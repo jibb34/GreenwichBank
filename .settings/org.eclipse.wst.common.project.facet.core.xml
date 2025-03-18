@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faceted-project>
+  <runtime name="WildFly 33.0 Runtime 1"/>
+  <secondary-runtime name="Runtime"/>
+  <fixed facet="wst.jsdt.web"/>
+  <fixed facet="java"/>
+  <fixed facet="jst.web"/>
+  <installed facet="java" version="17"/>
+  <installed facet="wst.jsdt.web" version="1.0"/>
+  <installed facet="jpt.jpa" version="3.1"/>
+  <installed facet="jst.web" version="6.0"/>
+</faceted-project>
