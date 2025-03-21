@@ -12,22 +12,6 @@ services:
       - java_app
     ports:
       - "3306:3306"
-    volumes:
-      - db_data:/var/lib/mysql
-
-  wildfly:
-    image: quay.io/wildfly/wildfly:latest
-    container_name: wildfly
-    restart: always
-    networks:
-      - java_app
-    ports:
-      - "8080:8080" # Application
-      - "9990:9990" # Admin console
-    volumes:
-      - ./Wildfly:/opt/jboss/wildfly
-    command:
-      ["/opt/jboss/wildfly/bin/standalone.sh", "-c", "standalone-full.xml"]
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
@@ -43,9 +27,6 @@ services:
       - 8081:80
     depends_on:
       - db
-
-volumes:
-  db_data:
 
 networks:
   java_app:
