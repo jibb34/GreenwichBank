@@ -8,11 +8,12 @@ Then just navigate to localhost:8081, sign in with server mysql_db, username roo
 In eclipse, access database through host: 127.0.0.1:3306, and username: root, password: rootpass
 
 
-Wildfly Server folder should be set up, when adding a new server, just choose the runtime to be the Wildfly folder in the project directory
+Wildfly Server folder should be set up, when adding a new server, just choose Wildfly 27+
 Make sure to choose a new runtime enviornment, running java 17, and choose the Wildfly-server directory when creating the new runtime (rather than downloading a new one). Also make sure that under project settings "Project Facets", the java 17 version is selected, with the "runtimes" tab selecting the correct wildfly runtime that you created.
 
 TODO:
 We need to implement the functions inside the BankDAO class, which should be exclusively be functions that access data values (in order to create entity classes)
+
 JSP:
 We need to finish implementing all front end pages, including ways of executing business logic and crud functions.
 Dynamically generate web content jsp, html, css.
