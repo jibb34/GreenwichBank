@@ -1,0 +1,14 @@
+2025-03-05 12:46:49,013 INFO  [stdout] (default task-1) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-05 12:46:49,110 INFO  [stdout] (default task-1) [com.bank.model.Student@6d20c861]
+2025-03-05 12:46:51,085 INFO  [stdout] (default task-1) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-05 12:46:51,092 INFO  [stdout] (default task-1) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-05 12:46:51,100 INFO  [stdout] (default task-1) [com.bank.model.Account@7309c559]
+2025-03-05 12:48:54,924 INFO  [stdout] (default task-1) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-05 12:48:54,946 INFO  [stdout] (default task-1) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-05 12:48:54,965 INFO  [stdout] (default task-1) [com.bank.model.Account@1f369a98]
+2025-03-05 12:50:00,509 INFO  [stdout] (default task-2) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-05 12:50:00,528 INFO  [stdout] (default task-2) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-05 12:50:00,551 INFO  [stdout] (default task-2) [com.bank.model.Account@55ccc7fb]
+2025-03-05 12:55:41,436 INFO  [stdout] (default task-1) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-05 12:55:41,472 INFO  [stdout] (default task-1) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-05 12:55:41,485 INFO  [stdout] (default task-1) [com.bank.model.Account@5f911d63]

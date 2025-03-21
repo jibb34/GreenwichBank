@@ -1,0 +1,6 @@
+2025-03-06 14:45:51,176 INFO  [stdout] (default task-1) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-06 14:45:51,253 INFO  [stdout] (default task-1) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-06 14:45:51,262 INFO  [stdout] (default task-1) [com.bank.model.Account@5eed1c17]
+2025-03-06 14:47:05,646 INFO  [stdout] (default task-1) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-06 14:47:05,666 INFO  [stdout] (default task-1) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-06 14:47:05,675 INFO  [stdout] (default task-1) [com.bank.model.Account@3811697e]

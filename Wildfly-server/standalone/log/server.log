@@ -1,0 +1,25 @@
+2025-03-19 21:08:20,675 INFO  [org.jboss.as.server] (Thread-1) WFLYSRV0272: Suspending server
+2025-03-19 21:08:20,709 INFO  [org.jboss.as.ejb3] (Thread-1) WFLYEJB0493: Jakarta Enterprise Beans subsystem suspension complete
+2025-03-19 21:08:20,717 INFO  [org.jboss.as.server] (Thread-1) WFLYSRV0220: Server shutdown has been requested via an OS signal
+2025-03-19 21:08:20,765 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-2) WFLYMAIL0002: Unbound mail session [java:jboss/mail/Default]
+2025-03-19 21:08:20,766 INFO  [org.wildfly.extension.messaging-activemq] (MSC service thread 1-6) WFLYMSGAMQ0006: Unbound messaging object to jndi name java:/ConnectionFactory
+2025-03-19 21:08:20,767 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 102) WFLYUT0022: Unregistered web context: '/Bank' from server 'default-server'
+2025-03-19 21:08:20,793 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0019: Host default-host stopping
+2025-03-19 21:08:20,808 INFO  [org.jboss.as.connector.deployment] (MSC service thread 1-2) WFLYJCA0119: Unbinding connection factory named java:/JmsXA to alias java:jboss/DefaultJMSConnectionFactory
+2025-03-19 21:08:20,808 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-7) WFLYJCA0010: Unbound data source [java:jboss/datasources/ExampleDS]
+2025-03-19 21:08:20,808 INFO  [org.jboss.as.connector.deployment] (MSC service thread 1-4) WFLYJCA0011: Unbound Jakarta Connectors ConnectionFactory [java:/JmsXA]
+2025-03-19 21:08:20,811 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-2) WFLYJCA0019: Stopped Driver service with driver-name = h2
+2025-03-19 21:08:20,810 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 108) WFLYJPA0011: Stopping Persistence Unit (phase 2 of 2) Service 'Bank.war#Bank'
+2025-03-19 21:08:20,824 INFO  [org.hibernate.orm.beans] (ServerService Thread Pool -- 108) HHH10005004: Stopping BeanContainer : org.hibernate.resource.beans.container.internal.CdiBeanContainerExtendedAccessImpl@2f646f23
+2025-03-19 21:08:20,834 INFO  [org.apache.activemq.artemis.ra.ActiveMQRALogger] (ServerService Thread Pool -- 114) AMQ151003: resource adaptor stopped
+2025-03-19 21:08:20,836 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 114) WFLYJPA0011: Stopping Persistence Unit (phase 1 of 2) Service 'Bank.war#Bank'
+2025-03-19 21:08:20,837 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-1) WFLYJCA0010: Unbound data source [java:/BankDS]
+2025-03-19 21:08:20,838 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-1) WFLYJCA0019: Stopped Driver service with driver-name = mysql
+2025-03-19 21:08:20,882 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) WFLYUT0008: Undertow HTTPS listener https suspending
+2025-03-19 21:08:20,883 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) WFLYUT0007: Undertow HTTPS listener https stopped, was bound to 127.0.0.1:8443
+2025-03-19 21:08:20,883 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-8) WFLYSRV0028: Stopped deployment Bank.war (runtime-name: Bank.war) in 156ms
+2025-03-19 21:08:21,045 INFO  [org.apache.activemq.artemis.core.server] (ServerService Thread Pool -- 108) AMQ221002: Apache ActiveMQ Artemis Message Broker version 2.35.0 [75b34986-f80a-11ef-9410-a07817ada456] stopped, uptime 1 day 9 hours
+2025-03-19 21:08:21,047 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0008: Undertow HTTP listener default suspending
+2025-03-19 21:08:21,048 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0007: Undertow HTTP listener default stopped, was bound to 127.0.0.1:8080
+2025-03-19 21:08:21,049 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0004: Undertow 2.3.17.Final stopping
+2025-03-19 21:08:21,053 INFO  [org.jboss.as] (MSC service thread 1-1) WFLYSRV0050: WildFly 33.0.2.Final (WildFly Core 25.0.2.Final) stopped in 325ms
