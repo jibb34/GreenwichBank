@@ -33,7 +33,7 @@ public class Controller extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		processRequest(request, response);
+		processGETRequest(request, response);
 	}
 
 	/**
@@ -41,15 +41,36 @@ public class Controller extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		processPOSTRequest(request, response);
 	}
 
-	private void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	private void processPOSTRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String action = request.getParameter("action");
+		switch(action)	{
+		/*
+		 * Handle POST Requests here:
+		 */
+		case "transfer":
+			//implement transfer handler
+			//TODO: Get current account from context, get target account from
+			// POST form, set attributes then redirect back to page.
+			break;
+		case "withdraw":
+			break;
+			//implement withdraw handler
+		}
+
+	}
+
+	private void processGETRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String action = request.getParameter("action");
 		//Handle Actions here:
 		switch(action) {
+		/*
+		 * Handle GET Requests Here
+		 */
 		case "home":
-            request.getRequestDispatcher("index.jsp").forward(request, response);
+            request.getRequestDispatcher("jsp/home.jsp").forward(request, response);
 			break;
 		case "listStudents":
 			//do the listing of the students
@@ -64,7 +85,11 @@ public class Controller extends HttpServlet {
 			request.getRequestDispatcher("jsp/ListAccounts.jsp").forward(request, response);
 			break;
 		case "transfer":
-			//implement bank transfer
+			request.getRequestDispatcher("jsp/Transfer.jsp").forward(request, response);
+			//implement transfer handler
+			//TODO: Get current account from context, get target account from
+			// POST form, set attributes then redirect back to page.
+			break;
 		//etc...
 		}
 	}
