@@ -32,7 +32,6 @@ public class Controller extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		processGETRequest(request, response);
 	}
 
@@ -40,7 +39,6 @@ public class Controller extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		processPOSTRequest(request, response);
 	}
 
@@ -85,10 +83,10 @@ public class Controller extends HttpServlet {
 			request.getRequestDispatcher("jsp/ListAccounts.jsp").forward(request, response);
 			break;
 		case "transfer":
-			request.getRequestDispatcher("jsp/Transfer.jsp").forward(request, response);
-			//implement transfer handler
-			//TODO: Get current account from context, get target account from
-			// POST form, set attributes then redirect back to page.
+			request.getRequestDispatcher("jsp/transfer/Transfer.jsp").forward(request, response);
+			break;
+		case "withdraw":
+			request.getRequestDispatcher("jsp/withdraw/Withdraw.jsp").forward(request, response);
 			break;
 		//etc...
 		}
