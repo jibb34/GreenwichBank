@@ -1,0 +1,78 @@
+package com.bank.rest;
+
+import jakarta.inject.Inject;
+import jakarta.persistence.EntityNotFoundException;
+import jakarta.ws.rs.*;
+import com.bank.model.Account;
+import com.bank.model.Student;
+
+import java.util.List;
+
+import com.bank.dao.BankDAO;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
+
+@Path("/accounts")
+public class AccountResource {
+	@Inject
+	private BankDAO bankDAO;
+	
+	//GET /api/accounts
+	@GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getAllAccounts() {
+        List<Account> accounts = bankDAO.getAllAccounts();
+        return Response.ok(accounts).build();
+    }
+
+	@GET
+    @Path("/{accountID}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getAccount(@PathParam("accountID") int accountID) {
+        Account account = bankDAO.getAccountByID(accountID);
+        return Response.ok(account).build();
+    }
+	@GET
+    @Path("/studentID/{accountID}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getAccountsByStudentID(@PathParam("accountID") int accountID, @PathParam("studentID") int studentID) {
+        List<Account> accounts = bankDAO.getAccountsByStudentID(studentID);
+        return Response.ok(accounts).build();
+    }
+
+	@POST
+	@Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response createAccount(Account account, @QueryParam("studentID") int studentID) {
+        Student student = bankDAO.getStudentByID(studentID);
+        if (student == null) {
+            return Response.status(Response.Status.BAD_REQUEST).entity("Student not found").build();
+        }
+        account.setStudent(student);
+        bankDAO.createAccount(account);
+        return Response.status(Response.Status.CREATED).entity(account).build();
+    }
+    @PUT
+    @Path("/{id}")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response updateAccount(@PathParam("id") int id, Account updatedAccount) {
+    	if(bankDAO.updateAccount(updatedAccount)) {
+    		return Response.status(Response.Status.CREATED).entity(updatedAccount).build();
+    	}
+    	
+    	return Response.status(Response.Status.BAD_REQUEST).entity("Account ID" + id + " not found.").build();
+
+    }
+    @DELETE
+    @Path("/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response deleteAccount(@PathParam("id") int id) {
+        boolean removed = bankDAO.deleteStudent(id);
+        if (!removed) {
+            return Response.status(Response.Status.NOT_FOUND).build();
+        }
+        return Response.noContent().build();
+    }
+
+}

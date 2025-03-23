@@ -58,7 +58,7 @@ public class Controller extends HttpServlet {
 		    student.setStudentPhone(request.getParameter("phone"));
 		    student.setStudentAddress(request.getParameter("address"));
 		    if(bankDAO.createStudent(student)) {
-		    	response.sendRedirect("index.jsp?action=listStudents");
+		    	response.sendRedirect("");
 		    }
 		    else {
 		    	request.setAttribute("error", "Could not add student.");
@@ -82,7 +82,7 @@ public class Controller extends HttpServlet {
 				account.setStudent(bankDAO.getStudentByID(studentID));
 				System.out.println("Account being created...");
 				bankDAO.createAccount(account);
-				response.sendRedirect("index.jsp");
+				response.sendRedirect("");
 			} else {response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Student not logged in or recognized");}
 			
 			break;

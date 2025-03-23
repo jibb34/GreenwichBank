@@ -1,16 +1,10 @@
 package com.bank.rest;
 
 import com.bank.dao.BankDAO;
+import com.bank.model.Account;
 import com.bank.model.Student;
 import jakarta.inject.Inject;
-import jakarta.ws.rs.Consumes;
-import jakarta.ws.rs.DELETE;
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.POST;
-import jakarta.ws.rs.PUT;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.PathParam;
-import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
@@ -59,8 +53,11 @@ public class StudentResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response updateStudent(@PathParam("id") int id, Student updatedStudent) {
-        //TODO: Implement update API 
-        return null;
+    	if(bankDAO.updateStudent(updatedStudent)) {
+    		return Response.status(Response.Status.CREATED).entity(updatedStudent).build();
+    	}
+    	
+    	return Response.status(Response.Status.BAD_REQUEST).entity("Student ID" + id + " not found.").build();
     }
     
  // DELETE /api/students/{id}
@@ -73,6 +70,7 @@ public class StudentResource {
         }
         return Response.noContent().build();
     }
+
 /* TODO: implement CRUD Operations for Accounts
  * Create Account for Student
  * Update Account
