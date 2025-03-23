@@ -11887,3 +11887,25 @@ Caused by: org.hibernate.query.UnknownParameterException: Could not locate named
 2025-03-23 21:48:48,603 INFO  [stdout] (default task-34) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
 2025-03-23 21:48:48,608 INFO  [stdout] (default task-34) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
 2025-03-23 21:48:48,613 INFO  [stdout] (default task-34) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-23 22:03:30,299 INFO  [stdout] (default task-39) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-23 22:03:30,301 INFO  [stdout] (default task-41) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-23 22:03:30,301 INFO  [stdout] (default task-34) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-23 22:03:30,301 INFO  [stdout] (default task-40) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-23 22:03:30,369 INFO  [stdout] (default task-39) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-23 22:03:30,370 INFO  [stdout] (default task-34) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-23 22:03:30,370 INFO  [stdout] (default task-40) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-23 22:03:30,370 INFO  [stdout] (default task-41) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-23 22:03:30,395 INFO  [stdout] (default task-41) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-23 22:03:30,395 INFO  [stdout] (default task-40) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-23 22:03:30,396 INFO  [stdout] (default task-34) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-23 22:03:30,396 INFO  [stdout] (default task-39) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-23 22:03:32,072 INFO  [stdout] (default task-40) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-23 22:03:32,083 INFO  [stdout] (default task-40) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-23 22:03:32,157 INFO  [stdout] (default task-40) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-23 22:03:32,169 INFO  [stdout] (default task-40) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-23 22:03:47,595 INFO  [stdout] (default task-40) Student being created...
+2025-03-23 22:03:47,669 INFO  [stdout] (default task-40) Hibernate: insert into Students (studentAddress,studentEmail,studentName,studentPhone) values (?,?,?,?)
+2025-03-23 22:03:47,911 INFO  [stdout] (default task-40) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-23 22:03:47,918 INFO  [stdout] (default task-40) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-23 22:03:48,000 INFO  [stdout] (default task-40) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-23 22:03:48,007 INFO  [stdout] (default task-40) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
