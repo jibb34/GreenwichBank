@@ -86,6 +86,20 @@ public class Controller extends HttpServlet {
 			} else {response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Student not logged in or recognized");}
 			
 			break;
+		case "deleteAccount":
+			String accountIDParam = request.getParameter("accountID");
+			if (accountIDParam != null) {
+				int accountID = Integer.parseInt(accountIDParam);
+				Account accToDelete = bankDAO.getAccountByID(accountID);
+				if (accToDelete != null && bankDAO.deleteAccount(accountID)) {
+					response.setStatus(HttpServletResponse.SC_OK);
+				} else { 
+		            response.sendError(HttpServletResponse.SC_NOT_FOUND, "Account not found or deleted.");
+				}
+			} else {
+		        response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Missing account ID.");
+		    }
+			break;
 		case "transfer":
 			//TODO: Implement Transfer Handler
 			break;
@@ -102,8 +116,10 @@ public class Controller extends HttpServlet {
 		String action = request.getParameter("action");
 		List<Student> students;
 		List<Account> accounts = bankDAO.getAllAccounts();
+		Cookie[] cookies;
 		Student student;
 		Account account;
+		int studentID = 0;
 		//Handle Actions here:
 		switch(action) {
 		/*
@@ -134,8 +150,8 @@ public class Controller extends HttpServlet {
 			break;
 // --------------- Accounts ---------------------
 		case "listAccounts": // Lists all accounts if not logged in, otherwise lists student accounts
-			int studentID = 0;
-			Cookie[] cookies = request.getCookies();
+			studentID = 0;
+			cookies = request.getCookies();
 			if (cookies != null) {
 			    for (Cookie cookie : cookies) {
 			        if ("studentID".equals(cookie.getName())) {
@@ -163,6 +179,13 @@ public class Controller extends HttpServlet {
 
 		case "deleteAccount": // Delete
 			break;
+			
+		case "viewAccount":
+		    int id = Integer.parseInt(request.getParameter("id"));
+		    account = bankDAO.getAccountByID(id);
+		    request.setAttribute("account", account);
+		    request.getRequestDispatcher("jsp/accounts/ViewAccount.jsp").forward(request, response);
+		    break;
 
 // --------------- Business Logic ---------------------
 
@@ -171,6 +194,21 @@ public class Controller extends HttpServlet {
 			break;
 
 		case "depositOrWithdraw":
+			cookies = request.getCookies();
+		    if (cookies != null) {
+		        for (Cookie cookie : cookies) {
+		            if ("studentID".equals(cookie.getName())) {
+		                studentID = Integer.parseInt(cookie.getValue());
+		                break;
+		            }
+		        }
+		    }
+		    if (studentID != 0) {
+		        accounts = bankDAO.getAccountsByStudentID(studentID);
+		        request.setAttribute("Accounts", accounts);
+		    } else {
+		        response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Student not logged in.");
+		    }
 			request.getRequestDispatcher("jsp/transactions/DepositOrWithdraw.jsp").forward(request, response);
 			break;
 		//etc...

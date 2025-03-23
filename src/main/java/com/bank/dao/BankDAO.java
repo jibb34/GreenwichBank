@@ -65,9 +65,20 @@ public class BankDAO {
 	}
 
 	public boolean deleteStudent(int studentId) {
-		//TODO: deleteStudent should also verify all accounts are deleted
-		return false;
+		Student student = em.find(Student.class, studentId);
+		if (student == null) {
+			return false;
+		}
+		em.remove(student);
+		em.flush();
+		// Verify deleted properly
+		Student deleted = em.find(Student.class, studentId);
+		TypedQuery<Account> query = em.createQuery("SELECT a FROM Account WHERE a.student.studentID = :id", Account.class);
+		query.setParameter("id", studentId);
+		List<Account> remainingAccounts = query.getResultList();
+		return deleted == null && (remainingAccounts == null || remainingAccounts.isEmpty());
  	}
+
 	
 	// =========== Account CRUD ======================
 
@@ -85,7 +96,7 @@ public class BankDAO {
 	}
 	public Account getAccountByID(int accountID) {
 		try{
-			return em.createQuery("Select a FROM Account a WHERE a.accountID = :ID", Account.class).setParameter("id", accountID).getSingleResult();
+			return em.createQuery("Select a FROM Account a WHERE a.accountID = :id", Account.class).setParameter("id", accountID).getSingleResult();
 		} catch (NoResultException e) {
 			return null;
 		}
@@ -106,7 +117,14 @@ public class BankDAO {
 	        return false;
 	    }
     }
-	public void deleteAccount(int accountID) {
+	public boolean deleteAccount(int accountID) {
+		Account account = em.find(Account.class, accountID);
+		if (account== null) {
+			return false;
+		}
+		em.remove(account);
+		em.flush();
+		return true;
  	}
 
 //TODO: Create Business Logic for operations Withdraw, Deposit & Transfer

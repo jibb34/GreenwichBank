@@ -26,6 +26,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
             if (action) {
                 loadPage(action);
+				if (action === "viewAccount") {
+				    attachViewAccountDeleteHandler();
+				}
             } else {
                 console.warn("No data-action found on clicked link.");
             }
@@ -67,10 +70,14 @@ function loadPage(action) {
             const content = document.getElementById('content');
             if (content) {
                 content.innerHTML = html;
+				handleDynamicAccountButtons();
             } 
 			else {
                 console.error("Content container not found!");
             }
+			if (action === "viewAccount") {
+				attachViewAccountDeleteHandler();
+			}
 			// handle actions for login POST and button to login page
 			if (action === 'login') {
 			        handleLoginForm();
@@ -89,7 +96,19 @@ function loadPage(action) {
             }
         });
 }
+function handleDynamicAccountButtons() {
+    const content = document.getElementById('content');
+    if (!content) return;
 
+    content.addEventListener('click', (e) => {
+        if (e.target && e.target.classList.contains('view-account-btn')) {
+            const id = e.target.dataset.id;
+            if (id) {
+                loadPage(`viewAccount&id=${id}`);
+            }
+        }
+    });
+}
 function handleLoginForm() {
     const form = document.getElementById("loginForm");
     if (!form) return;
@@ -121,6 +140,37 @@ function handleLoginButtonOnHomePage() {
         });
     }
 }
+function attachViewAccountDeleteHandler() {
+    const deleteBtn = document.getElementById("deleteAccountBtn");
+    if (!deleteBtn) return;
+	console.log("Delete button clicked");
+    deleteBtn.addEventListener("click", () => {
+        const accountId = deleteBtn.dataset.accountId;
+        if (!accountId) return;
+
+        const confirmed = confirm(`Are you sure you want to delete account #${accountId}? This action cannot be undone.`);
+
+        if (confirmed) {
+            fetch("Controller?action=deleteAccount", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                body: `accountID=${encodeURIComponent(accountId)}`
+            })
+            .then(res => {
+                if (!res.ok) throw new Error("Delete failed");
+                // No need to read the response body
+                alert("Account deleted successfully.");
+                loadPage("listAccounts"); // Dynamically load list again
+            })
+            .catch(err => {
+                alert("Error deleting account: " + err.message);
+            });
+        }
+    });
+}
+
 
 function fetchContent(action) {
     fetch(`Controller?action=${action}`)

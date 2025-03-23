@@ -1,12 +1,12 @@
 package com.bank.rest;
 
 import jakarta.inject.Inject;
-import jakarta.persistence.EntityNotFoundException;
 import jakarta.ws.rs.*;
 import com.bank.model.Account;
 import com.bank.model.Student;
 
 import java.util.List;
+import java.util.Map;
 
 import com.bank.dao.BankDAO;
 import jakarta.ws.rs.core.MediaType;
@@ -73,6 +73,38 @@ public class AccountResource {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
         return Response.noContent().build();
+    }
+    //TODO: implement Transfer, withdraw and Deposit
+    
+    @PUT
+    @Path("/accounts/{id}")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response modifyAccountBalance(@PathParam("id") int accountId, Map<String, Object> payload) {
+        try {
+            String operation = payload.get("operation").toString();
+            float amount = Float.parseFloat(payload.get("amount").toString());
+
+            boolean success = false;
+            if ("withdraw".equalsIgnoreCase(operation)) {
+                success = bankDAO.withdraw(accountId, amount);
+            } else if ("deposit".equalsIgnoreCase(operation)) {
+                success = bankDAO.deposit(accountId, amount);
+            }
+
+            if (success) {
+                return Response.ok(Map.of("message", operation + " successful")).build();
+            } else {
+                return Response.status(Response.Status.BAD_REQUEST)
+                               .entity(Map.of("error", operation + " failed"))
+                               .build();
+            }
+
+        } catch (Exception e) {
+            return Response.status(Response.Status.BAD_REQUEST)
+                           .entity(Map.of("error", "Invalid input or internal error"))
+                           .build();
+        }
     }
 
 }
