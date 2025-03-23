@@ -31,14 +31,31 @@ public class BankDAO {
 		query.setParameter("id", studentId);
 		return query.getSingleResult();
 	}
-	public Student createStudent(Student student) {
-		return null;
+
+	public boolean createStudent(Student student) {
+		//attempt to make student entry in database
+		try {
+	        em.persist(student);
+	        return true;
+	    } catch (Exception e) {
+	        e.printStackTrace(); 
+	        return false;
+	    }
+		//TODO: Implement duplication checking.
 	}
-	public Student updateStudent(Student student) {
-		return null;
-    }
+
+	public boolean updateStudent(Student student) {
+		try {
+	        em.merge(student);
+	        return true;
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	        return false;
+	    }
+	}
+
 	public boolean deleteStudent(int studentId) {
-		//INFO: deleteStudent should also verify all accounts are deleted
+		//TODO: deleteStudent should also verify all accounts are deleted
 		return false;
  	}
 	
@@ -47,19 +64,23 @@ public class BankDAO {
 		return em.createQuery("Select a FROM Account a", Account.class).getResultList();
 	}
 
-	public Account createAccount(Account account) {
-		return null;
+	public boolean createAccount(Account account) {
+		return false;
+		
 	}
-	public Account updateAccount(Account account) {
-		return null;
+	public void updateAccount(Account account) {
+
     }
 	public void deleteAccount(int accountID) {
  	}
-//TODO: Create Business Logic for operations Withdraw & Transfer
+//TODO: Create Business Logic for operations Withdraw, Deposit & Transfer
 	public boolean withdraw(int accountId, float amount) {
 		return false;
 	}
 	public boolean deposit(int accountId, float amount) {
 		return false;                    
+	}
+	public boolean transfer(int fromAccountID, int toAccountID, float amount) {
+		return false;
 	}
 }

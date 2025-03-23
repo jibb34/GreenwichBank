@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,8 +17,10 @@
                 <li><a href="#" data-action="home">Home</a></li>
                 <li><a href="#" data-action="listStudents">Students</a></li>
                 <li><a href="#" data-action="listAccounts">Accounts</a></li>
+                <c:if test="${not empty cookie.user.value}">
                 <li><a href="#" data-action="transfer">Transfer</a></li>
                 <li><a href="#" data-action="withdraw">Withdraw</a></li>
+                </c:if>
             </ul>
         </nav>
     </header>

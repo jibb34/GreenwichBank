@@ -45,8 +45,12 @@ public class StudentResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response createStudent(Student student) {
-        Student newStudent = bankDAO.createStudent(student);
-        return Response.status(Response.Status.CREATED).entity(newStudent).build();
+    	if(bankDAO.createStudent(student)) {
+    		return Response.status(Response.Status.CREATED).entity(student).build();
+    	} 
+    	else { 
+    		return Response.status(Response.Status.BAD_REQUEST).entity(student).build();
+    	}
     }
 
  // PUT /api/students/{id}
@@ -55,14 +59,8 @@ public class StudentResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response updateStudent(@PathParam("id") int id, Student updatedStudent) {
-        Student existingStudent = bankDAO.findStudentByID(id);
-        if (existingStudent == null) {
-            return Response.status(Response.Status.NOT_FOUND).build();
-        }
-        existingStudent.setStudentName(updatedStudent.getStudentName());
-        // TODO: Implement PUT logic for all fields
-        Student merged = bankDAO.updateStudent(existingStudent);
-        return Response.ok(merged).build();
+        //TODO: Implement update API 
+        return null;
     }
     
  // DELETE /api/students/{id}
@@ -75,4 +73,17 @@ public class StudentResource {
         }
         return Response.noContent().build();
     }
+/* TODO: implement CRUD Operations for Accounts
+ * Create Account for Student
+ * Update Account
+ * Delete Account
+ * Delete all user accounts
+ * Delete all accounts
+ * getAllAccounts
+ * getAccountByID
+ * getAccountByUserID
+ * getAccountByAlias?
+ * 
+ * 
+ */
 }
