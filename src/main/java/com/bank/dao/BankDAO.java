@@ -23,15 +23,6 @@ public class BankDAO {
 	}
 
 // ================ Student CRUD ========================
-	public List<Student> getAllStudents() {
-		return em.createQuery("SELECT s FROM Student s", Student.class).getResultList();
-	}
-	public Student getStudentByID(int studentId) {
-		TypedQuery<Student> query = em.createQuery("SELECT s FROM Student s WHERE s.studentID = :id", Student.class);
-		query.setParameter("id", studentId);
-		return query.getSingleResult();
-	}
-
 	public boolean createStudent(Student student) {
 		//attempt to make student entry in database
 		try {
@@ -42,6 +33,15 @@ public class BankDAO {
 	        return false;
 	    }
 		//TODO: Implement duplication checking.
+	}
+	public List<Student> getAllStudents() {
+		return em.createQuery("SELECT s FROM Student s", Student.class).getResultList();
+	}
+
+	public Student getStudentByID(int studentId) {
+		TypedQuery<Student> query = em.createQuery("SELECT s FROM Student s WHERE s.studentID = :id", Student.class);
+		query.setParameter("id", studentId);
+		return query.getSingleResult();
 	}
 
 	public Student getStudentByName(String username) throws NoResultException {
@@ -70,9 +70,6 @@ public class BankDAO {
  	}
 	
 	// =========== Account CRUD ======================
-	public List<Account> getAllAccounts() {
-		return em.createQuery("Select a FROM Account a", Account.class).getResultList();
-	}
 
 	public boolean createAccount(Account account) {
 		try {
@@ -83,25 +80,56 @@ public class BankDAO {
 	        return false;
 	    }
 	}
-	public void updateAccount(Account account) {
-		//TODO: implement logic for updating an account
+	public List<Account> getAllAccounts() {
+		return em.createQuery("Select a FROM Account a", Account.class).getResultList();
+	}
+	public Account getAccountByID(int accountID) {
+		try{
+			return em.createQuery("Select a FROM Account a WHERE a.accountID = :ID", Account.class).setParameter("id", accountID).getSingleResult();
+		} catch (NoResultException e) {
+			return null;
+		}
+	}
 
-    }
-	public void deleteAccount(int accountID) {
- 	}
 	public List<Account> getAccountsByStudentID(int studentID) {
 		TypedQuery<Account> query = em.createQuery(
 	            "SELECT a FROM Account a WHERE a.student.studentID = :studentID", Account.class);
 	    query.setParameter("studentID", studentID);
 	    return query.getResultList();
 	}
+	public boolean updateAccount(Account account) {
+		try {
+	        em.merge(account);
+	        return true;
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	        return false;
+	    }
+    }
+	public void deleteAccount(int accountID) {
+ 	}
 
 //TODO: Create Business Logic for operations Withdraw, Deposit & Transfer
 	public boolean withdraw(int accountId, float amount) {
-		return false;
+		Account account = em.find(Account.class, accountId);
+		if (account != null && account.getAccountBalance() >= amount){
+			// Set balance to be amount less than before
+			account.setAccountBalance(account.getAccountBalance() - amount);
+			em.merge(account);
+			return true;
+		}
+		return false; // Insufficient Funds
 	}
 	public boolean deposit(int accountId, float amount) {
-		return false;                    
+		// Literally the same as withdraw except + amount
+		Account account = em.find(Account.class, accountId);
+		if (account != null && account.getAccountBalance() >= amount){
+			// Set balance to be amount less than before
+			account.setAccountBalance(account.getAccountBalance() + amount);
+			em.merge(account);
+			return true;
+		}
+		return false; // Insufficient Funds
 	}
 	public boolean transfer(int fromAccountID, int toAccountID, float amount) {
 		return false;

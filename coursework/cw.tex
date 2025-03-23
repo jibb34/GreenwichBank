@@ -1,0 +1,181 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{titlesec}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{COMP1610 Coursework}
+\lhead{Greenwich Bank}
+\rfoot{Page \thepage}
+
+\titleformat{\section}{\Large\bfseries}{\thesection}{1em}{}
+
+\title{COMP1610 Coursework Report \\ \large Programming Enterprise Components \\ \large Greenwich Bank Project}
+\author{Full Name \\ Student ID \\ Group Number}
+\date{Submission Date: 24 March 2025}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Design Documentation (Group Work)}
+
+\subsection{Entity-Relationship Diagram}
+Insert ERD exported from phpMyAdmin.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{erd_placeholder.png}
+	\caption{Entity-Relationship Diagram from MySQL/phpMyAdmin}
+\end{figure}
+
+\subsection{Architecture Diagram}
+Illustrate the overall system architecture: WildFly server, MySQL DB, JSP frontend, Servlet Controller, REST services, DAO layer, etc.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{architecture_placeholder.png}
+	\caption{Overall Application Architecture}
+\end{figure}
+
+\section{Screenshots (Group Work)}
+Add one screenshot per implemented feature, e.g., student listing, account creation, transfers.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{create_account.png}
+	\caption{Create Account Feature}
+\end{figure}
+
+\subsection*{Feature List:}
+\begin{itemize}
+	\item Student CRUD
+	\item Account CRUD
+	\item Transfers and Withdrawals
+	\item RESTful Service
+	\item Centralized Servlet
+\end{itemize}
+
+\section{Evaluation (Group Work)}
+\textit{Write approx. 100 words about the implementation experience.}
+Discuss issues faced, how you worked around them, and any improvements made.
+
+\section{Research (Individual)}
+\textit{Write approx. 200 words.}
+Compare Jakarta EE with frameworks such as:
+\begin{itemize}
+	\item Spring Boot
+	\item ASP.NET Core
+	\item Django
+	\item Node.js (Express)
+\end{itemize}
+
+Discuss component-based design, scalability, learning curve, IDE/tooling support, REST and ORM integration.
+
+\section{Individual Reflection (Individual)}
+\textit{Write approx. 200 words.}
+Discuss your role in the group project, lessons learned, collaboration, and areas for improvement. Mention tools used (e.g., Git, Eclipse, phpMyAdmin) and key takeaways.
+
+\section{Appendix}
+
+\subsection{WildFly 33 Server Configuration}
+
+This section outlines the essential configuration settings from the \texttt{standalone-full.xml} used in the deployment of the WildFly 33 application server.
+
+\subsubsection{Subsystems and Extensions}
+The configuration includes a comprehensive set of extensions and subsystems to support a variety of Java EE technologies:
+\begin{itemize}
+	\item \textbf{EJB, JPA, JSF, JAX-RS:} Enabled via \texttt{org.jboss.as.ejb3}, \texttt{org.jboss.as.jpa}, etc.
+	\item \textbf{Security:} Configured through WildFly Elytron with domains \texttt{ApplicationDomain} and \texttt{ManagementDomain}.
+	\item \textbf{Clustering and Caching:} Infinispan containers set for EJBs and Web session management.
+	\item \textbf{Logging:} Console and periodic file handlers with custom formatters.
+	\item \textbf{Data Sources:}
+	      \begin{itemize}
+		      \item \texttt{ExampleDS}: In-memory H2 database.
+		      \item \texttt{BankDS}: MySQL datasource connecting to \texttt{bank\_db} using driver \texttt{com.mysql.cj.jdbc.Driver}.
+	      \end{itemize}
+\end{itemize}
+
+\subsubsection{Management and Access Control}
+\begin{itemize}
+	\item Management is accessible via HTTP interface bound to \texttt{management-http} (port 9990).
+	\item Role-based access is enabled using the \texttt{SuperUser} role mapped to the local user \texttt{\$local}.
+	\item Audit logging is available but currently disabled.
+\end{itemize}
+
+\subsubsection{Security and Authentication}
+\begin{itemize}
+	\item Elytron subsystems define HTTP and SASL authentication factories.
+	\item Identity realms and properties realms are used to manage users and roles.
+	\item A keystore \texttt{applicationKS} is defined for SSL contexts.
+\end{itemize}
+
+\subsubsection{Server Interfaces and Socket Bindings}
+\begin{itemize}
+	\item Interfaces are defined for \texttt{management}, \texttt{public}, and \texttt{unsecure} IP addresses.
+	\item Common ports include:
+	      \begin{itemize}
+		      \item HTTP: 8080
+		      \item HTTPS: 8443
+		      \item AJP: 8009
+		      \item Management HTTP/HTTPS: 9990 / 9993
+	      \end{itemize}
+\end{itemize}
+
+\subsubsection{Deployment and Monitoring}
+\begin{itemize}
+	\item Deployment scanner monitors the \texttt{deployments} directory every 5 seconds.
+	\item Metrics, health, and microprofile extensions are enabled.
+\end{itemize}
+
+\subsubsection{Thread and Resource Management}
+\begin{itemize}
+	\item Default thread pools are defined for concurrency and EJB processing.
+	\item Resource adapters and managed executors are configured under the EE subsystem.
+\end{itemize}
+
+This configuration enables a robust and secure environment suitable for enterprise Java applications, with database integration, secure authentication, clustering, and deployment automation.
+
+\subsection{Source Code Structure}
+Briefly outline your directory structure:
+
+\begin{verbatim}
+BankApp/
+│
+├── src/
+│   ├── controller/
+│   ├── dao/
+│   ├── model/
+│   ├── service/
+│   └── rest/
+├── webapp/
+│   ├── jsp/
+│       ├── accounts/
+│       ├── home/
+│       ├── students/
+    │   └── transactions/
+│   ├── css/
+│   └── js/
+└── META-INF/
+\end{verbatim}
+
+\subsection{References}
+\begin{itemize}
+	\item Jakarta EE Documentation: \url{https://jakarta.ee}
+	\item WildFly Docs: \url{https://docs.wildfly.org}
+	\item MySQL Documentation: \url{https://dev.mysql.com/doc/}
+\end{itemize}
+
+\end{document}
+
