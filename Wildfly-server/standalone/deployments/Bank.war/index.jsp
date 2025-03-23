@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,32 +13,24 @@
     <header>
         <h1>Greenwich Bank Co.</h1>
         <nav>
-            <ul>
-                <li><a href=Controller?action=home>Home</a></li>
-                <li><a href=Controller?action=listStudents>Students</a></li>
-                <li><a href=Controller?action=listAccounts>Accounts</a></li>
-                <li><a href=Controller?action=transfer>Transfer</a></li>
+            <ul id="menu">
+                <li><a href="#" data-action="home">Home</a></li>
+                <li><a href="#" data-action="listStudents">Students</a></li>
+                <li><a href="#" data-action="listAccounts">Accounts</a></li>
+                <c:if test="${not empty cookie.user.value}">
+                <li><a href="#" data-action="transfer">Transfer</a></li>
+                <li><a href="#" data-action="depositOrWithdraw">Deposit/Withdraw</a></li>
+                </c:if>
             </ul>
         </nav>
     </header>
     
-    <div class="container">
-        <h2>Welcome, ${userName}!</h2>
-        <p>Your financial data at a glance.</p>
-        
-        <!-- Optionally display a list of accounts if provided -->
-        <c:if test="${not empty accounts}">
-            <h3>Your Accounts:</h3>
-            <ul>
-                <c:forEach var="account" items="${accounts}">
-                    <li>${account.alias} - Balance: ${account.balance}</li>
-                </c:forEach>
-            </ul>
-        </c:if>
-    </div>
-    
+    <div id="content">
+        <!-- Dynamic content loads here -->
+    </div> 
     <footer>
-        <p>&copy; 2025 Greenwich Bank Co. Your money safe with us.</p>
+        <p>&copy; 2025 Greenwich Bank Co. Your money is probably not safe with us.</p>
     </footer>
+    <script src="${pageContext.request.contextPath}/js/main.js"></script>
 </body>
 </html>

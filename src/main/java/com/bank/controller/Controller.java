@@ -79,8 +79,8 @@ public class Controller extends HttpServlet {
 			    }
 			}
 			if(studentID != 0) {
-				account.setStudent(bankDAO.getStudentByID(1));
-				System.out.println("Student being created...");
+				account.setStudent(bankDAO.getStudentByID(studentID));
+				System.out.println("Account being created...");
 				bankDAO.createAccount(account);
 				response.sendRedirect("index.jsp");
 			} else {response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Student not logged in or recognized");}
@@ -140,6 +140,7 @@ public class Controller extends HttpServlet {
 			    for (Cookie cookie : cookies) {
 			        if ("studentID".equals(cookie.getName())) {
 			            studentID = Integer.valueOf(cookie.getValue());
+			            System.out.println("Student ID from cookie: " + studentID);
 			        }
 			    }
 			}
@@ -152,7 +153,7 @@ public class Controller extends HttpServlet {
 			    // Load all accounts
 			    accounts = bankDAO.getAllAccounts();
 			    request.setAttribute("Accounts", accounts);
-			}			request.setAttribute("Accounts", accounts);
+			}			
 			request.getRequestDispatcher("jsp/accounts/ListAccounts.jsp").forward(request, response);
 			break;
 
