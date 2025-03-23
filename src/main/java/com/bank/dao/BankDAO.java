@@ -26,8 +26,8 @@ public class BankDAO {
 	public List<Student> getAllStudents() {
 		return em.createQuery("SELECT s FROM Student s", Student.class).getResultList();
 	}
-	public Student findStudentByID(int studentId) {
-		TypedQuery<Student> query = em.createQuery("SELECT s FROM Student s WHERE s.id = :id", Student.class);
+	public Student getStudentByID(int studentId) {
+		TypedQuery<Student> query = em.createQuery("SELECT s FROM Student s WHERE s.studentID = :id", Student.class);
 		query.setParameter("id", studentId);
 		return query.getSingleResult();
 	}
@@ -44,6 +44,16 @@ public class BankDAO {
 		//TODO: Implement duplication checking.
 	}
 
+	public Student getStudentByName(String username) throws NoResultException {
+		try {
+		TypedQuery<Student> query = em.createQuery("SELECT S FROM Student s WHERE s.studentName LIKE :name", Student.class);
+		query.setParameter("name", username.toLowerCase());
+		return query.getSingleResult();
+		} catch (NoResultException e) {
+			return null;
+		}
+		
+	}
 	public boolean updateStudent(Student student) {
 		try {
 	        em.merge(student);
@@ -65,14 +75,27 @@ public class BankDAO {
 	}
 
 	public boolean createAccount(Account account) {
-		return false;
-		
+		try {
+	        em.persist(account);
+	        return true;
+	    } catch (Exception e) {
+	        e.printStackTrace(); 
+	        return false;
+	    }
 	}
 	public void updateAccount(Account account) {
+		//TODO: implement logic for updating an account
 
     }
 	public void deleteAccount(int accountID) {
  	}
+	public List<Account> getAccountsByStudentID(int studentID) {
+		TypedQuery<Account> query = em.createQuery(
+	            "SELECT a FROM Account a WHERE a.student.studentID = :studentID", Account.class);
+	    query.setParameter("studentID", studentID);
+	    return query.getResultList();
+	}
+
 //TODO: Create Business Logic for operations Withdraw, Deposit & Transfer
 	public boolean withdraw(int accountId, float amount) {
 		return false;

@@ -6,7 +6,7 @@
     <label for="user">Student:</label>
     <select name="username" id="username" required>
         <c:forEach var="student" items="${students}">
-            <option value="${student.studentName}">${student.studentName}</option>
+            <option value="${student.studentName}" data-id="${student.studentID}">${student.studentName}</option>
         </c:forEach>
     </select>
     <button type="submit">Log In</button>

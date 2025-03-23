@@ -3,6 +3,7 @@ package com.bank.controller;
 import jakarta.ejb.EJB;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -65,7 +66,25 @@ public class Controller extends HttpServlet {
 		    }
 		    break;
 		case "addAccount":
-			//TODO: Implement Account Creation Handler
+			Account account = new Account();
+			account.setAccountAlias(request.getParameter("accountAlias"));
+			account.setAccountBalance(0.0f);
+			int studentID = 0;
+			Cookie[] cookies = request.getCookies();
+			if (cookies != null) {
+			    for (Cookie cookie : cookies) {
+			        if ("studentID".equals(cookie.getName())) {
+			            studentID = Integer.valueOf(cookie.getValue());
+			        }
+			    }
+			}
+			if(studentID != 0) {
+				account.setStudent(bankDAO.getStudentByID(1));
+				System.out.println("Student being created...");
+				bankDAO.createAccount(account);
+				response.sendRedirect("index.jsp");
+			} else {response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Student not logged in or recognized");}
+			
 			break;
 		case "transfer":
 			//TODO: Implement Transfer Handler
@@ -81,8 +100,10 @@ public class Controller extends HttpServlet {
 
 	private void processGETRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String action = request.getParameter("action");
-		List<Student> students = bankDAO.getAllStudents();
-			List<Account> accounts = bankDAO.getAllAccounts();
+		List<Student> students;
+		List<Account> accounts = bankDAO.getAllAccounts();
+		Student student;
+		Account account;
 		//Handle Actions here:
 		switch(action) {
 		/*
@@ -95,6 +116,7 @@ public class Controller extends HttpServlet {
 			break;
 
 		case "login":
+			students = bankDAO.getAllStudents();
 		    request.setAttribute("students", students);
 		    request.getRequestDispatcher("jsp/home/login.jsp").forward(request, response);			
 		    break;
@@ -102,6 +124,7 @@ public class Controller extends HttpServlet {
 // --------------- Students ---------------------
 		case "listStudents":
 			//do the listing of the students
+			students = bankDAO.getAllStudents();
             request.setAttribute("Students", students);
             request.getRequestDispatcher("jsp/students/ListStudents.jsp").forward(request, response);
             break;
@@ -110,12 +133,30 @@ public class Controller extends HttpServlet {
 			request.getRequestDispatcher("jsp/students/AddStudent.jsp").forward(request, response);
 			break;
 // --------------- Accounts ---------------------
-		case "listAccounts": // Read
-			request.setAttribute("Accounts", accounts);
+		case "listAccounts": // Lists all accounts if not logged in, otherwise lists student accounts
+			int studentID = 0;
+			Cookie[] cookies = request.getCookies();
+			if (cookies != null) {
+			    for (Cookie cookie : cookies) {
+			        if ("studentID".equals(cookie.getName())) {
+			            studentID = Integer.valueOf(cookie.getValue());
+			        }
+			    }
+			}
+
+			if (studentID != 0) {
+			    // Load only accounts for this student
+			    accounts = bankDAO.getAccountsByStudentID(studentID);
+			    request.setAttribute("Accounts", accounts);
+			} else {
+			    // Load all accounts
+			    accounts = bankDAO.getAllAccounts();
+			    request.setAttribute("Accounts", accounts);
+			}			request.setAttribute("Accounts", accounts);
 			request.getRequestDispatcher("jsp/accounts/ListAccounts.jsp").forward(request, response);
 			break;
 
-		case "addAccount": //Create
+		case "addAccount": // Web Page for creating a new Account
 			request.getRequestDispatcher("jsp/accounts/AddAccount.jsp").forward(request, response);
 			break;
 

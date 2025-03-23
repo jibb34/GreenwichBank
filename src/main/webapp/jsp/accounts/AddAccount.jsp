@@ -3,7 +3,7 @@
 <div class="form-container">
     <h2>Create New Account</h2>
 
-    <form action="Controller?action=createAccount" method="post" accept-charset="UTF-8">
+    <form action="Controller?action=addAccount" method="post" accept-charset="UTF-8">
 
         <div class="form-group">
             <label for="accountAlias">Account Alias:</label>

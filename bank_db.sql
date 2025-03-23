@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mysql_db:3306
--- Generation Time: Mar 23, 2025 at 01:25 PM
+-- Generation Time: Mar 23, 2025 at 03:34 PM
 -- Server version: 8.0.41
 -- PHP Version: 8.2.27
 
@@ -60,7 +60,8 @@ INSERT INTO `Students` (`studentID`, `studentName`, `studentAddress`, `studentEm
 (5, 'Test Test', '123 Test Road, London, UK', 'test@test.com', '123456789'),
 (6, 'John Doe', '221b Baker Street', 'johndoe@email.com', '07812 012232'),
 (7, 'tt', '123 Test Road, Test, TT', '12@12.12', '1234112321'),
-(8, 'Test2', '1234 Baker', 'test@test.test', '1234');
+(8, 'Test2', '1234 Baker', 'test@test.test', '1234'),
+(9, 'John Doe', '123 Bank Street', 'john@example.com', '07123 45678');
 
 --
 -- Indexes for dumped tables
@@ -70,6 +71,7 @@ INSERT INTO `Students` (`studentID`, `studentName`, `studentAddress`, `studentEm
 -- Indexes for table `Accounts`
 --
 ALTER TABLE `Accounts`
+  ADD PRIMARY KEY (`accountID`),
   ADD KEY `FK_Student_Account` (`studentID`);
 
 --
@@ -84,10 +86,16 @@ ALTER TABLE `Students`
 --
 
 --
+-- AUTO_INCREMENT for table `Accounts`
+--
+ALTER TABLE `Accounts`
+  MODIFY `accountID` int NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `Students`
 --
 ALTER TABLE `Students`
-  MODIFY `studentID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `studentID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Constraints for dumped tables

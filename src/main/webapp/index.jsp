@@ -19,7 +19,7 @@
                 <li><a href="#" data-action="listAccounts">Accounts</a></li>
                 <c:if test="${not empty cookie.user.value}">
                 <li><a href="#" data-action="transfer">Transfer</a></li>
-                <li><a href="#" data-action="withdraw">Withdraw</a></li>
+                <li><a href="#" data-action="depositOrWithdraw">Deposit/Withdraw</a></li>
                 </c:if>
             </ul>
         </nav>
@@ -29,7 +29,7 @@
         <!-- Dynamic content loads here -->
     </div> 
     <footer>
-        <p>&copy; 2025 Greenwich Bank Co. Your money safe with us.</p>
+        <p>&copy; 2025 Greenwich Bank Co. Your money is probably not safe with us.</p>
     </footer>
     <script src="${pageContext.request.contextPath}/js/main.js"></script>
 </body>

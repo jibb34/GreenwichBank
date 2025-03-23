@@ -52,7 +52,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
 function loadPage(action) {
     console.log("Loading:", action);
-
+	if (action === "listAccounts") {
+	        const user = getDecodedCookie("user");
+	        if (user) {
+	            action += `&username=${encodeURIComponent(user)}`;
+	        }
+	    }
     fetch('Controller?action=' + action)
         .then(response => {
             if (!response.ok) throw new Error("Fetch failed with status " + response.status);
@@ -94,10 +99,15 @@ function handleLoginForm() {
 
         const formData = new FormData(form);
         const username = formData.get("username");
+		const select = form.querySelector("#username");
+		const selectedOption = select.options[select.selectedIndex];
+
+		// Get the custom data-id attribute
+		const studentID = selectedOption.dataset.id;
 
         // Set cookie (expires in 1 day)
         document.cookie = `user=${encodeURIComponent(username)}; path=/; max-age=${60 * 60 * 24}`;
-
+		document.cookie = `studentID=${studentID}; path=/; max-age=${60 * 60 * 24}`;
         // Redirect to home
         loadPage("home");
 		window.location.reload(); 
@@ -123,4 +133,17 @@ function fetchContent(action) {
 function logout() {
     document.cookie = "user=; path=/; max-age=0";
     loadPage("home");
+	window.location.reload(); 
+}
+function getDecodedCookie(name) {
+    const cookies = document.cookie.split(';');
+
+    for (let cookie of cookies) {
+        const [key, value] = cookie.trim().split('=');
+        if (key === name) {
+            return decodeURIComponent(value);
+        }
+    }
+
+    return null;
 }

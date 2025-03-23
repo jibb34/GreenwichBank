@@ -34,7 +34,7 @@ public class StudentResource {
 	@Path("/{id}")
 	@Produces(MediaType.APPLICATION_JSON)
     public Response getStudentById(@PathParam("id") int id) {
-        Student student = bankDAO.findStudentByID(id);
+        Student student = bankDAO.getStudentByID(id);
         if (student == null) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
