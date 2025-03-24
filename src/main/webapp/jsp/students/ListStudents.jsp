@@ -33,6 +33,11 @@
                             Delete
                         </button>
                     </form>
+                    <form method="get" action="Controller" style="display:inline;">
+                    <input type="hidden" name="action" value="editStudent" />
+                    <input type="hidden" name="id" value="${student.studentID}" />
+                    <button type="submit" class="btn">Edit</button>
+                </form>
                 </td>
             </tr>
         </c:forEach>

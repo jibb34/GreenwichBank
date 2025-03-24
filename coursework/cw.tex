@@ -19,29 +19,29 @@
 
 \titleformat{\section}{\Large\bfseries}{\thesection}{1em}{}
 
-\title{COMP1610 Coursework Report \\ \large Programming Enterprise Components \\ \large Greenwich Bank Project}
-\author{Full Name \\ Student ID \\ Group Number}
+\title{COMP1610 Coursework Report \\ \large Programming Enterprise Components \\ \large Bank App Project}
+\author{Jack Jibb\\ 001408490 \\ Other Group Members: \\ Syed Ali Irtaza – 001414068 \\ Anastasiia Pyslar – 001412071 \\ Devanshi Pandya – 001426270 \\ Poorva Motaval – 001449334  }
 \date{Submission Date: 24 March 2025}
 
 \begin{document}
 
+
 \maketitle
+\newpage
 \tableofcontents
 \newpage
 
 \section{Design Documentation (Group Work)}
 
 \subsection{Entity-Relationship Diagram}
-Insert ERD exported from phpMyAdmin.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{erd_placeholder.png}
-	\caption{Entity-Relationship Diagram from MySQL/phpMyAdmin}
+	\includegraphics[width=0.5\textwidth]{./assets/ERD}
+	\caption{Entity Relationship Diagram for the Database}
 \end{figure}
 
 \subsection{Architecture Diagram}
-Illustrate the overall system architecture: WildFly server, MySQL DB, JSP frontend, Servlet Controller, REST services, DAO layer, etc.
 
 \begin{figure}[H]
 	\centering
@@ -59,17 +59,115 @@ Add one screenshot per implemented feature, e.g., student listing, account creat
 \end{figure}
 
 \subsection*{Feature List:}
+
+This section outlines the implemented features of the Banking Web Application, categorized by functionality. Each category includes a description and a self-assessment box (1 = Poor, 5 = Excellent) to reflect how well the features were implemented.
+
+\subsubsection{Authentication \& Session Management}
+
 \begin{itemize}
-	\item Student CRUD
-	\item Account CRUD
-	\item Transfers and Withdrawals
-	\item RESTful Service
-	\item Centralized Servlet
+	\item \textbf{Student Login:} Dropdown menu for selecting and logging in a student.
+	\item \textbf{Session Cookies:} Username and student ID stored in cookies.
+	\item \textbf{Logout:} Clears cookies and session state.
 \end{itemize}
 
+\begin{center}
+	\fbox{
+		\begin{minipage}{0.9\linewidth}
+			\textbf{Implementation Rating (1--5):} \underline{\hspace{1cm}}
+		\end{minipage}
+	}
+\end{center}
+
+\subsubsection{Student Management (CRUD)}
+
+\begin{itemize}
+	\item Create student with form (name, email, phone, address).
+	\item List all students (admin view).
+	\item RESTful API: Create, Read, Update, Delete student.
+	\item Cascade delete verified upon student deletion.
+\end{itemize}
+
+\begin{center}
+	\fbox{
+		\begin{minipage}{0.9\linewidth}
+			\textbf{Implementation Rating (1--5):} \underline{\hspace{1cm}}
+		\end{minipage}
+	}
+\end{center}
+
+\subsubsection{Account Management (CRUD)}
+
+\begin{itemize}
+	\item Create account (initial balance £0, linked via student ID from cookie).
+	\item Conditional listing (all accounts or student-specific).
+	\item Detailed view per account with deletion.
+	\item RESTful API: Create, Read, Update, Delete account.
+\end{itemize}
+
+\begin{center}
+	\fbox{
+		\begin{minipage}{0.9\linewidth}
+			\textbf{Implementation Rating (1--5):} \underline{\hspace{1cm}}
+		\end{minipage}
+	}
+\end{center}
+
+\subsubsection{Transactions (Deposit, Withdraw, Transfer)}
+
+\begin{itemize}
+	\item Deposit and withdraw via dynamic form.
+	\item Overdraft protection prevents excessive withdrawal.
+	\item Transfer funds between accounts with validation.
+	\item TransactionResult page displays updated balances and outcome messages.
+\end{itemize}
+
+\begin{center}
+	\fbox{
+		\begin{minipage}{0.9\linewidth}
+			\textbf{Implementation Rating (1--5):} \underline{\hspace{1cm}}
+		\end{minipage}
+	}
+\end{center}
+
+\subsubsection{Front-End Features}
+
+\begin{itemize}
+	\item Dynamic page loading using JavaScript and AJAX.
+	\item Button and form action binding via \texttt{main.js}.
+	\item Confirmation prompts for sensitive actions (e.g., delete).
+	\item Responsive feedback and clean UI structure.
+\end{itemize}
+
+\begin{center}
+	\fbox{
+		\begin{minipage}{0.9\linewidth}
+			\textbf{Implementation Rating (1--5):} \underline{\hspace{1cm}}
+		\end{minipage}
+	}
+\end{center}
+
+\subsubsection{RESTful API (JSON)}
+
+\begin{itemize}
+	\item JSON-based API for students and accounts.
+	\item Endpoints for CRUD operations.
+	\item Special endpoints for deposit, withdraw, and transfer.
+\end{itemize}
+
+\begin{center}
+	\fbox{
+		\begin{minipage}{0.9\linewidth}
+			\textbf{Implementation Rating (1--5):} \underline{\hspace{1cm}}
+		\end{minipage}
+	}
+\end{center}
+
+\vspace{1em}
+\noindent \textit{Note:} All JSON endpoints consume and produce data via \texttt{MediaType.APPLICATION\_JSON}.
+
+
 \section{Evaluation (Group Work)}
-\textit{Write approx. 100 words about the implementation experience.}
-Discuss issues faced, how you worked around them, and any improvements made.
+
 
 \section{Research (Individual)}
 \textit{Write approx. 200 words.}

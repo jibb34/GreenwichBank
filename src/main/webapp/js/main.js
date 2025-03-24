@@ -43,10 +43,20 @@ window.addEventListener('DOMContentLoaded', () => {
 		}
 
 		const action = el.dataset.action;
+		const id = el.dataset.id;
 		if (action) {
 			e.preventDefault();
 			console.log("Global click: loading action:", action);
 			loadPage(action);
+		}
+
+		if (action == "editStudent"){
+			if (id) {
+				loadPage(action + "&id=${id}")
+			} else {
+				alert("Student ID missing.");
+			}
+			
 		}
 	});
     // Load default content
@@ -76,7 +86,7 @@ function loadPage(action) {
                 console.error("Content container not found!");
             }
 			if (action === "viewAccount") {
-					attachViewAccountDeleteHandler();
+						attachViewAccountDeleteHandler();
 					}
 			// handle actions for login POST and button to login page
 			if (action === 'login') {

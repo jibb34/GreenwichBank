@@ -66,13 +66,43 @@ public class Controller extends HttpServlet {
 		    	request.getRequestDispatcher("Controller?action=listStudents").forward(request, response);
 		    }
 		    break;
+		case "updateStudent":
+		    try {
+		        int editStudentID = Integer.parseInt(request.getParameter("studentID"));
+		        Student editableStudent = bankDAO.getStudentByID(editStudentID);
+		        
+		        if (editableStudent == null) {
+		            request.setAttribute("error", "Student not found");
+		            request.getRequestDispatcher("jsp/students/EditStudent.jsp").forward(request, response);
+		            return;
+		        }
+		        
+		        editableStudent.setStudentName(request.getParameter("studentName"));
+		        editableStudent.setStudentEmail(request.getParameter("studentEmail"));
+		        editableStudent.setStudentAddress(request.getParameter("studentAddress"));
+		        editableStudent.setStudentPhone(request.getParameter("studentPhone"));
+		        
+		        if (bankDAO.updateStudent(editableStudent)) {
+		            request.setAttribute("success", "Student updated");
+		            response.setStatus(HttpServletResponse.SC_OK);
+					request.getRequestDispatcher(request.getContextPath());
+					response.sendRedirect(request.getContextPath());
+		        } else {
+		            request.setAttribute("error", "Failed to update student");
+		            request.getRequestDispatcher("jsp/students/EditStudent.jsp").forward(request, response);
+		        }
+		    } catch (Exception e) {
+		        request.setAttribute("error", "Error: " + e.getMessage());
+		        request.getRequestDispatcher("jsp/students/EditStudent.jsp").forward(request, response);
+		    }
+		    break;
 		case "deleteStudent":
 		    studentID = Integer.parseInt(request.getParameter("studentID"));
 		    int sessionStudentID = getStudentIdFromCookie(request);
 		    boolean deleted;
 		    if(sessionStudentID != studentID) {
 
-		    	deleted = bankDAO.deleteAccount(studentID) && bankDAO.deleteStudent(studentID);
+		    	deleted = bankDAO.deleteStudent(studentID);
 		    } else {
 		    	deleted = false;
 		    }
@@ -209,6 +239,23 @@ public class Controller extends HttpServlet {
 		case "addStudent":
 			request.getRequestDispatcher("jsp/students/AddStudent.jsp").forward(request, response);
 			break;
+			
+		case "editStudent":
+		    try {
+		        int studentId = Integer.parseInt(request.getParameter("id"));
+		        Student studentToEdit = bankDAO.getStudentByID(studentId);
+		        if (studentToEdit == null) {
+		            request.setAttribute("error", "Student not found");
+		            request.getRequestDispatcher("jsp/students/ListStudents.jsp").forward(request, response);
+		            return;
+		        }
+		        System.out.println("Forwarding to EditStudent.jsp"); 
+		        request.setAttribute("student", studentToEdit);
+		        request.getRequestDispatcher("jsp/students/EditStudent.jsp").forward(request, response);
+		    } catch (Exception e) {
+		        request.setAttribute("error", "Error loading student: " + e.getMessage());
+		        request.getRequestDispatcher("jsp/students/ListStudents.jsp").forward(request, response);
+		    }
 // --------------- Accounts ---------------------
 		case "listAccounts": // Lists all accounts if not logged in, otherwise lists student accounts
 			studentID = getStudentIdFromCookie(request);
