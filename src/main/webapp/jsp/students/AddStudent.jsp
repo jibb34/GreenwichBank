@@ -4,7 +4,7 @@
 <div class="form-container">
     <h2>Add New Student</h2>
 
-    <form action="Controller?action=addStudent" method="post" accept-charset="UTF-8">
+    <form action="Controller?action=addStudent" method="post">
         <div class="form-group">
             <label for="name">Full Name:</label>
             <input type="text" name="name" id="name" placeholder="John Doe" required>
@@ -28,4 +28,3 @@
         <button type="submit" class="submit-btn">Add Student</button>
     </form>
 </div>
-

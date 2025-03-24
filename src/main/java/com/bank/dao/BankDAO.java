@@ -100,7 +100,18 @@ public class BankDAO {
 			return null;
 		}
 	}
+	public Account getAccountByAlias(String alias) {
+	    try {
+	        TypedQuery<Account> query = em.createQuery(
+	            "SELECT a FROM Account a WHERE a.accountAlias = :alias", Account.class);
+	        query.setParameter("alias", alias);
+	        return query.getSingleResult();
+	    } catch (NoResultException e) {
+	        return null;
+	    }
+	}
 
+	
 	public List<Account> getAccountsByStudentID(int studentID) {
 		TypedQuery<Account> query = em.createQuery(
 	            "SELECT a FROM Account a WHERE a.student.studentID = :studentID", Account.class);
@@ -125,7 +136,19 @@ public class BankDAO {
 		em.flush();
 		return true;
  	}
-
+	public boolean deleteAllUserAccounts(int studentID) {
+	    try {
+	        int deletedCount = em.createQuery(
+	                "DELETE FROM Account a WHERE a.student.studentID = :studentId")
+	                .setParameter("studentId", studentID)
+	                .executeUpdate();
+	        return deletedCount > 0;
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	        return false;
+	    }
+	}
+	
 	public boolean withdraw(int accountId, float amount) {
 		Account account = em.find(Account.class, accountId);
 		if (account != null && account.getAccountBalance() >= amount){

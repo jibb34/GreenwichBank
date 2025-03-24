@@ -39,9 +39,6 @@
     </table>
 
     <div class="button-wrapper">
-        <form method="post" action="Controller">
-            <input type="hidden" name="action" value="addStudent" />
-            <button type="submit" class="action-btn">Add Student</button>
-        </form>
+            <button type="button" class="action-btn" data-action="addStudent">Add Student</button>
     </div>
 </div>

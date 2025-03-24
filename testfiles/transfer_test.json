@@ -1,0 +1,7 @@
+{
+  "fromAccountID": 101,
+  "toAccountID": 202,
+  "fromStudentID": 1,
+  "toStudentID": 2,
+  "amount": 150.00
+}

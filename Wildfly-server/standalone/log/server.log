@@ -7471,3 +7471,606 @@ Caused by: org.hibernate.query.SemanticException: Could not interpret path expre
 2025-03-24 12:50:32,080 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
 2025-03-24 12:50:32,086 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
 2025-03-24 12:50:32,098 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:51:16,177 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:51:16,196 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:51:16,206 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:51:16,220 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:51:16,224 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:51:16,226 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:51:29,674 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:51:29,681 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:51:29,684 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:51:29,692 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:51:29,703 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:51:29,707 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:51:29,708 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:51:29,711 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:51:31,108 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:51:31,117 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:51:31,120 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:51:31,129 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:51:31,141 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:51:31,144 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:51:31,146 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:51:31,152 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:51:32,407 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:51:32,416 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:51:32,421 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:51:32,431 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:51:32,444 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:51:32,450 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:51:32,452 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:51:32,456 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:51:33,306 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:51:33,313 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:51:33,317 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:51:33,330 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:51:33,335 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:51:33,337 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:51:34,321 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:51:34,325 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:51:34,328 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:51:34,974 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:51:34,979 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:51:34,983 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:51:34,991 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:52:30,190 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:52:30,235 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:52:30,241 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:52:30,249 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:52:30,253 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:52:30,255 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:52:30,294 INFO  [stdout] (default task-18) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:52:30,300 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:52:30,301 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:52:30,305 INFO  [stdout] (default task-18) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:52:30,307 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:52:30,308 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:52:31,023 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:52:31,031 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:52:31,034 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:52:31,040 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:52:31,054 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:52:31,071 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:52:31,073 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:52:31,076 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:52:31,907 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:52:31,915 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:52:31,919 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:52:31,933 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:52:31,938 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:52:31,940 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:52:32,772 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:52:32,778 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:52:32,783 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:52:32,792 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:52:35,192 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:52:35,195 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:52:35,198 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:52:36,720 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:52:36,725 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:52:36,731 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:52:36,739 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:52:36,749 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:52:36,754 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:52:36,755 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:52:36,759 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:54:40,748 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:54:40,772 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:54:40,778 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:54:40,800 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:54:40,804 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:54:40,805 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:55:48,479 INFO  [stdout] (default task-18) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:55:48,502 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:55:48,508 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:55:50,122 INFO  [stdout] (default task-18) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:55:50,130 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:55:50,136 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:55:50,706 INFO  [stdout] (default task-18) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:55:50,714 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:55:50,718 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:55:50,725 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:55:52,537 INFO  [stdout] (default task-18) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:55:52,548 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:55:52,553 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:55:52,568 INFO  [stdout] (default task-18) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:55:52,571 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:55:52,572 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:28,364 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:58:28,384 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:28,390 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:30,043 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:58:30,047 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:30,051 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:30,060 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:58:30,066 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:30,068 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:31,869 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:58:31,887 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:31,888 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:31,892 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:58:31,904 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:58:31,908 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:31,910 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:31,913 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:58:32,573 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:58:32,581 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:32,585 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:32,597 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:58:32,603 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:32,605 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:33,308 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:58:33,315 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:33,319 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:33,327 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:58:36,520 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:58:36,526 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:36,530 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:37,891 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:58:37,899 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:37,902 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:37,912 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:58:37,927 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:58:37,932 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:37,935 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:37,939 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:58:38,914 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:58:38,922 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:38,925 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:38,937 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:58:38,948 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:58:38,953 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:38,954 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:38,959 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:58:40,292 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:58:40,300 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:40,304 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:40,316 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:58:40,328 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:58:40,333 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:40,335 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:40,339 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:58:43,937 INFO  [stdout] (default task-16) Student being created...
+2025-03-24 12:58:43,970 INFO  [stdout] (default task-16) Hibernate: insert into Students (studentAddress,studentEmail,studentName,studentPhone) values (?,?,?,?)
+2025-03-24 12:58:44,027 WARN  [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] (default task-16) SQL Error: 1048, SQLState: 23000
+2025-03-24 12:58:44,027 ERROR [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] (default task-16) Column 'studentAddress' cannot be null
+2025-03-24 12:58:44,029 ERROR [stderr] (default task-16) org.hibernate.exception.ConstraintViolationException: could not execute statement [Column 'studentAddress' cannot be null] [insert into Students (studentAddress,studentEmail,studentName,studentPhone) values (?,?,?,?)]
+2025-03-24 12:58:44,029 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:62)
+2025-03-24 12:58:44,029 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+2025-03-24 12:58:44,029 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+2025-03-24 12:58:44,029 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+2025-03-24 12:58:44,029 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.id.insert.GetGeneratedKeysDelegate.performInsert(GetGeneratedKeysDelegate.java:107)
+2025-03-24 12:58:44,029 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.engine.jdbc.mutation.internal.MutationExecutorPostInsertSingleTable.execute(MutationExecutorPostInsertSingleTable.java:100)
+2025-03-24 12:58:44,029 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.persister.entity.mutation.InsertCoordinator.doStaticInserts(InsertCoordinator.java:175)
+2025-03-24 12:58:44,029 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.persister.entity.mutation.InsertCoordinator.coordinateInsert(InsertCoordinator.java:113)
+2025-03-24 12:58:44,029 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2868)
+2025-03-24 12:58:44,029 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:81)
+2025-03-24 12:58:44,029 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:670)
+2025-03-24 12:58:44,029 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:291)
+2025-03-24 12:58:44,029 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:272)
+2025-03-24 12:58:44,029 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:322)
+2025-03-24 12:58:44,029 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:386)
+2025-03-24 12:58:44,029 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:300)
+2025-03-24 12:58:44,029 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:219)
+2025-03-24 12:58:44,029 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:134)
+2025-03-24 12:58:44,029 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:175)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:93)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:54)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:754)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.internal.SessionImpl.persist(SessionImpl.java:738)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.jboss.as.jpa@33.0.2.Final//org.jboss.as.jpa.container.AbstractEntityManager.persist(AbstractEntityManager.java:566)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at deployment.Bank.war//com.bank.dao.BankDAO.createStudent(BankDAO.java:29)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.jboss.as.ee@33.0.2.Final//org.jboss.as.ee.component.ManagedReferenceMethodInterceptor.processInvocation(ManagedReferenceMethodInterceptor.java:35)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext$Invocation.proceed(InterceptorContext.java:509)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.jboss.as.weld.common@33.0.2.Final//org.jboss.as.weld.interceptors.Jsr299BindingsInterceptor.delegateInterception(Jsr299BindingsInterceptor.java:62)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.jboss.as.weld.common@33.0.2.Final//org.jboss.as.weld.interceptors.Jsr299BindingsInterceptor.doMethodInterception(Jsr299BindingsInterceptor.java:72)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.jboss.as.weld.common@33.0.2.Final//org.jboss.as.weld.interceptors.Jsr299BindingsInterceptor.processInvocation(Jsr299BindingsInterceptor.java:85)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.jboss.as.ee@33.0.2.Final//org.jboss.as.ee.component.interceptors.UserInterceptorFactory$1.processInvocation(UserInterceptorFactory.java:46)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.jboss.as.ejb3@33.0.2.Final//org.jboss.as.ejb3.component.invocationmetrics.ExecutionTimeInterceptor.processInvocation(ExecutionTimeInterceptor.java:32)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.jboss.as.jpa@33.0.2.Final//org.jboss.as.jpa.interceptor.SBInvocationInterceptor.processInvocation(SBInvocationInterceptor.java:30)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.jboss.as.ee@33.0.2.Final//org.jboss.as.ee.concurrent.ConcurrentContextInterceptor.processInvocation(ConcurrentContextInterceptor.java:28)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InitialInterceptor.processInvocation(InitialInterceptor.java:40)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.ChainedInterceptor.processInvocation(ChainedInterceptor.java:53)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.jboss.as.ee@33.0.2.Final//org.jboss.as.ee.component.interceptors.ComponentDispatcherInterceptor.processInvocation(ComponentDispatcherInterceptor.java:35)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.jboss.as.ejb3@33.0.2.Final//org.jboss.as.ejb3.component.pool.PooledInstanceInterceptor.processInvocation(PooledInstanceInterceptor.java:34)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.jboss.as.ejb3@33.0.2.Final//org.jboss.as.ejb3.component.interceptors.AdditionalSetupInterceptor.processInvocation(AdditionalSetupInterceptor.java:39)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.jboss.as.ejb3@33.0.2.Final//org.jboss.as.ejb3.tx.CMTTxInterceptor.invokeInOurTx(CMTTxInterceptor.java:237)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.jboss.as.ejb3@33.0.2.Final//org.jboss.as.ejb3.tx.CMTTxInterceptor.required(CMTTxInterceptor.java:373)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.jboss.as.ejb3@33.0.2.Final//org.jboss.as.ejb3.tx.CMTTxInterceptor.processInvocation(CMTTxInterceptor.java:143)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext$Invocation.proceed(InterceptorContext.java:509)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.jboss.weld.core@5.1.2.Final//org.jboss.weld.module.ejb.AbstractEJBRequestScopeActivationInterceptor.aroundInvoke(AbstractEJBRequestScopeActivationInterceptor.java:78)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.jboss.as.weld.common@33.0.2.Final//org.jboss.as.weld.ejb.EjbRequestScopeActivationInterceptor.processInvocation(EjbRequestScopeActivationInterceptor.java:72)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.jboss.as.ejb3@33.0.2.Final//org.jboss.as.ejb3.component.interceptors.CurrentInvocationContextInterceptor.processInvocation(CurrentInvocationContextInterceptor.java:24)
+2025-03-24 12:58:44,030 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.jboss.as.ejb3@33.0.2.Final//org.jboss.as.ejb3.component.invocationmetrics.WaitTimeInterceptor.processInvocation(WaitTimeInterceptor.java:30)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.jboss.as.ejb3@33.0.2.Final//org.jboss.as.ejb3.security.IdentityOutflowInterceptor.processInvocation(IdentityOutflowInterceptor.java:56)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.jboss.as.ejb3@33.0.2.Final//org.jboss.as.ejb3.security.SecurityDomainInterceptor.processInvocation(SecurityDomainInterceptor.java:27)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.jboss.as.ejb3@33.0.2.Final//org.jboss.as.ejb3.deployment.processors.StartupAwaitInterceptor.processInvocation(StartupAwaitInterceptor.java:27)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.jboss.as.ejb3@33.0.2.Final//org.jboss.as.ejb3.component.interceptors.ShutDownInterceptorFactory$1.processInvocation(ShutDownInterceptorFactory.java:47)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.jboss.as.ejb3@33.0.2.Final//org.jboss.as.ejb3.component.interceptors.LoggingInterceptor.processInvocation(LoggingInterceptor.java:50)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.jboss.as.ee@33.0.2.Final//org.jboss.as.ee.component.NamespaceContextInterceptor.processInvocation(NamespaceContextInterceptor.java:33)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.ContextClassLoaderInterceptor.processInvocation(ContextClassLoaderInterceptor.java:60)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.run(InterceptorContext.java:438)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.wildfly.security.elytron-base@2.5.2.Final//org.wildfly.security.manager.WildFlySecurityManager.doChecked(WildFlySecurityManager.java:633)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.AccessCheckingInterceptor.processInvocation(AccessCheckingInterceptor.java:57)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.ChainedInterceptor.processInvocation(ChainedInterceptor.java:53)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.jboss.as.ee@33.0.2.Final//org.jboss.as.ee.component.ViewService$View.invoke(ViewService.java:181)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.jboss.as.ee@33.0.2.Final//org.jboss.as.ee.component.ViewDescription$1.processInvocation(ViewDescription.java:174)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.jboss.as.ejb3@33.0.2.Final//org.jboss.as.ejb3.security.IdentityInterceptor.lambda$processInvocation$0(IdentityInterceptor.java:30)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.wildfly.security.elytron-base@2.5.2.Final//org.wildfly.security.auth.server.SecurityIdentity.runAsFunctionEx(SecurityIdentity.java:421)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.wildfly.security.elytron-base@2.5.2.Final//org.wildfly.security.auth.server.Scoped.runAsFunctionEx(Scoped.java:161)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.wildfly.security.elytron-base@2.5.2.Final//org.wildfly.security.auth.server.Scoped.runAsSupplierEx(Scoped.java:229)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.jboss.as.ejb3@33.0.2.Final//org.jboss.as.ejb3.security.IdentityInterceptor.processInvocation(IdentityInterceptor.java:30)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.ChainedInterceptor.processInvocation(ChainedInterceptor.java:53)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.jboss.as.ee@33.0.2.Final//org.jboss.as.ee.component.ProxyInvocationHandler.invoke(ProxyInvocationHandler.java:64)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at deployment.Bank.war//com.bank.dao.BankDAO$$$view8.createStudent(Unknown Source)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at deployment.Bank.war//com.bank.controller.Controller.processPOSTRequest(Controller.java:61)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at deployment.Bank.war//com.bank.controller.Controller.doPost(Controller.java:42)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at jakarta.servlet.api@6.0.0//jakarta.servlet.http.HttpServlet.service(HttpServlet.java:547)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at jakarta.servlet.api@6.0.0//jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at io.undertow.servlet@2.3.17.Final//io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at io.undertow.servlet@2.3.17.Final//io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at io.undertow.servlet@2.3.17.Final//io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at io.undertow.servlet@2.3.17.Final//io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.wildfly.security.elytron-web.undertow-server@4.1.0.Final//org.wildfly.elytron.web.undertow.server.ElytronRunAsHandler.lambda$handleRequest$1(ElytronRunAsHandler.java:68)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.wildfly.security.elytron-base@2.5.2.Final//org.wildfly.security.auth.server.FlexibleIdentityAssociation.runAsFunctionEx(FlexibleIdentityAssociation.java:103)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.wildfly.security.elytron-base@2.5.2.Final//org.wildfly.security.auth.server.Scoped.runAsFunctionEx(Scoped.java:161)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.wildfly.security.elytron-base@2.5.2.Final//org.wildfly.security.auth.server.Scoped.runAs(Scoped.java:73)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at org.wildfly.security.elytron-web.undertow-server@4.1.0.Final//org.wildfly.elytron.web.undertow.server.ElytronRunAsHandler.handleRequest(ElytronRunAsHandler.java:67)
+2025-03-24 12:58:44,031 ERROR [stderr] (default task-16) 	at io.undertow.servlet@2.3.17.Final//io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
+2025-03-24 12:58:44,032 ERROR [stderr] (default task-16) 	at io.undertow.servlet@2.3.17.Final//io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:117)
+2025-03-24 12:58:44,032 ERROR [stderr] (default task-16) 	at io.undertow.servlet@2.3.17.Final//io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+2025-03-24 12:58:44,032 ERROR [stderr] (default task-16) 	at io.undertow.core@2.3.17.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+2025-03-24 12:58:44,032 ERROR [stderr] (default task-16) 	at io.undertow.core@2.3.17.Final//io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+2025-03-24 12:58:44,032 ERROR [stderr] (default task-16) 	at io.undertow.servlet@2.3.17.Final//io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+2025-03-24 12:58:44,032 ERROR [stderr] (default task-16) 	at io.undertow.core@2.3.17.Final//io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+2025-03-24 12:58:44,032 ERROR [stderr] (default task-16) 	at org.wildfly.security.elytron-web.undertow-server-servlet@4.1.0.Final//org.wildfly.elytron.web.undertow.server.servlet.CleanUpHandler.handleRequest(CleanUpHandler.java:38)
+2025-03-24 12:58:44,032 ERROR [stderr] (default task-16) 	at io.undertow.core@2.3.17.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+2025-03-24 12:58:44,032 ERROR [stderr] (default task-16) 	at org.wildfly.extension.undertow@33.0.2.Final//org.wildfly.extension.undertow.security.jacc.JACCContextIdHandler.handleRequest(JACCContextIdHandler.java:44)
+2025-03-24 12:58:44,032 ERROR [stderr] (default task-16) 	at io.undertow.core@2.3.17.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+2025-03-24 12:58:44,032 ERROR [stderr] (default task-16) 	at org.wildfly.extension.undertow@33.0.2.Final//org.wildfly.extension.undertow.deployment.GlobalRequestControllerHandler.handleRequest(GlobalRequestControllerHandler.java:51)
+2025-03-24 12:58:44,032 ERROR [stderr] (default task-16) 	at io.undertow.servlet@2.3.17.Final//io.undertow.servlet.handlers.SendErrorPageHandler.handleRequest(SendErrorPageHandler.java:52)
+2025-03-24 12:58:44,032 ERROR [stderr] (default task-16) 	at io.undertow.core@2.3.17.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+2025-03-24 12:58:44,032 ERROR [stderr] (default task-16) 	at io.undertow.servlet@2.3.17.Final//io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:276)
+2025-03-24 12:58:44,032 ERROR [stderr] (default task-16) 	at io.undertow.servlet@2.3.17.Final//io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+2025-03-24 12:58:44,032 ERROR [stderr] (default task-16) 	at io.undertow.servlet@2.3.17.Final//io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:132)
+2025-03-24 12:58:44,032 ERROR [stderr] (default task-16) 	at io.undertow.servlet@2.3.17.Final//io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+2025-03-24 12:58:44,032 ERROR [stderr] (default task-16) 	at io.undertow.servlet@2.3.17.Final//io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+2025-03-24 12:58:44,032 ERROR [stderr] (default task-16) 	at org.wildfly.extension.undertow@33.0.2.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1421)
+2025-03-24 12:58:44,032 ERROR [stderr] (default task-16) 	at org.wildfly.extension.undertow@33.0.2.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1421)
+2025-03-24 12:58:44,032 ERROR [stderr] (default task-16) 	at org.wildfly.extension.undertow@33.0.2.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1421)
+2025-03-24 12:58:44,032 ERROR [stderr] (default task-16) 	at org.wildfly.extension.undertow@33.0.2.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1421)
+2025-03-24 12:58:44,032 ERROR [stderr] (default task-16) 	at org.wildfly.extension.undertow@33.0.2.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1421)
+2025-03-24 12:58:44,032 ERROR [stderr] (default task-16) 	at io.undertow.servlet@2.3.17.Final//io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:256)
+2025-03-24 12:58:44,032 ERROR [stderr] (default task-16) 	at io.undertow.servlet@2.3.17.Final//io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:101)
+2025-03-24 12:58:44,032 ERROR [stderr] (default task-16) 	at io.undertow.core@2.3.17.Final//io.undertow.server.Connectors.executeRootHandler(Connectors.java:395)
+2025-03-24 12:58:44,032 ERROR [stderr] (default task-16) 	at io.undertow.core@2.3.17.Final//io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:859)
+2025-03-24 12:58:44,032 ERROR [stderr] (default task-16) 	at org.jboss.threads@2.4.0.Final//org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+2025-03-24 12:58:44,032 ERROR [stderr] (default task-16) 	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:1990)
+2025-03-24 12:58:44,032 ERROR [stderr] (default task-16) 	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1486)
+2025-03-24 12:58:44,032 ERROR [stderr] (default task-16) 	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1377)
+2025-03-24 12:58:44,032 ERROR [stderr] (default task-16) 	at org.jboss.xnio@3.8.16.Final//org.xnio.XnioWorker$WorkerThreadFactory$1$1.run(XnioWorker.java:1282)
+2025-03-24 12:58:44,032 ERROR [stderr] (default task-16) 	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-03-24 12:58:44,033 ERROR [stderr] (default task-16) Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'studentAddress' cannot be null
+2025-03-24 12:58:44,033 ERROR [stderr] (default task-16) 	at com.mysql@8.0.28//com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+2025-03-24 12:58:44,033 ERROR [stderr] (default task-16) 	at com.mysql@8.0.28//com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+2025-03-24 12:58:44,033 ERROR [stderr] (default task-16) 	at com.mysql@8.0.28//com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+2025-03-24 12:58:44,033 ERROR [stderr] (default task-16) 	at com.mysql@8.0.28//com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1098)
+2025-03-24 12:58:44,033 ERROR [stderr] (default task-16) 	at com.mysql@8.0.28//com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1046)
+2025-03-24 12:58:44,033 ERROR [stderr] (default task-16) 	at com.mysql@8.0.28//com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1371)
+2025-03-24 12:58:44,033 ERROR [stderr] (default task-16) 	at com.mysql@8.0.28//com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1031)
+2025-03-24 12:58:44,033 ERROR [stderr] (default task-16) 	at org.jboss.ironjacamar.jdbcadapters@3.0.9.Final//org.jboss.jca.adapters.jdbc.WrappedPreparedStatement.executeUpdate(WrappedPreparedStatement.java:537)
+2025-03-24 12:58:44,033 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194)
+2025-03-24 12:58:44,033 ERROR [stderr] (default task-16) 	... 138 more
+2025-03-24 12:58:51,591 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:58:51,600 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:51,604 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:51,619 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:58:51,623 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:51,625 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:52,729 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:58:52,735 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:52,738 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:53,857 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:58:53,865 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:53,869 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:53,874 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:58:53,886 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:58:53,892 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:53,893 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:58:53,898 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:58:55,313 INFO  [stdout] (default task-16) Student being created...
+2025-03-24 12:58:55,315 INFO  [stdout] (default task-16) Hibernate: insert into Students (studentAddress,studentEmail,studentName,studentPhone) values (?,?,?,?)
+2025-03-24 12:58:55,321 WARN  [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] (default task-16) SQL Error: 1048, SQLState: 23000
+2025-03-24 12:58:55,322 ERROR [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] (default task-16) Column 'studentAddress' cannot be null
+2025-03-24 12:58:55,322 ERROR [stderr] (default task-16) org.hibernate.exception.ConstraintViolationException: could not execute statement [Column 'studentAddress' cannot be null] [insert into Students (studentAddress,studentEmail,studentName,studentPhone) values (?,?,?,?)]
+2025-03-24 12:58:55,323 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:62)
+2025-03-24 12:58:55,323 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+2025-03-24 12:58:55,323 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+2025-03-24 12:58:55,323 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+2025-03-24 12:58:55,323 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.id.insert.GetGeneratedKeysDelegate.performInsert(GetGeneratedKeysDelegate.java:107)
+2025-03-24 12:58:55,323 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.engine.jdbc.mutation.internal.MutationExecutorPostInsertSingleTable.execute(MutationExecutorPostInsertSingleTable.java:100)
+2025-03-24 12:58:55,323 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.persister.entity.mutation.InsertCoordinator.doStaticInserts(InsertCoordinator.java:175)
+2025-03-24 12:58:55,323 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.persister.entity.mutation.InsertCoordinator.coordinateInsert(InsertCoordinator.java:113)
+2025-03-24 12:58:55,323 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2868)
+2025-03-24 12:58:55,323 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:81)
+2025-03-24 12:58:55,323 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:670)
+2025-03-24 12:58:55,323 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:291)
+2025-03-24 12:58:55,323 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:272)
+2025-03-24 12:58:55,323 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:322)
+2025-03-24 12:58:55,323 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:386)
+2025-03-24 12:58:55,323 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:300)
+2025-03-24 12:58:55,323 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:219)
+2025-03-24 12:58:55,323 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:134)
+2025-03-24 12:58:55,324 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:175)
+2025-03-24 12:58:55,324 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:93)
+2025-03-24 12:58:55,324 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77)
+2025-03-24 12:58:55,324 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:54)
+2025-03-24 12:58:55,324 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+2025-03-24 12:58:55,324 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:754)
+2025-03-24 12:58:55,324 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.internal.SessionImpl.persist(SessionImpl.java:738)
+2025-03-24 12:58:55,324 ERROR [stderr] (default task-16) 	at org.jboss.as.jpa@33.0.2.Final//org.jboss.as.jpa.container.AbstractEntityManager.persist(AbstractEntityManager.java:566)
+2025-03-24 12:58:55,324 ERROR [stderr] (default task-16) 	at deployment.Bank.war//com.bank.dao.BankDAO.createStudent(BankDAO.java:29)
+2025-03-24 12:58:55,324 ERROR [stderr] (default task-16) 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+2025-03-24 12:58:55,324 ERROR [stderr] (default task-16) 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+2025-03-24 12:58:55,324 ERROR [stderr] (default task-16) 	at org.jboss.as.ee@33.0.2.Final//org.jboss.as.ee.component.ManagedReferenceMethodInterceptor.processInvocation(ManagedReferenceMethodInterceptor.java:35)
+2025-03-24 12:58:55,324 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:55,324 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext$Invocation.proceed(InterceptorContext.java:509)
+2025-03-24 12:58:55,325 ERROR [stderr] (default task-16) 	at org.jboss.as.weld.common@33.0.2.Final//org.jboss.as.weld.interceptors.Jsr299BindingsInterceptor.delegateInterception(Jsr299BindingsInterceptor.java:62)
+2025-03-24 12:58:55,325 ERROR [stderr] (default task-16) 	at org.jboss.as.weld.common@33.0.2.Final//org.jboss.as.weld.interceptors.Jsr299BindingsInterceptor.doMethodInterception(Jsr299BindingsInterceptor.java:72)
+2025-03-24 12:58:55,325 ERROR [stderr] (default task-16) 	at org.jboss.as.weld.common@33.0.2.Final//org.jboss.as.weld.interceptors.Jsr299BindingsInterceptor.processInvocation(Jsr299BindingsInterceptor.java:85)
+2025-03-24 12:58:55,325 ERROR [stderr] (default task-16) 	at org.jboss.as.ee@33.0.2.Final//org.jboss.as.ee.component.interceptors.UserInterceptorFactory$1.processInvocation(UserInterceptorFactory.java:46)
+2025-03-24 12:58:55,325 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:55,325 ERROR [stderr] (default task-16) 	at org.jboss.as.ejb3@33.0.2.Final//org.jboss.as.ejb3.component.invocationmetrics.ExecutionTimeInterceptor.processInvocation(ExecutionTimeInterceptor.java:32)
+2025-03-24 12:58:55,325 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:55,325 ERROR [stderr] (default task-16) 	at org.jboss.as.jpa@33.0.2.Final//org.jboss.as.jpa.interceptor.SBInvocationInterceptor.processInvocation(SBInvocationInterceptor.java:30)
+2025-03-24 12:58:55,325 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:55,325 ERROR [stderr] (default task-16) 	at org.jboss.as.ee@33.0.2.Final//org.jboss.as.ee.concurrent.ConcurrentContextInterceptor.processInvocation(ConcurrentContextInterceptor.java:28)
+2025-03-24 12:58:55,325 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:55,325 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InitialInterceptor.processInvocation(InitialInterceptor.java:40)
+2025-03-24 12:58:55,325 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:55,325 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.ChainedInterceptor.processInvocation(ChainedInterceptor.java:53)
+2025-03-24 12:58:55,326 ERROR [stderr] (default task-16) 	at org.jboss.as.ee@33.0.2.Final//org.jboss.as.ee.component.interceptors.ComponentDispatcherInterceptor.processInvocation(ComponentDispatcherInterceptor.java:35)
+2025-03-24 12:58:55,326 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:55,327 ERROR [stderr] (default task-16) 	at org.jboss.as.ejb3@33.0.2.Final//org.jboss.as.ejb3.component.pool.PooledInstanceInterceptor.processInvocation(PooledInstanceInterceptor.java:34)
+2025-03-24 12:58:55,328 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:55,328 ERROR [stderr] (default task-16) 	at org.jboss.as.ejb3@33.0.2.Final//org.jboss.as.ejb3.component.interceptors.AdditionalSetupInterceptor.processInvocation(AdditionalSetupInterceptor.java:39)
+2025-03-24 12:58:55,328 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:55,328 ERROR [stderr] (default task-16) 	at org.jboss.as.ejb3@33.0.2.Final//org.jboss.as.ejb3.tx.CMTTxInterceptor.invokeInOurTx(CMTTxInterceptor.java:237)
+2025-03-24 12:58:55,328 ERROR [stderr] (default task-16) 	at org.jboss.as.ejb3@33.0.2.Final//org.jboss.as.ejb3.tx.CMTTxInterceptor.required(CMTTxInterceptor.java:373)
+2025-03-24 12:58:55,328 ERROR [stderr] (default task-16) 	at org.jboss.as.ejb3@33.0.2.Final//org.jboss.as.ejb3.tx.CMTTxInterceptor.processInvocation(CMTTxInterceptor.java:143)
+2025-03-24 12:58:55,328 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:55,328 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext$Invocation.proceed(InterceptorContext.java:509)
+2025-03-24 12:58:55,328 ERROR [stderr] (default task-16) 	at org.jboss.weld.core@5.1.2.Final//org.jboss.weld.module.ejb.AbstractEJBRequestScopeActivationInterceptor.aroundInvoke(AbstractEJBRequestScopeActivationInterceptor.java:78)
+2025-03-24 12:58:55,328 ERROR [stderr] (default task-16) 	at org.jboss.as.weld.common@33.0.2.Final//org.jboss.as.weld.ejb.EjbRequestScopeActivationInterceptor.processInvocation(EjbRequestScopeActivationInterceptor.java:72)
+2025-03-24 12:58:55,329 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:55,329 ERROR [stderr] (default task-16) 	at org.jboss.as.ejb3@33.0.2.Final//org.jboss.as.ejb3.component.interceptors.CurrentInvocationContextInterceptor.processInvocation(CurrentInvocationContextInterceptor.java:24)
+2025-03-24 12:58:55,329 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:55,329 ERROR [stderr] (default task-16) 	at org.jboss.as.ejb3@33.0.2.Final//org.jboss.as.ejb3.component.invocationmetrics.WaitTimeInterceptor.processInvocation(WaitTimeInterceptor.java:30)
+2025-03-24 12:58:55,329 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:55,329 ERROR [stderr] (default task-16) 	at org.jboss.as.ejb3@33.0.2.Final//org.jboss.as.ejb3.security.IdentityOutflowInterceptor.processInvocation(IdentityOutflowInterceptor.java:56)
+2025-03-24 12:58:55,329 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:55,329 ERROR [stderr] (default task-16) 	at org.jboss.as.ejb3@33.0.2.Final//org.jboss.as.ejb3.security.SecurityDomainInterceptor.processInvocation(SecurityDomainInterceptor.java:27)
+2025-03-24 12:58:55,329 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:55,329 ERROR [stderr] (default task-16) 	at org.jboss.as.ejb3@33.0.2.Final//org.jboss.as.ejb3.deployment.processors.StartupAwaitInterceptor.processInvocation(StartupAwaitInterceptor.java:27)
+2025-03-24 12:58:55,329 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:55,329 ERROR [stderr] (default task-16) 	at org.jboss.as.ejb3@33.0.2.Final//org.jboss.as.ejb3.component.interceptors.ShutDownInterceptorFactory$1.processInvocation(ShutDownInterceptorFactory.java:47)
+2025-03-24 12:58:55,330 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:55,330 ERROR [stderr] (default task-16) 	at org.jboss.as.ejb3@33.0.2.Final//org.jboss.as.ejb3.component.interceptors.LoggingInterceptor.processInvocation(LoggingInterceptor.java:50)
+2025-03-24 12:58:55,330 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:55,330 ERROR [stderr] (default task-16) 	at org.jboss.as.ee@33.0.2.Final//org.jboss.as.ee.component.NamespaceContextInterceptor.processInvocation(NamespaceContextInterceptor.java:33)
+2025-03-24 12:58:55,330 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:55,330 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.ContextClassLoaderInterceptor.processInvocation(ContextClassLoaderInterceptor.java:60)
+2025-03-24 12:58:55,330 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:55,330 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.run(InterceptorContext.java:438)
+2025-03-24 12:58:55,330 ERROR [stderr] (default task-16) 	at org.wildfly.security.elytron-base@2.5.2.Final//org.wildfly.security.manager.WildFlySecurityManager.doChecked(WildFlySecurityManager.java:633)
+2025-03-24 12:58:55,330 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.AccessCheckingInterceptor.processInvocation(AccessCheckingInterceptor.java:57)
+2025-03-24 12:58:55,330 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:55,330 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.ChainedInterceptor.processInvocation(ChainedInterceptor.java:53)
+2025-03-24 12:58:55,330 ERROR [stderr] (default task-16) 	at org.jboss.as.ee@33.0.2.Final//org.jboss.as.ee.component.ViewService$View.invoke(ViewService.java:181)
+2025-03-24 12:58:55,330 ERROR [stderr] (default task-16) 	at org.jboss.as.ee@33.0.2.Final//org.jboss.as.ee.component.ViewDescription$1.processInvocation(ViewDescription.java:174)
+2025-03-24 12:58:55,330 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:55,331 ERROR [stderr] (default task-16) 	at org.jboss.as.ejb3@33.0.2.Final//org.jboss.as.ejb3.security.IdentityInterceptor.lambda$processInvocation$0(IdentityInterceptor.java:30)
+2025-03-24 12:58:55,331 ERROR [stderr] (default task-16) 	at org.wildfly.security.elytron-base@2.5.2.Final//org.wildfly.security.auth.server.SecurityIdentity.runAsFunctionEx(SecurityIdentity.java:421)
+2025-03-24 12:58:55,331 ERROR [stderr] (default task-16) 	at org.wildfly.security.elytron-base@2.5.2.Final//org.wildfly.security.auth.server.Scoped.runAsFunctionEx(Scoped.java:161)
+2025-03-24 12:58:55,331 ERROR [stderr] (default task-16) 	at org.wildfly.security.elytron-base@2.5.2.Final//org.wildfly.security.auth.server.Scoped.runAsSupplierEx(Scoped.java:229)
+2025-03-24 12:58:55,331 ERROR [stderr] (default task-16) 	at org.jboss.as.ejb3@33.0.2.Final//org.jboss.as.ejb3.security.IdentityInterceptor.processInvocation(IdentityInterceptor.java:30)
+2025-03-24 12:58:55,331 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+2025-03-24 12:58:55,331 ERROR [stderr] (default task-16) 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.ChainedInterceptor.processInvocation(ChainedInterceptor.java:53)
+2025-03-24 12:58:55,331 ERROR [stderr] (default task-16) 	at org.jboss.as.ee@33.0.2.Final//org.jboss.as.ee.component.ProxyInvocationHandler.invoke(ProxyInvocationHandler.java:64)
+2025-03-24 12:58:55,331 ERROR [stderr] (default task-16) 	at deployment.Bank.war//com.bank.dao.BankDAO$$$view8.createStudent(Unknown Source)
+2025-03-24 12:58:55,331 ERROR [stderr] (default task-16) 	at deployment.Bank.war//com.bank.controller.Controller.processPOSTRequest(Controller.java:61)
+2025-03-24 12:58:55,331 ERROR [stderr] (default task-16) 	at deployment.Bank.war//com.bank.controller.Controller.doPost(Controller.java:42)
+2025-03-24 12:58:55,331 ERROR [stderr] (default task-16) 	at jakarta.servlet.api@6.0.0//jakarta.servlet.http.HttpServlet.service(HttpServlet.java:547)
+2025-03-24 12:58:55,331 ERROR [stderr] (default task-16) 	at jakarta.servlet.api@6.0.0//jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614)
+2025-03-24 12:58:55,331 ERROR [stderr] (default task-16) 	at io.undertow.servlet@2.3.17.Final//io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+2025-03-24 12:58:55,331 ERROR [stderr] (default task-16) 	at io.undertow.servlet@2.3.17.Final//io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+2025-03-24 12:58:55,331 ERROR [stderr] (default task-16) 	at io.undertow.servlet@2.3.17.Final//io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+2025-03-24 12:58:55,331 ERROR [stderr] (default task-16) 	at io.undertow.servlet@2.3.17.Final//io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+2025-03-24 12:58:55,331 ERROR [stderr] (default task-16) 	at org.wildfly.security.elytron-web.undertow-server@4.1.0.Final//org.wildfly.elytron.web.undertow.server.ElytronRunAsHandler.lambda$handleRequest$1(ElytronRunAsHandler.java:68)
+2025-03-24 12:58:55,332 ERROR [stderr] (default task-16) 	at org.wildfly.security.elytron-base@2.5.2.Final//org.wildfly.security.auth.server.FlexibleIdentityAssociation.runAsFunctionEx(FlexibleIdentityAssociation.java:103)
+2025-03-24 12:58:55,332 ERROR [stderr] (default task-16) 	at org.wildfly.security.elytron-base@2.5.2.Final//org.wildfly.security.auth.server.Scoped.runAsFunctionEx(Scoped.java:161)
+2025-03-24 12:58:55,332 ERROR [stderr] (default task-16) 	at org.wildfly.security.elytron-base@2.5.2.Final//org.wildfly.security.auth.server.Scoped.runAs(Scoped.java:73)
+2025-03-24 12:58:55,332 ERROR [stderr] (default task-16) 	at org.wildfly.security.elytron-web.undertow-server@4.1.0.Final//org.wildfly.elytron.web.undertow.server.ElytronRunAsHandler.handleRequest(ElytronRunAsHandler.java:67)
+2025-03-24 12:58:55,332 ERROR [stderr] (default task-16) 	at io.undertow.servlet@2.3.17.Final//io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
+2025-03-24 12:58:55,332 ERROR [stderr] (default task-16) 	at io.undertow.servlet@2.3.17.Final//io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:117)
+2025-03-24 12:58:55,332 ERROR [stderr] (default task-16) 	at io.undertow.servlet@2.3.17.Final//io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+2025-03-24 12:58:55,332 ERROR [stderr] (default task-16) 	at io.undertow.core@2.3.17.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+2025-03-24 12:58:55,332 ERROR [stderr] (default task-16) 	at io.undertow.core@2.3.17.Final//io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+2025-03-24 12:58:55,332 ERROR [stderr] (default task-16) 	at io.undertow.servlet@2.3.17.Final//io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+2025-03-24 12:58:55,332 ERROR [stderr] (default task-16) 	at io.undertow.core@2.3.17.Final//io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+2025-03-24 12:58:55,332 ERROR [stderr] (default task-16) 	at org.wildfly.security.elytron-web.undertow-server-servlet@4.1.0.Final//org.wildfly.elytron.web.undertow.server.servlet.CleanUpHandler.handleRequest(CleanUpHandler.java:38)
+2025-03-24 12:58:55,332 ERROR [stderr] (default task-16) 	at io.undertow.core@2.3.17.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+2025-03-24 12:58:55,332 ERROR [stderr] (default task-16) 	at org.wildfly.extension.undertow@33.0.2.Final//org.wildfly.extension.undertow.security.jacc.JACCContextIdHandler.handleRequest(JACCContextIdHandler.java:44)
+2025-03-24 12:58:55,332 ERROR [stderr] (default task-16) 	at io.undertow.core@2.3.17.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+2025-03-24 12:58:55,333 ERROR [stderr] (default task-16) 	at org.wildfly.extension.undertow@33.0.2.Final//org.wildfly.extension.undertow.deployment.GlobalRequestControllerHandler.handleRequest(GlobalRequestControllerHandler.java:51)
+2025-03-24 12:58:55,333 ERROR [stderr] (default task-16) 	at io.undertow.servlet@2.3.17.Final//io.undertow.servlet.handlers.SendErrorPageHandler.handleRequest(SendErrorPageHandler.java:52)
+2025-03-24 12:58:55,333 ERROR [stderr] (default task-16) 	at io.undertow.core@2.3.17.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+2025-03-24 12:58:55,333 ERROR [stderr] (default task-16) 	at io.undertow.servlet@2.3.17.Final//io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:276)
+2025-03-24 12:58:55,333 ERROR [stderr] (default task-16) 	at io.undertow.servlet@2.3.17.Final//io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+2025-03-24 12:58:55,333 ERROR [stderr] (default task-16) 	at io.undertow.servlet@2.3.17.Final//io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:132)
+2025-03-24 12:58:55,333 ERROR [stderr] (default task-16) 	at io.undertow.servlet@2.3.17.Final//io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+2025-03-24 12:58:55,333 ERROR [stderr] (default task-16) 	at io.undertow.servlet@2.3.17.Final//io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+2025-03-24 12:58:55,333 ERROR [stderr] (default task-16) 	at org.wildfly.extension.undertow@33.0.2.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1421)
+2025-03-24 12:58:55,333 ERROR [stderr] (default task-16) 	at org.wildfly.extension.undertow@33.0.2.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1421)
+2025-03-24 12:58:55,333 ERROR [stderr] (default task-16) 	at org.wildfly.extension.undertow@33.0.2.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1421)
+2025-03-24 12:58:55,333 ERROR [stderr] (default task-16) 	at org.wildfly.extension.undertow@33.0.2.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1421)
+2025-03-24 12:58:55,333 ERROR [stderr] (default task-16) 	at org.wildfly.extension.undertow@33.0.2.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1421)
+2025-03-24 12:58:55,333 ERROR [stderr] (default task-16) 	at io.undertow.servlet@2.3.17.Final//io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:256)
+2025-03-24 12:58:55,333 ERROR [stderr] (default task-16) 	at io.undertow.servlet@2.3.17.Final//io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:101)
+2025-03-24 12:58:55,333 ERROR [stderr] (default task-16) 	at io.undertow.core@2.3.17.Final//io.undertow.server.Connectors.executeRootHandler(Connectors.java:395)
+2025-03-24 12:58:55,333 ERROR [stderr] (default task-16) 	at io.undertow.core@2.3.17.Final//io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:859)
+2025-03-24 12:58:55,334 ERROR [stderr] (default task-16) 	at org.jboss.threads@2.4.0.Final//org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+2025-03-24 12:58:55,334 ERROR [stderr] (default task-16) 	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:1990)
+2025-03-24 12:58:55,334 ERROR [stderr] (default task-16) 	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1486)
+2025-03-24 12:58:55,334 ERROR [stderr] (default task-16) 	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1377)
+2025-03-24 12:58:55,334 ERROR [stderr] (default task-16) 	at org.jboss.xnio@3.8.16.Final//org.xnio.XnioWorker$WorkerThreadFactory$1$1.run(XnioWorker.java:1282)
+2025-03-24 12:58:55,334 ERROR [stderr] (default task-16) 	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-03-24 12:58:55,334 ERROR [stderr] (default task-16) Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'studentAddress' cannot be null
+2025-03-24 12:58:55,334 ERROR [stderr] (default task-16) 	at com.mysql@8.0.28//com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+2025-03-24 12:58:55,334 ERROR [stderr] (default task-16) 	at com.mysql@8.0.28//com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+2025-03-24 12:58:55,334 ERROR [stderr] (default task-16) 	at com.mysql@8.0.28//com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+2025-03-24 12:58:55,334 ERROR [stderr] (default task-16) 	at com.mysql@8.0.28//com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1098)
+2025-03-24 12:58:55,334 ERROR [stderr] (default task-16) 	at com.mysql@8.0.28//com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1046)
+2025-03-24 12:58:55,334 ERROR [stderr] (default task-16) 	at com.mysql@8.0.28//com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1371)
+2025-03-24 12:58:55,334 ERROR [stderr] (default task-16) 	at com.mysql@8.0.28//com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1031)
+2025-03-24 12:58:55,334 ERROR [stderr] (default task-16) 	at org.jboss.ironjacamar.jdbcadapters@3.0.9.Final//org.jboss.jca.adapters.jdbc.WrappedPreparedStatement.executeUpdate(WrappedPreparedStatement.java:537)
+2025-03-24 12:58:55,334 ERROR [stderr] (default task-16) 	at org.hibernate@6.4.4.Final//org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194)
+2025-03-24 12:58:55,334 ERROR [stderr] (default task-16) 	... 138 more
+2025-03-24 13:04:26,361 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 13:04:26,388 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:04:26,392 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:04:26,407 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 13:04:26,410 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:04:26,412 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:04:29,639 INFO  [stdout] (default task-18) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 13:04:29,643 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:04:29,645 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:04:31,731 INFO  [stdout] (default task-18) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 13:04:31,739 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:04:31,742 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:04:31,751 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 13:04:31,830 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 13:04:31,837 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:04:31,841 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:04:31,845 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 13:04:33,950 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 13:04:33,957 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:04:33,961 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:07:53,256 INFO  [stdout] (default task-16) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 13:07:53,273 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:07:53,278 INFO  [stdout] (default task-16) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:07:56,556 INFO  [stdout] (default task-18) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 13:07:56,562 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:07:56,569 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:07:57,628 INFO  [stdout] (default task-18) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 13:07:57,634 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:07:57,638 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:07:57,647 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 13:07:58,694 INFO  [stdout] (default task-18) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 13:07:58,707 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:07:58,715 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:00,324 INFO  [stdout] (default task-18) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 13:08:00,328 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:00,330 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:00,336 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 13:08:00,391 INFO  [stdout] (default task-18) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 13:08:00,395 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:00,396 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:00,399 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 13:08:02,076 INFO  [stdout] (default task-18) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 13:08:02,084 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:02,087 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:14,514 INFO  [stdout] (default task-18) Student being created...
+2025-03-24 13:08:14,537 INFO  [stdout] (default task-18) Hibernate: insert into Students (studentAddress,studentEmail,studentName,studentPhone) values (?,?,?,?)
+2025-03-24 13:08:14,670 INFO  [stdout] (default task-18) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 13:08:14,677 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:14,681 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:23,329 INFO  [stdout] (default task-18) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 13:08:23,336 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:23,340 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:23,351 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 13:08:23,367 INFO  [stdout] (default task-18) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 13:08:23,371 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:23,373 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:23,377 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 13:08:30,744 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:30,760 INFO  [stdout] (default task-18) Hibernate: delete from Students where studentID=?
+2025-03-24 13:08:30,766 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:30,770 INFO  [stdout] (default task-18) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 13:08:30,834 INFO  [stdout] (default task-18) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 13:08:30,844 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:30,846 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:37,594 INFO  [stdout] (default task-18) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 13:08:37,601 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:37,605 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:37,613 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 13:08:37,630 INFO  [stdout] (default task-18) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 13:08:37,636 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:37,639 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:37,644 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 13:08:41,396 INFO  [stdout] (default task-18) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 13:08:41,407 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:41,410 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:44,093 INFO  [stdout] (default task-18) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 13:08:44,099 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:44,103 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:44,109 INFO  [stdout] (default task-18) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 13:08:44,116 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:44,125 INFO  [stdout] (default task-18) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 13:08:44,129 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:44,130 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:44,135 INFO  [stdout] (default task-18) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 13:08:44,140 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:45,761 INFO  [stdout] (default task-18) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 13:08:45,770 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:45,774 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:45,783 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 13:08:45,796 INFO  [stdout] (default task-18) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 13:08:45,802 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:45,804 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:45,809 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 13:08:47,080 INFO  [stdout] (default task-18) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 13:08:47,086 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:47,089 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:47,105 INFO  [stdout] (default task-18) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 13:08:47,109 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:47,111 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:51,695 INFO  [stdout] (default task-18) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 13:08:51,700 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:51,709 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:53,395 INFO  [stdout] (default task-18) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 13:08:53,400 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:53,402 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:53,409 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 13:08:53,425 INFO  [stdout] (default task-18) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 13:08:53,430 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:53,431 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 13:08:53,436 INFO  [stdout] (default task-18) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0

@@ -71,7 +71,8 @@ public class Controller extends HttpServlet {
 		    int sessionStudentID = getStudentIdFromCookie(request);
 		    boolean deleted;
 		    if(sessionStudentID != studentID) {
-		    	deleted = bankDAO.deleteStudent(studentID);
+
+		    	deleted = bankDAO.deleteAccount(studentID) && bankDAO.deleteStudent(studentID);
 		    } else {
 		    	deleted = false;
 		    }

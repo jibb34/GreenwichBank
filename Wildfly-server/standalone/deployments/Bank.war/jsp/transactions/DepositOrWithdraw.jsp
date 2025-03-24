@@ -9,17 +9,14 @@
     <form action="Controller?action=depositOrWithdraw" method="post">
         <input type="hidden" name="action" value="processTransaction">
 
-        <label>
-			<input type="radio" name="transaction" value="deposit" checked/> Deposit 
-		</label>
-
-		<label>
-			<input type="radio" name="transaction" value="withdraw" /> Withdraw 
-		</label>
+        <div class="form-group radio-group">
+            <label><input type="radio" name="transaction" value="deposit" checked> Deposit</label>
+            <label><input type="radio" name="transaction" value="withdraw"> Withdraw</label>
+        </div>
 
         <div class="form-group">
             <label for="accountID">Select Account:</label>
-            <select name="accountID" id="accountID" required>
+            <select name="accountID" id="accountID" class="styled-select" required>
                 <c:forEach var="account" items="${Accounts}">
                     <option value="${account.accountID}">
                         ${account.accountAlias} (ID: ${account.accountID}, £<fmt:formatNumber value="${account.accountBalance}" type="number" minFractionDigits="2" maxFractionDigits="2" />)
