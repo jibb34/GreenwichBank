@@ -3,7 +3,7 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
 <div class="form-container">
-    <h2> hello jee Transfer Funds</h2>
+    <h2>Transfer Funds</h2>
     <form action="Controller" method="post">
         <input type="hidden" name="action" value="transfer">
 

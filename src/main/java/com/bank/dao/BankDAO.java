@@ -137,6 +137,23 @@ public class BankDAO {
 		}
 		return false; // Insufficient Funds
 	}
+	
+	
+//	testing delete all user accounts
+	public boolean deleteAllUserAccounts(int studentID) {
+	    try {
+	        int deletedCount = em.createQuery(
+	                "DELETE FROM Account a WHERE a.student.studentID = :studentId")
+	                .setParameter("studentId", studentID)
+	                .executeUpdate();
+	        return deletedCount > 0;
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	        return false;
+	    }
+	}
+	
+	
 	public boolean deposit(int accountId, float amount) {
 		// Literally the same as withdraw except + amount
 		Account account = em.find(Account.class, accountId);
@@ -166,5 +183,17 @@ public class BankDAO {
 		    } else {
 		        return false; // Insufficient funds
 		    }
+	}
+	
+	// testing get account by alias
+	public Account getAccountByAlias(String alias) {
+	    try {
+	        TypedQuery<Account> query = em.createQuery(
+	            "SELECT a FROM Account a WHERE a.accountAlias = :alias", Account.class);
+	        query.setParameter("alias", alias);
+	        return query.getSingleResult();
+	    } catch (NoResultException e) {
+	        return null;
+	    }
 	}
 }

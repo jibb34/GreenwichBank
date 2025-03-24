@@ -32,8 +32,9 @@
                         <td>£<fmt:formatNumber value="${account.accountBalance}" type="number" minFractionDigits="2" maxFractionDigits="2" />
                         </td>
                         <td>
-                            <button class="view-account-btn" data-id="${account.accountID}">View</button>
-                        </td>
+    						<button class="view-account-btn" data-id="${account.accountID}">View</button>
+   							<button class="delete-account-btn" data-id="${account.accountID}">Delete</button>
+						</td>
                     </tr>
                 </c:forEach>
             </table>
@@ -71,6 +72,12 @@
         if (e.target.classList.contains("view-account-btn")) {
             const id = e.target.dataset.id;
             loadPage(`viewAccount&id=${id}`);
+        }
+    });
+    document.addEventListener("click", (e) => {
+        if (e.target.classList.contains("delete-account-btn")) {
+            const id = e.target.dataset.id;
+            loadPage(`deleteAccountConfirmation&id=${id}`);
         }
     });
 </script>

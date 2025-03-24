@@ -94,6 +94,21 @@ public class Controller extends HttpServlet {
 		        response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Missing account ID.");
 		    }
 			break;
+			
+
+		// testing delete all student accounts
+		case "deleteAllStudentAccounts":
+		    studentID = getStudentIdFromCookie(request);
+		    if (studentID != 0) {
+		        List<Account> accounts = bankDAO.getAccountsByStudentID(studentID);
+		        for (Account acc : accounts) {
+		            bankDAO.deleteAccount(acc.getAccountID());
+		        }
+		        response.sendRedirect("Controller?action=listAccounts");
+		    } else {
+		        response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Student not logged in.");
+		    }
+		    break;
 		case "transfer":
 	        int fromAccountID = Integer.parseInt(request.getParameter("fromAccountID"));
 	        int toAccountID = Integer.parseInt(request.getParameter("toAccountID"));
@@ -212,13 +227,28 @@ public class Controller extends HttpServlet {
 
 		case "deleteAccount": // Delete
 			break;
-			
+		case "deleteStudent":
+		    int studentId = Integer.parseInt(request.getParameter("id"));
+		    if (bankDAO.deleteStudent(studentId)) {
+		        response.sendRedirect("Controller?action=listStudents");
+		    } else {
+		        request.setAttribute("error", "Failed to delete student");
+		        request.getRequestDispatcher("Controller?action=listStudents").forward(request, response);
+		    }
+		    break;	
 		case "viewAccount":
 		    int id = Integer.parseInt(request.getParameter("id"));
 		    account = bankDAO.getAccountByID(id);
 		    request.setAttribute("account", account);
 		    request.getRequestDispatcher("jsp/accounts/ViewAccount.jsp").forward(request, response);
 		    break;
+		 // testing get account delete confirmation
+		case "deleteAccountConfirmation":
+			int accountId = Integer.parseInt(request.getParameter("id"));
+			account = bankDAO.getAccountByID(accountId);
+			request.setAttribute("account", account);
+			request.getRequestDispatcher("jsp/accounts/DeleteAccountConfirmation.jsp").forward(request, response);
+		 	break;
 
 // --------------- Business Logic ---------------------
 
