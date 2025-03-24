@@ -5,12 +5,14 @@
 \usepackage{hyperref}
 \usepackage{listings}
 \usepackage{color}
+\usepackage{xcolor}
 \usepackage{amsmath}
 \usepackage{fancyhdr}
 \usepackage{caption}
 \usepackage{enumitem}
 \usepackage{titlesec}
-
+\usepackage{fontspec}
+\setmonofont{DejaVu Sans Mono}
 \pagestyle{fancy}
 \fancyhf{}
 \rhead{COMP1610 Coursework}
@@ -168,9 +170,108 @@ List of all endpoints and the function they serve:
 	\item \textbf{DELETE /api/students/{student\_id}}:\texttt{deleteStudent(student\_id)}
 \end{itemize}
 \paragraph{Account API}
-\newpage
-\section{Evaluation (Group Work)}
+\begin{itemize}
+	\item \textbf{GET /api/accounts}: \textit{getAllAccounts()}
+	\item \textbf{GET /api/accounts/{account\_id}}: \textit{getAccount(account\_id)}
+	\item \textbf{GET /api/accounts/studentID/{student\_id}}: \textit{getAccountsByStudentID(student\_id)}
+	\item \textbf{POST /api/accounts}: \textit{createAccount(Account entity)}
+	\item \textbf{PUT /api/accounts}: \textit{updateAccount(Account entity)}
+	\item \textbf{DELETE /api/accounts/{account\_id}}: \textit{deleteAccount(account\_id)}
+	\item \textbf{PUT /api/accounts/{accounts\_id}}: \textit{modifyAccountBalance(account\_id)}
+	\item \textbf{PUT /api/accounts/transfer}: \textit{transferFunds(CustomJSON payload)}
+\end{itemize}
+\section{Command Line Application}
+\subsection{Overview}
+This is a Command-Line Interface (CLI) application for managing and their associated bank accounts. User can:
+\begin{itemize}
+	\item Create/read/update/delete (CRUD) student and account data
+	\item Make deposits, withdrawals, and transfers between accounts (legacy or new featured way)
+	\item View all students and accounts in the system
+\end{itemize}
+\subsection{Project Structure}
+The application uses a modular structure and communicates with external packages that handle requests to create, update, fetch, or delete records via exposed REST API.
+\begin{verbatim}
+├── Entities/
+│   └── Contains data structures like Student, Account, Transaction
+├── Requests/
+│   ├── AccountBased/
+│       └── Business logic, transactions, transfers
+│   ├── Delete/
+│       └── Delete operations
+│   ├── Get/
+│       └── Fetch data
+│   ├── Post/
+│       └── Create data
+│   └── Update/
+│       └── Update data
+└── main.go
+    └── CLI entry point
+\end{verbatim}
 
+\subsection{How To Run}
+In CLI directory, run \texttt{go run main.go}
+\subsection{Features and Command Menu}
+\begin{enumerate}
+	\item[0] Exit
+	      \subitem Exits the CLI application
+	\item Create Student
+	      \subitem Prompts the user for student name, address, email, and phone, creates a new student.
+	      \subitem Route: POST api/students
+	\item Create an Account for a Student
+	      \subitem Prompts for student ID, alias, and balance, create a new account for the mentioned student.
+	      \subitem Route: POST api/accounts/studentID/{student\_ID}
+	\item Get a Student by ID
+	      \subitem Prompts for student ID, return the student who has specified ID
+	      \subitem Route: GET api/students/{student\_ID}
+	\item Get an Account by ID
+	      \subitem Prompts for account ID, return the account that has specified ID
+	      \subitem Route: GET api/accounts/{account\_ID}
+	\item Get Accounts by Student ID
+	      \subitem Retrieves all accounts linked to a given student ID
+	      \subitem Route: GET api/accounts/studentID/{student\_ID}
+	\item Update a Student
+	      \subitem Allows updating name, address, email, and phone of a student
+	      \subitem Route: PUT api/students
+	\item Update an Account
+	      \subitem Updates account alias, balance and associated student ID
+	      \subitem Route: PUT api/accounts
+	\item Delete Student
+	      \subitem Removes Student by ID
+	      \subitem Route: DELETE api/students/{student\_ID}
+	\item Delete an Account
+	      \subitem Removes Account by ID
+	      \subitem Route: DELETE api/accounts/{account\_ID}
+	\item Process a Transaction (Deposit/Withdrawal)
+	      \subitem Prompts for account ID, operation type (deposit or withdraw), and amount. Offers two processing methods:
+	      \begin{itemize}
+		      \item  Process Transaction: (basic/legacy)
+		      \item  ProcessTransactionFeature: (During a withdrawal, the system checks if the selected account has sufficient funds. If not, it withdraws the available balance and continues with the student's other accounts to cover the remaining amount)
+	      \end{itemize}
+	      \subitem Route: PUT api/accounts/{account\_ID}
+	\item Process a Transfer between Two Accounts
+	      \subitem Transfers funds from one account to another. Requires both account IDs and student IDs. Offerstwo processing methods:
+	      \begin{itemize}
+		      \item  ProcessTransfer: (basic/legacy)
+		      \item  ProcessTransferFeature: (During a transfer, the system checks if the selected account has sufficient funds. If not, it withdraws the available balance and continues with the student's other accounts to cover the remaining amount)
+	      \end{itemize}
+	      \subitem Route: PUT api/accounts/transfer
+	\item Show all Students
+	      \subitem Displays all student records in JSON format
+	      \subitem Route: GET api/students
+	\item Show All Accounts
+	      \subitem Displays all account records in JSON format
+	      \subitem Route: GET api/accounts
+
+\end{enumerate}
+
+\newpage
+\section{Evaluation}
+Everyone participated well in the development of the project, with a good distribution of workload.
+We had some issues getting off the ground due to configuration difficulties with the server files. This was remedied
+by working together to comb through each issue until we had synchronized environments.
+Everything started slowly since we were all busy with other coursework, but we managed to get together in time to finish the project successfully.
+We helped each other to uncover our weaknesses and improve them, for example, Anastasiia helped Jack with API functions and testing the functionality of the REST functions.
+We also had an issue with Wildfly server, where the debug mode would cause the server to hang on Persistence Manager loading indefinitely.
 
 \section{Research (Individual)}
 
