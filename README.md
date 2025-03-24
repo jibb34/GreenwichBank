@@ -41,3 +41,20 @@ ERD and Class diagram
 Screenshots of application
 Evaluation of product development lifecycle
 
+API Handles:
+
+Accounts:
+ - getAllAccounts: GET /api/accounts
+ - getAccount: GET /api/accounts/{account_id}
+ - getAccountsByStudentID: GET /api/accounts/studentID/{student_id}
+ - createAccount: POST /api/accounts
+ - updateAccount: PUT /api/accounts/{account_id}
+ - deleteAccount: DELETE /api/accounts/{account_id}
+ - modifyAccountBalance (aka withdraw and deposit): PUT /api/accounts/{account_id}
+ - transferFunds: PUT /api/accounts/transfer
+
+Students:
+ - getAllStudents: GET /api/students
+ - deleteStudent: DELETE /api/students/{student_id}
+ - getStudentById: GET /api/students/{student_id}
+ - updateStudent: PUT /api/students/{student_id}

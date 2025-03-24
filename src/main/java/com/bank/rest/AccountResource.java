@@ -24,22 +24,24 @@ public class AccountResource {
         List<Account> accounts = bankDAO.getAllAccounts();
         return Response.ok(accounts).build();
     }
-
+//GET /api/accounts/{account_id}
 	@GET
     @Path("/{accountID}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAccount(@PathParam("accountID") int accountID) {
+
         Account account = bankDAO.getAccountByID(accountID);
         return Response.ok(account).build();
     }
+	//GET /api/accounts/studentID/{student_id}
 	@GET
-    @Path("/studentID/{accountID}")
+    @Path("/studentID/{studentID}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getAccountsByStudentID(@PathParam("accountID") int accountID, @PathParam("studentID") int studentID) {
+    public Response getAccountsByStudentID(@PathParam("studentID") int studentID) {
         List<Account> accounts = bankDAO.getAccountsByStudentID(studentID);
         return Response.ok(accounts).build();
     }
-
+	//POST /api/accounts
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
@@ -52,6 +54,7 @@ public class AccountResource {
         bankDAO.createAccount(account);
         return Response.status(Response.Status.CREATED).entity(account).build();
     }
+	//PUT /api/accounts/{account_id}
     @PUT
     @Path("/{id}")
     @Consumes(MediaType.APPLICATION_JSON)
@@ -64,6 +67,7 @@ public class AccountResource {
     	return Response.status(Response.Status.BAD_REQUEST).entity("Account ID" + id + " not found.").build();
 
     }
+    // DELETE /api/accounts/{account_id}
     @DELETE
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -74,7 +78,7 @@ public class AccountResource {
         }
         return Response.noContent().build();
     }
-    
+   // PUT /api/accounts/{account_ID}
     @PUT
     @Path("/{id}")
     @Consumes(MediaType.APPLICATION_JSON)
@@ -106,6 +110,7 @@ public class AccountResource {
         }
     }
     
+    // PUT /api/accounts/transfer
     @PUT
     @Path("/transfer")
     @Consumes(MediaType.APPLICATION_JSON)
@@ -116,8 +121,23 @@ public class AccountResource {
         	//get the data first
             int fromAccountID = Integer.parseInt(payload.get("fromAccountID").toString());
             int toAccountID = Integer.parseInt(payload.get("toAccountID").toString());
+            int fromStudentID = Integer.parseInt(payload.get("fromStudentID").toString());
+            int toStudentID = Integer.parseInt(payload.get("toStudentID").toString());
+            Account toAccount = bankDAO.getAccountByID(toAccountID);
+            Account fromAccount = bankDAO.getAccountByID(fromAccountID);
+            
             float amount = Float.parseFloat(payload.get("amount").toString());
+            if (fromAccount.getStudent().getStudentID() != fromStudentID) {
+                return Response.status(Response.Status.UNAUTHORIZED)
+                               .entity(Map.of("error", "From account does not belong to the specified student"))
+                               .build();
+            }
 
+            if (toAccount.getStudent().getStudentID() != toStudentID) {
+                return Response.status(Response.Status.UNAUTHORIZED)
+                               .entity(Map.of("error", "To account does not belong to the specified student"))
+                               .build();
+            }
             //do the transfer
             if (bankDAO.transfer(fromAccountID, toAccountID, amount)) {
                 return Response.ok(Map.of("message", "Transfer successful")).build();
