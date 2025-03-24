@@ -73,7 +73,7 @@ public class BankDAO {
 		em.flush();
 		// Verify deleted properly
 		Student deleted = em.find(Student.class, studentId);
-		TypedQuery<Account> query = em.createQuery("SELECT a FROM Account WHERE a.student.studentID = :id", Account.class);
+		TypedQuery<Account> query = em.createQuery("SELECT a FROM Account a WHERE a.student.studentID = :id", Account.class);
 		query.setParameter("id", studentId);
 		List<Account> remainingAccounts = query.getResultList();
 		return deleted == null && (remainingAccounts == null || remainingAccounts.isEmpty());

@@ -45,6 +45,7 @@ public class Controller extends HttpServlet {
 	private void processPOSTRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String action = request.getParameter("action");
 		float amount;
+		int studentID;
 		switch(action)	{
 		/*
 		 * Handle POST Requests here:
@@ -65,16 +66,28 @@ public class Controller extends HttpServlet {
 		    	request.getRequestDispatcher("Controller?action=listStudents").forward(request, response);
 		    }
 		    break;
+		case "deleteStudent":
+		    studentID = Integer.parseInt(request.getParameter("studentID"));
+		    boolean deleted = bankDAO.deleteStudent(studentID);
+
+		    if (deleted) {
+		        // Redirect to home after deletion
+		        response.sendRedirect(request.getContextPath());
+		    } else {
+		        request.setAttribute("error", "Could not delete student.");
+		        request.getRequestDispatcher("/jsp/StudentList.jsp").forward(request, response);
+		    }
+		    break;
 		case "addAccount":
 			Account account = new Account();
 			account.setAccountAlias(request.getParameter("accountAlias"));
 			account.setAccountBalance(0.0f);
-			int studentID = getStudentIdFromCookie(request);
+			studentID = getStudentIdFromCookie(request);
 			if(studentID != 0) {
 				account.setStudent(bankDAO.getStudentByID(studentID));
 				System.out.println("Account being created...");
 				bankDAO.createAccount(account);
-				response.sendRedirect("/Bank/");
+				response.sendRedirect(request.getContextPath());
 			} else {response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Student not logged in or recognized");}
 			
 			break;
@@ -85,8 +98,8 @@ public class Controller extends HttpServlet {
 				Account accToDelete = bankDAO.getAccountByID(accountID);
 				if (accToDelete != null && bankDAO.deleteAccount(accountID)) {
 					response.setStatus(HttpServletResponse.SC_OK);
-					request.getRequestDispatcher("/Bank/");
-					response.sendRedirect("/Bank/");
+					request.getRequestDispatcher(request.getContextPath());
+					response.sendRedirect(request.getContextPath());
 					} else { 
 		            response.sendError(HttpServletResponse.SC_NOT_FOUND, "Account not found or deleted.");
 				}

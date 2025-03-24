@@ -11,15 +11,22 @@
         <th>Email</th>
         <th>Telephone</th>
       </tr>
-      <c:forEach var="student" items="${Students}">
-        <tr>
-          <td>${student.studentID}</td>
-          <td>${student.studentName}</td>
-          <td>${student.studentAddress}</td>
-          <td>${student.studentEmail}</td>
-          <td>${student.studentPhone}</td>
-        </tr>
-      </c:forEach>
+<c:forEach var="student" items="${Students}">
+  <tr>
+    <td>${student.studentID}</td>
+    <td>${student.studentName}</td>
+    <td>${student.studentAddress}</td>
+    <td>${student.studentEmail}</td>
+    <td>${student.studentPhone}</td>
+    <td>
+      <form method="post" action="Controller">
+        <input type="hidden" name="action" value="deleteStudent" />
+        <input type="hidden" name="studentID" value="${student.studentID}" />
+        <button type="submit" class="action-btn delete">Delete</button>
+      </form>
+    </td>
+  </tr>
+</c:forEach>
     </table>
     <c:if test="${not empty error}">
 		<p style="color: red;">${error}</p>
