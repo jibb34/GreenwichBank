@@ -5,6 +5,7 @@ import jakarta.ws.rs.*;
 import com.bank.model.Account;
 import com.bank.model.Student;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -30,8 +31,15 @@ public class AccountResource {
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAccount(@PathParam("accountID") int accountID) {
         Account account = bankDAO.getAccountByID(accountID);
+        
         if (account != null) {
-        return Response.ok(account).build();
+        	// Generate custom map that includes studentID, since account only stores student entity
+			Map<String, Object> customReturn = new HashMap<>();
+			customReturn.put("accountID", account.getAccountID());
+			customReturn.put("studentID", account.getStudent().getStudentID());
+			customReturn.put("accountAlias", account.getAccountAlias());
+			customReturn.put("accountBalance", account.getAccountBalance());
+			return Response.ok(customReturn).build();
         } else {
             return Response.status(Response.Status.BAD_REQUEST).entity("Account not found").build();
         }
@@ -130,17 +138,8 @@ public class AccountResource {
             Account fromAccount = bankDAO.getAccountByID(fromAccountID);
             
             float amount = Float.parseFloat(payload.get("amount").toString());
-            if (fromAccount.getStudent().getStudentID() != fromStudentID) {
-                return Response.status(Response.Status.UNAUTHORIZED)
-                               .entity(Map.of("error", "From account does not belong to the specified student"))
-                               .build();
-            }
+            System.out.println(fromAccount.getStudent().getStudentID());
 
-            if (toAccount.getStudent().getStudentID() != toStudentID) {
-                return Response.status(Response.Status.UNAUTHORIZED)
-                               .entity(Map.of("error", "To account does not belong to the specified student"))
-                               .build();
-            }
             //do the transfer
             if (bankDAO.transfer(fromAccountID, toAccountID, amount)) {
                 return Response.ok(Map.of("message", "Transfer successful")).build();

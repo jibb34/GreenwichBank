@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024/Homebrew)  (format=lualatex 2024.3.10)  24 MAR 2025 18:25
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024/Homebrew)  (format=lualatex 2024.3.10)  24 MAR 2025 21:26
  restricted system commands enabled.
 **cw.tex
 (./cw.tex
@@ -587,27 +587,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [2]
-<./assets/ERD.png, id=132, 617.30624pt x 258.9675pt>
+<./assets/ERD.png, id=142, 617.30624pt x 258.9675pt>
 File: ./assets/ERD.png Graphic file (type png)
 <use ./assets/ERD.png>
 Package luatex.def Info: ./assets/ERD.png  used on input line 40.
 (luatex.def)             Requested size: 226.48395pt x 95.01035pt.
+<./assets/archdiagram2.png, id=143, 1073.00874pt x 1273.75874pt>
+File: ./assets/archdiagram2.png Graphic file (type png)
+<use ./assets/archdiagram2.png>
+Package luatex.def Info: ./assets/archdiagram2.png  used on input line 48.
+(luatex.def)             Requested size: 271.7835pt x 322.61763pt.
 
-
-LaTeX Warning: File `architecture_placeholder.png' not found on input line 48.
-
-
-! Package luatex.def Error: File `architecture_placeholder.png' not found: usin
-g draft setting.
-
-See the luatex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.48 ...th=\textwidth]{architecture_placeholder.png}
-                                                  
-? R
-OK, entering \nonstopmode...
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -616,23 +606,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[3<./assets/ERD.png>]
-
-LaTeX Warning: File `create_account.png' not found on input line 57.
-
-
-! Package luatex.def Error: File `create_account.png' not found: using draft se
-tting.
-
-See the luatex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.57 ...ics[width=0.8\textwidth]{create_account.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+[3<./assets/ERD.png><./assets/archdiagram2.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -642,9 +616,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [4]
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 65.
+Overfull \hbox (7.48273pt too wide) in paragraph at lines 158--159
+\TU/lmr/m/it/12 *Note: \TU/lmr/m/n/12 All JSON end-points con-sume and pro-duce data via \TU/lmtt/m/n/12 MediaType.APPLICATION_JSON\TU/lmr/m/n/12 . 
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -655,11 +629,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [5]
-Overfull \hbox (1.48273pt too wide) in paragraph at lines 166--167
-\TU/lmr/m/it/12 Note: \TU/lmr/m/n/12 All JSON end-points con-sume and pro-duce 
-data via \TU/lmtt/m/n/12 MediaType.APPLICATION_JSON\TU/lmr/m/n/12 . 
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -669,14 +638,198 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [6]
-Overfull \hbox (2.60068pt too wide) in paragraph at lines 197--198
+<./assets/login.png, id=199, 1021.8175pt x 366.36874pt>
+File: ./assets/login.png Graphic file (type png)
+<use ./assets/login.png>
+Package luatex.def Info: ./assets/login.png  used on input line 188.
+(luatex.def)             Requested size: 317.07614pt x 113.68494pt.
+<./assets/chooseLogin.png, id=200, 1043.9pt x 456.70625pt>
+File: ./assets/chooseLogin.png Graphic file (type png)
+<use ./assets/chooseLogin.png>
+Package luatex.def Info: ./assets/chooseLogin.png  used on input line 194.
+(luatex.def)             Requested size: 317.07614pt x 138.72028pt.
+<./assets/loggedIn.png, id=201, 826.08624pt x 290.08376pt>
+File: ./assets/loggedIn.png Graphic file (type png)
+<use ./assets/loggedIn.png>
+Package luatex.def Info: ./assets/loggedIn.png  used on input line 200.
+(luatex.def)             Requested size: 317.07614pt x 111.34396pt.
+<./assets/cookie.png, id=202, 956.57375pt x 596.2275pt>
+File: ./assets/cookie.png Graphic file (type png)
+<use ./assets/cookie.png>
+Package luatex.def Info: ./assets/cookie.png  used on input line 206.
+(luatex.def)             Requested size: 317.07614pt x 197.62906pt.
+<./assets/nocookie.png, id=203, 693.59125pt x 593.21625pt>
+File: ./assets/nocookie.png Graphic file (type png)
+<use ./assets/nocookie.png>
+Package luatex.def Info: ./assets/nocookie.png  used on input line 212.
+(luatex.def)             Requested size: 317.07614pt x 271.19916pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[7<./assets/login.png><./assets/chooseLogin.png><./assets/loggedIn.png>]
+<./assets/listAllStudents.png, id=213, 1012.78375pt x 757.83125pt>
+File: ./assets/listAllStudents.png Graphic file (type png)
+<use ./assets/listAllStudents.png>
+Package luatex.def Info: ./assets/listAllStudents.png  used on input line 218.
+(luatex.def)             Requested size: 317.07614pt x 237.24953pt.
+<./assets/addStudentButton.png, id=214, 823.075pt x 282.05376pt>
+File: ./assets/addStudentButton.png Graphic file (type png)
+<use ./assets/addStudentButton.png>
+Package luatex.def Info: ./assets/addStudentButton.png  used on input line 224.
+
+(luatex.def)             Requested size: 317.07614pt x 108.65773pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[8<./assets/cookie.png><./assets/nocookie.png>]
+<./assets/addNewStudent.png, id=221, 1053.9375pt x 713.66624pt>
+File: ./assets/addNewStudent.png Graphic file (type png)
+<use ./assets/addNewStudent.png>
+Package luatex.def Info: ./assets/addNewStudent.png  used on input line 230.
+(luatex.def)             Requested size: 317.07614pt x 214.71133pt.
+<./assets/editStudent.png, id=222, 1115.16624pt x 587.19376pt>
+File: ./assets/editStudent.png Graphic file (type png)
+<use ./assets/editStudent.png>
+Package luatex.def Info: ./assets/editStudent.png  used on input line 236.
+(luatex.def)             Requested size: 317.07614pt x 166.95772pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[9<./assets/listAllStudents.png><./assets/addStudentButton.png>]
+<./assets/listAllAccounts.png, id=229, 1000.73875pt x 703.62875pt>
+File: ./assets/listAllAccounts.png Graphic file (type png)
+<use ./assets/listAllAccounts.png>
+Package luatex.def Info: ./assets/listAllAccounts.png  used on input line 242.
+(luatex.def)             Requested size: 317.07614pt x 222.9326pt.
+<./assets/createAccount.png, id=230, 996.72375pt x 340.27126pt>
+File: ./assets/createAccount.png Graphic file (type png)
+<use ./assets/createAccount.png>
+Package luatex.def Info: ./assets/createAccount.png  used on input line 248.
+(luatex.def)             Requested size: 317.07614pt x 108.2452pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[10<./assets/addNewStudent.png><./assets/editStudent.png>]
+<./assets/accountDetails.png, id=237, 1083.04625pt x 439.6425pt>
+File: ./assets/accountDetails.png Graphic file (type png)
+<use ./assets/accountDetails.png>
+Package luatex.def Info: ./assets/accountDetails.png  used on input line 254.
+(luatex.def)             Requested size: 317.07614pt x 128.70728pt.
+<./assets/listOfUserAccounts.png, id=238, 945.5325pt x 670.505pt>
+File: ./assets/listOfUserAccounts.png Graphic file (type png)
+<use ./assets/listOfUserAccounts.png>
+Package luatex.def Info: ./assets/listOfUserAccounts.png  used on input line 26
+0.
+(luatex.def)             Requested size: 317.07614pt x 224.8482pt.
+<./assets/transfer.png, id=239, 979.66pt x 512.91624pt>
+File: ./assets/transfer.png Graphic file (type png)
+<use ./assets/transfer.png>
+Package luatex.def Info: ./assets/transfer.png  used on input line 266.
+(luatex.def)             Requested size: 317.07614pt x 166.00706pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[11<./assets/listAllAccounts.png><./assets/createAccount.png><./assets/accountDe
+tails.png>]
+<./assets/transferSuccess.png, id=248, 1084.05pt x 424.58624pt>
+File: ./assets/transferSuccess.png Graphic file (type png)
+<use ./assets/transferSuccess.png>
+Package luatex.def Info: ./assets/transferSuccess.png  used on input line 272.
+(luatex.def)             Requested size: 317.07614pt x 124.18935pt.
+<./assets/accountTransaction.png, id=249, 938.50626pt x 508.90125pt>
+File: ./assets/accountTransaction.png Graphic file (type png)
+<use ./assets/accountTransaction.png>
+Package luatex.def Info: ./assets/accountTransaction.png  used on input line 27
+8.
+(luatex.def)             Requested size: 317.07614pt x 171.92924pt.
+<./assets/depositSuccessful.png, id=250, 1033.8625pt x 249.93375pt>
+File: ./assets/depositSuccessful.png Graphic file (type png)
+<use ./assets/depositSuccessful.png>
+Package luatex.def Info: ./assets/depositSuccessful.png  used on input line 284
+.
+(luatex.def)             Requested size: 317.07614pt x 76.6511pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[12<./assets/listOfUserAccounts.png><./assets/transfer.png><./assets/transferSuc
+cess.png>]
+<./assets/transactionFailed.png, id=258, 1045.9075pt x 288.07625pt>
+File: ./assets/transactionFailed.png Graphic file (type png)
+<use ./assets/transactionFailed.png>
+Package luatex.def Info: ./assets/transactionFailed.png  used on input line 290
+.
+(luatex.def)             Requested size: 317.07614pt x 87.33344pt.
+<./assets/CLImenu.png, id=259, 1125.20375pt x 445.665pt>
+File: ./assets/CLImenu.png Graphic file (type png)
+<use ./assets/CLImenu.png>
+Package luatex.def Info: ./assets/CLImenu.png  used on input line 297.
+(luatex.def)             Requested size: 317.07614pt x 125.58098pt.
+<./assets/CLIcreateAccount.png, id=260, 899.36pt x 157.58875pt>
+File: ./assets/CLIcreateAccount.png Graphic file (type png)
+<use ./assets/CLIcreateAccount.png>
+Package luatex.def Info: ./assets/CLIcreateAccount.png  used on input line 303.
+
+(luatex.def)             Requested size: 317.07614pt x 55.55844pt.
+<./assets/cliAllAccounts.png, id=261, 409.53pt x 620.3175pt>
+File: ./assets/cliAllAccounts.png Graphic file (type png)
+<use ./assets/cliAllAccounts.png>
+Package luatex.def Info: ./assets/cliAllAccounts.png  used on input line 309.
+(luatex.def)             Requested size: 181.18439pt x 274.44553pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[13<./assets/accountTransaction.png><./assets/depositSuccessful.png><./assets/tr
+ansactionFailed.png><./assets/CLImenu.png>]
+Overfull \hbox (2.60068pt too wide) in paragraph at lines 321--322
 []\TU/lmr/bx/n/12 EJB, JPA, JSF, JAX-RS: \TU/lmr/m/n/12 En-abled via \TU/lmtt/m
 /n/12 org.jboss.as.ejb3\TU/lmr/m/n/12 , \TU/lmtt/m/n/12 org.jboss.as.jpa\TU/lmr
 /m/n/12 ,
  []
 
 
-Overfull \hbox (76.53862pt too wide) in paragraph at lines 204--205
+Overfull \hbox (76.53862pt too wide) in paragraph at lines 327--328
 []\TU/lmtt/m/n/12 BankDS\TU/lmr/m/n/12 : MySQL data-source con-nect-ing to \TU/
 lmtt/m/n/12 bank_db \TU/lmr/m/n/12 us-ing driver \TU/lmtt/m/n/12 com.mysql.cj.jd
 bc.Driver\TU/lmr/m/n/12 . 
@@ -690,7 +843,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[7]
+[14<./assets/CLIcreateAccount.png><./assets/cliAllAccounts.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -699,7 +852,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[8]
+[15
+Missing character: There is no │ (U+2502) in font [lmmono12-regular]:!
+Missing character: There is no ├ (U+251C) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+Missing character: There is no │ (U+2502) in font [lmmono12-regular]:!
+Missing character: There is no ├ (U+251C) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+Missing character: There is no │ (U+2502) in font [lmmono12-regular]:!
+Missing character: There is no ├ (U+251C) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+Missing character: There is no │ (U+2502) in font [lmmono12-regular]:!
+Missing character: There is no ├ (U+251C) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -708,23 +878,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[9
-Missing character: There is no │ (U+2502) in font [lmmono12-regular]:!
-Missing character: There is no ├ (U+251C) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-Missing character: There is no │ (U+2502) in font [lmmono12-regular]:!
-Missing character: There is no ├ (U+251C) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-Missing character: There is no │ (U+2502) in font [lmmono12-regular]:!
-Missing character: There is no ├ (U+251C) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-Missing character: There is no │ (U+2502) in font [lmmono12-regular]:!
-Missing character: There is no ├ (U+251C) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+[16
 Missing character: There is no │ (U+2502) in font [lmmono12-regular]:!
 Missing character: There is no ├ (U+251C) in font [lmmono12-regular]:!
 Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
@@ -773,19 +927,19 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `cw.out' has not changed.
-(rerunfilecheck)             Checksum: F9A47A0A6A9C5C96BB3B584CEE771364;4516.
+(rerunfilecheck)             Checksum: D5CD566A5647261FA109B9B5F39DA782;4824.
 )
 
 Here is how much of LuaTeX's memory you used:
- 13629 strings out of 476447
+ 13915 strings out of 476447
  125027,1977958 words of node,token memory allocated
  509 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 6 attribute, 57 glue_spec,
  6 attribute_list, 1 write nodes
-   avail lists: 2:731,3:323,4:116,5:313,6:83,7:3776,8:26,9:484,10:6,11:257
- 35464 multiletter control sequences out of 65536+600000
+   avail lists: 1:1,2:750,3:335,4:106,5:330,6:89,7:4464,8:26,9:513,10:13,11:331
+ 35659 multiletter control sequences out of 65536+600000
  47 fonts using 3262551 bytes
- 72i,11n,75p,321b,464s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,11n,75p,316b,566s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dist/fonts/opentype/public/
 lm/lmroman12-italic.otf></opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dis
 t/fonts/opentype/public/lm/lmmono12-regular.otf></opt/homebrew/Cellar/texlive/20
@@ -793,10 +947,10 @@ t/fonts/opentype/public/lm/lmmono12-regular.otf></opt/homebrew/Cellar/texlive/20
 brew/Cellar/texlive/20240312_3/share/texmf-dist/fonts/opentype/public/lm/lmroman
 12-regular.otf></opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dist/fonts/o
 pentype/public/lm/lmroman17-regular.otf>
-Output written on cw.pdf (9 pages, 96015 bytes).
+Output written on cw.pdf (16 pages, 2106867 bytes).
 
-PDF statistics: 209 PDF objects out of 1000 (max. 8388607)
- 179 compressed objects within 2 object streams
- 36 named destinations out of 1000 (max. 131072)
- 185 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 332 PDF objects out of 1000 (max. 8388607)
+ 250 compressed objects within 3 object streams
+ 65 named destinations out of 1000 (max. 131072)
+ 201 words of extra memory for PDF output out of 10000 (max. 100000000)
 

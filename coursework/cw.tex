@@ -45,29 +45,22 @@
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{architecture_placeholder.png}
+	\includegraphics[width=0.6\textwidth]{./assets/archdiagram2}
 	\caption{Overall Application Architecture}
 \end{figure}
 
-\section{Screenshots (Group Work)}
-Add one screenshot per implemented feature, e.g., student listing, account creation, transfers.
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{create_account.png}
-	\caption{Create Account Feature}
-\end{figure}
-
+\newpage
 \subsection*{Feature List:}
 
 This section outlines the implemented features of the Banking Web Application, categorized by functionality. Each category includes a description and a self-assessment box (1 = Poor, 5 = Excellent) to reflect how well the features were implemented.
-
+See figures in appendix that items reference.
 \subsubsection{Authentication \& Session Management}
 
 \begin{itemize}
-	\item \textbf{Student Login:} Dropdown menu for selecting and logging in a student.
-	\item \textbf{Session Cookies:} Username and student ID stored in cookies.
-	\item \textbf{Logout:} Clears cookies and session state.
+	\item \textbf{Student Login:} Dropdown menu for selecting and logging in a student \autoref{fig:chooseLogin}.
+	\item \textbf{Session Cookies:} Username and student ID stored in cookies \autoref{fig:cookie}.
+	\item \textbf{Logout:} Clears cookies and session state \autoref{fig:nocookie}.
 \end{itemize}
 
 \begin{center}
@@ -81,16 +74,16 @@ This section outlines the implemented features of the Banking Web Application, c
 \subsubsection{Student Management (CRUD)}
 
 \begin{itemize}
-	\item Create student with form (name, email, phone, address).
-	\item List all students (admin view).
-	\item RESTful API: Create, Read, Update, Delete student.
+	\item Create student with form (name, email, phone, address) \autoref{fig:addNewStudent}.
+	\item List all students (admin view) \autoref{fig:listAllStudents}.
+	\item RESTful API: Create, Read, Update, Delete student \autoref{fig:editStudent}, \autoref{fig:addStudentButton}, \autoref{fig:addNewStudent}.
 	\item Cascade delete verified upon student deletion.
 \end{itemize}
 
 \begin{center}
 	\fbox{
 		\begin{minipage}{0.9\linewidth}
-			\textbf{Implementation Rating (1--5):} \underline{5}
+			\textbf{Implementation Rating (1--5):} \underline{4}
 		\end{minipage}
 	}
 \end{center}
@@ -98,10 +91,10 @@ This section outlines the implemented features of the Banking Web Application, c
 \subsubsection{Account Management (CRUD)}
 
 \begin{itemize}
-	\item Create account (initial balance £0, linked via student ID from cookie).
-	\item Conditional listing (all accounts or student-specific).
-	\item Detailed view per account with deletion.
-	\item RESTful API: Create, Read, Update, Delete account.
+	\item Create account (initial balance £0, linked via student ID from cookie) \autoref{fig:createAccount}.
+	\item Conditional listing (all accounts or student-specific) \autoref{fig:listAllAccounts}, \autoref{fig:listOfUserAccounts}.
+	\item Detailed view per account with deletion \autoref{fig:accountDetails}.
+	\item RESTful API: Create, Read, Update, Delete account \autoref{fig:CLImenu}.
 \end{itemize}
 
 \begin{center}
@@ -115,10 +108,10 @@ This section outlines the implemented features of the Banking Web Application, c
 \subsubsection{Transactions (Deposit, Withdraw, Transfer)}
 
 \begin{itemize}
-	\item Deposit and withdraw via dynamic form.
+	\item Deposit and withdraw via dynamic form \autoref{fig:accountTransaction}.
 	\item Overdraft protection prevents excessive withdrawal.
-	\item Transfer funds between accounts with Student validation.
-	\item TransactionResult page displays updated balances and outcome messages.
+	\item Transfer funds between accounts with Student validation \autoref{fig:transfer}.
+	\item TransactionResult page displays updated balances and outcome messages \autoref{fig:transferSuccess}.
 \end{itemize}
 
 \begin{center}
@@ -191,11 +184,132 @@ List of all endpoints and the function they serve:
 \subsubsection{Web App Screenshots}
 
 \begin{figure}[H]
-	\includegraphics[width=\textwidth]{./assets/Web1}
-	\caption{}
+	\centering
+	\includegraphics[width=0.7\textwidth]{./assets/login}
+	\caption{Initial Login Screen}
+	\label{fig:login}
 \end{figure}
-
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{./assets/chooseLogin}
+	\caption{Ability to choose which Student to log in as}
+	\label{fig:chooseLogin}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{./assets/loggedIn}
+	\caption{When logged in, the cookie allows the web page to display their name}
+	\label{fig:loggedIn}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{./assets/cookie}
+	\caption{Cookie present when logged in}
+	\label{fig:cookie}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{./assets/nocookie}
+	\caption{Cookie not present when not logged in}
+	\label{fig:nocookie}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{./assets/listAllStudents}
+	\caption{Students tab shows all students in the database, each student can be edited with "edit" button (just a POST form page)}
+	\label{fig:listAllStudents}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{./assets/addStudentButton.png}
+	\caption{There is an add student button at the bottom of the student list}
+	\label{fig:addStudentButton}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{./assets/addNewStudent}
+	\caption{Button navigates to add new student page, which allows user to enter a new student with a POST form}
+	\label{fig:addNewStudent}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{./assets/editStudent}
+	\caption{Edit button leads to edit student page, allowing user to update student information}
+	\label{fig:editStudent}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{./assets/listAllAccounts}
+	\caption{When not "logged in" Accounts tab shows all accounts, with an edit button}
+	\label{fig:listAllAccounts}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{./assets/createAccount}
+	\caption{When logged in, user can create an account that associates with the user that is logged in (via cookie)}
+	\label{fig:createAccount}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{./assets/accountDetails}
+	\caption{Clicking edit sends user to account details page, where they have option to delete account}
+	\label{fig:accountDetails}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{./assets/listOfUserAccounts.png}
+	\caption{When user logged in they see only their own user accounts}
+	\label{fig:listOfUserAccounts}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{./assets/transfer}
+	\caption{Transfer Form page allows user to transfer from 1 account to another}
+	\label{fig:transfer}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{./assets/transferSuccess}
+	\caption{Screen showing successful transfer, displays the transfer data}
+	\label{fig:transferSuccess}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{./assets/accountTransaction}
+	\caption{Form for withdrawing or depositing money. Radio buttons choose which operation to perform.}
+	\label{fig:accountTransaction}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{./assets/depositSuccessful}
+	\caption{Screen showing a successful deposit (also works for withdraw)}
+	\label{fig:depositSuccessful}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{./assets/transactionFailed}
+	\caption{Upon any transaction failure, shows the failure and what transaction failed.}
+	\label{fig:transactionFailed}
+\end{figure}
 \subsubsection{CLI Application Screenshots}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{./assets/CLImenu}
+	\caption{CLI main menu, shows which options to choose}
+	\label{fig:CLImenu}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{./assets/CLIcreateAccount}
+	\caption{Create Account Option}
+	\label{fig:CLIcreateAccount}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\textwidth]{./assets/cliAllAccounts.png}
+	\caption{Show All Accounts Option}
+	\label{fig:cliAllAccounts}
+\end{figure}
 
 \subsection{WildFly 33 Server Configuration}
 
@@ -249,8 +363,7 @@ The configuration includes a comprehensive set of extensions and subsystems to s
 This configuration enables a robust and secure environment suitable for enterprise Java applications, with database integration, secure authentication, clustering, and deployment automation.
 
 \subsection{Source Code Structure}
-Briefly outline your directory structure:
-
+\paragraph{Web App Source Code}
 \begin{verbatim}
 BankApp/
 │
