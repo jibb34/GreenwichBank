@@ -22,4 +22,3 @@
 		<button id="loginButton">Log In</button>
 	</c:otherwise>
 </c:choose>
-<script></script>
