@@ -7,34 +7,39 @@
     <meta charset="UTF-8">
     <title>Welcome to Greenwich Bank</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
-    <script src="${pageContext.request.contextPath}/js/main.js"></script>
+    <script src="${pageContext.request.contextPath}/js/main.js" defer></script>
 </head>
-<body>
+<body class="layout">
     <header>
-        <h1>Greenwich Bank Co.</h1>
+    <div class="header-inner">
+        <h1>🏦 Greenwich Bank Co.</h1>
         <nav>
             <ul id="menu">
                 <li><a href="#" data-action="home">Home</a></li>
                 <li><a href="#" data-action="listStudents">Students</a></li>
                 <li><a href="#" data-action="listAccounts">Accounts</a></li>
                 <c:if test="${not empty cookie.user.value}">
-                <li><a href="#" data-action="transfer">Transfer</a></li>
-                <li><a href="#" data-action="depositOrWithdraw">Deposit/Withdraw</a></li>
+                    <li><a href="#" data-action="transfer">Transfer</a></li>
+                    <li><a href="#" data-action="depositOrWithdraw">Deposit/Withdraw</a></li>
                 </c:if>
             </ul>
         </nav>
-    </header>
-    <c:if test="${not empty sessionScope.error}">
-		<p style="color: red;">${sessionScope.error}</p>
-		<c:remove var="error" scope="session" />
-	</c:if>
-    
-    <div id="content">
-        <!-- Dynamic content loads here -->
-    </div> 
+    </div>
+</header>
+
+    <main class="container">
+        <c:if test="${not empty sessionScope.error}">
+            <div class="error-message">${sessionScope.error}</div>
+            <c:remove var="error" scope="session" />
+        </c:if>
+
+        <div id="content">
+            <!-- Dynamic content loads here -->
+        </div>
+    </main>
+
     <footer>
-        <p>&copy; 2025 Greenwich Bank Co. Your money is probably not safe with us.</p>
+        <p>&copy; 2025 Greenwich Bank Co. Your money is <em>probably</em> not safe with us.</p>
     </footer>
-    <script src="${pageContext.request.contextPath}/js/main.js"></script>
 </body>
 </html>
