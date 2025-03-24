@@ -76,7 +76,7 @@ public class AccountResource {
     }
     
     @PUT
-    @Path("/accounts/{id}")
+    @Path("/{id}")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response modifyAccountBalance(@PathParam("id") int accountId, Map<String, Object> payload) {
