@@ -32,7 +32,6 @@ public class BankDAO {
 	        e.printStackTrace(); 
 	        return false;
 	    }
-		//TODO: Implement duplication checking.
 	}
 	public List<Student> getAllStudents() {
 		return em.createQuery("SELECT s FROM Student s", Student.class).getResultList();

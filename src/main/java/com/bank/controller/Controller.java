@@ -68,14 +68,19 @@ public class Controller extends HttpServlet {
 		    break;
 		case "deleteStudent":
 		    studentID = Integer.parseInt(request.getParameter("studentID"));
-		    boolean deleted = bankDAO.deleteStudent(studentID);
-
+		    int sessionStudentID = getStudentIdFromCookie(request);
+		    boolean deleted;
+		    if(sessionStudentID != studentID) {
+		    	deleted = bankDAO.deleteStudent(studentID);
+		    } else {
+		    	deleted = false;
+		    }
 		    if (deleted) {
 		        // Redirect to home after deletion
 		        response.sendRedirect(request.getContextPath());
 		    } else {
-		        request.setAttribute("error", "Could not delete student.");
-		        request.getRequestDispatcher("/jsp/StudentList.jsp").forward(request, response);
+		        request.getSession().setAttribute("error", "Could not delete student.");
+		        response.sendRedirect(request.getContextPath());
 		    }
 		    break;
 		case "addAccount":

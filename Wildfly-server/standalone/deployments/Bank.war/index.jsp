@@ -24,6 +24,10 @@
             </ul>
         </nav>
     </header>
+    <c:if test="${not empty sessionScope.error}">
+		<p style="color: red;">${sessionScope.error}</p>
+		<c:remove var="error" scope="session" />
+	</c:if>
     
     <div id="content">
         <!-- Dynamic content loads here -->

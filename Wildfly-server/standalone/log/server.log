@@ -6691,3 +6691,617 @@ Caused by: org.hibernate.query.SemanticException: Could not interpret path expre
 	at org.hibernate@6.4.4.Final//org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:840)
 	... 118 more
 
+2025-03-24 12:09:07,091 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 15) WFLYUT0022: Unregistered web context: '/Bank' from server 'default-server'
+2025-03-24 12:09:07,116 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 108) WFLYJPA0011: Stopping Persistence Unit (phase 2 of 2) Service 'Bank.war#Bank'
+2025-03-24 12:09:07,131 INFO  [org.hibernate.orm.beans] (ServerService Thread Pool -- 108) HHH10005004: Stopping BeanContainer : org.hibernate.resource.beans.container.internal.CdiBeanContainerExtendedAccessImpl@3256e9cc
+2025-03-24 12:09:07,134 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 108) WFLYJPA0011: Stopping Persistence Unit (phase 1 of 2) Service 'Bank.war#Bank'
+2025-03-24 12:09:07,145 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) WFLYSRV0028: Stopped deployment Bank.war (runtime-name: Bank.war) in 65ms
+2025-03-24 12:09:07,147 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0027: Starting deployment of "Bank.war" (runtime-name: "Bank.war")
+2025-03-24 12:09:07,455 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-1) WFLYSRV0293: The 'javax.servlet.jsp.api' module alias has been added as a dependency to 'Bank.war' deployment via jboss-deployment-structure.xml. While this is allowed, it is recommended to use its target module instead. Consider replacing this alias with its target module 'jakarta.servlet.jsp.api'.
+2025-03-24 12:09:07,523 INFO  [org.jboss.as.jpa] (MSC service thread 1-8) WFLYJPA0002: Read persistence.xml for Bank
+2025-03-24 12:09:07,542 INFO  [org.jipijapa] (MSC service thread 1-8) JIPIORMV6020260: Second level cache enabled for Bank.war#Bank
+2025-03-24 12:09:07,554 INFO  [org.jboss.weld.deployer] (MSC service thread 1-2) WFLYWELD0003: Processing weld deployment Bank.war
+2025-03-24 12:09:07,558 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 108) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.marshalling.jboss.JBossMarshaller'
+2025-03-24 12:09:07,578 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 108) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'Bank.war#Bank'
+2025-03-24 12:09:07,579 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 108) HHH000204: Processing PersistenceUnitInfo [name: Bank]
+2025-03-24 12:09:07,580 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-2) WFLYEJB0473: JNDI bindings for session bean named 'BankDAO' in deployment unit 'deployment "Bank.war"' are as follows:
+
+	java:global/Bank/BankDAO!com.bank.dao.BankDAO
+	java:app/Bank/BankDAO!com.bank.dao.BankDAO
+	java:module/BankDAO!com.bank.dao.BankDAO
+	java:global/Bank/BankDAO
+	java:app/Bank/BankDAO
+	java:module/BankDAO
+
+2025-03-24 12:09:07,598 INFO  [org.hibernate.cache.internal.RegionFactoryInitiator] (ServerService Thread Pool -- 108) HHH000025: Second-level cache region factory [org.infinispan.hibernate.cache.v62.InfinispanRegionFactory]
+2025-03-24 12:09:07,605 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 108) Envers integration enabled? : true
+2025-03-24 12:09:07,642 INFO  [org.jipijapa] (MSC service thread 1-6) JIPIORMV6020260: Second level cache enabled for Bank.war#Bank
+2025-03-24 12:09:07,695 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 108) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'Bank.war#Bank'
+2025-03-24 12:09:07,916 WARN  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0101: Duplicate servlet mapping /Controller found
+2025-03-24 12:09:07,938 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 109) RESTEASY002225: Deploying jakarta.ws.rs.core.Application: class com.bank.rest.RestApplication
+2025-03-24 12:09:07,945 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 109) WFLYUT0021: Registered web context: '/Bank' for server 'default-server'
+2025-03-24 12:09:07,981 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) WFLYSRV0016: Replaced deployment "Bank.war" with deployment "Bank.war"
+2025-03-24 12:09:18,572 INFO  [stdout] (default task-4) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:09:18,573 INFO  [stdout] (default task-1) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:09:18,595 INFO  [stdout] (default task-1) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:18,596 INFO  [stdout] (default task-4) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:18,605 INFO  [stdout] (default task-4) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:18,606 INFO  [stdout] (default task-1) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:20,356 INFO  [stdout] (default task-4) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:09:20,367 INFO  [stdout] (default task-4) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:20,376 INFO  [stdout] (default task-4) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:20,383 INFO  [stdout] (default task-4) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:09:20,402 INFO  [stdout] (default task-1) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:09:20,403 INFO  [stdout] (default task-5) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:09:20,408 INFO  [stdout] (default task-6) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:09:20,411 INFO  [stdout] (default task-5) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:20,411 INFO  [stdout] (default task-1) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:20,414 INFO  [stdout] (default task-5) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:20,415 INFO  [stdout] (default task-1) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:20,417 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:20,424 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:20,424 INFO  [stdout] (default task-1) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:09:20,424 INFO  [stdout] (default task-5) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:09:20,432 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:09:22,578 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:22,606 INFO  [stdout] (default task-6) Hibernate: delete from Students where studentID=?
+2025-03-24 12:09:22,612 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:22,650 INFO  [stdout] (default task-6) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:09:23,041 INFO  [stdout] (default task-6) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:09:23,050 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:23,055 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:23,102 INFO  [stdout] (default task-6) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:09:23,113 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:23,116 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:24,537 INFO  [stdout] (default task-6) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:09:24,544 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:24,549 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:24,564 INFO  [stdout] (default task-6) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:09:24,591 INFO  [stdout] (default task-4) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:09:24,591 INFO  [stdout] (default task-1) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:09:24,592 INFO  [stdout] (default task-5) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:09:24,597 INFO  [stdout] (default task-4) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:24,597 INFO  [stdout] (default task-1) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:24,599 INFO  [stdout] (default task-5) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:24,600 INFO  [stdout] (default task-4) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:24,600 INFO  [stdout] (default task-1) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:24,605 INFO  [stdout] (default task-5) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:24,611 INFO  [stdout] (default task-4) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:09:24,612 INFO  [stdout] (default task-1) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:09:24,614 INFO  [stdout] (default task-5) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:09:25,932 INFO  [stdout] (default task-5) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:09:25,942 INFO  [stdout] (default task-5) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:25,946 INFO  [stdout] (default task-5) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:25,956 INFO  [stdout] (default task-5) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:09:25,971 INFO  [stdout] (default task-5) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:09:25,976 INFO  [stdout] (default task-5) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:25,978 INFO  [stdout] (default task-4) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:09:25,978 INFO  [stdout] (default task-6) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:09:25,979 INFO  [stdout] (default task-5) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:25,985 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:25,985 INFO  [stdout] (default task-4) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:25,989 INFO  [stdout] (default task-5) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:09:25,990 INFO  [stdout] (default task-4) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:25,990 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:25,995 INFO  [stdout] (default task-4) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:09:25,996 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:09:32,225 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:32,235 INFO  [stdout] (default task-6) Hibernate: delete from Students where studentID=?
+2025-03-24 12:09:32,241 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:32,245 INFO  [stdout] (default task-6) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:09:32,444 INFO  [stdout] (default task-6) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:09:32,460 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:32,471 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:32,484 INFO  [stdout] (default task-6) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:09:32,489 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:32,491 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:35,006 INFO  [stdout] (default task-6) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:09:35,014 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:35,020 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:35,030 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:09:35,049 INFO  [stdout] (default task-6) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:09:35,051 INFO  [stdout] (default task-4) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:09:35,052 INFO  [stdout] (default task-5) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:09:35,056 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:35,061 INFO  [stdout] (default task-5) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:35,061 INFO  [stdout] (default task-4) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:35,061 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:35,065 INFO  [stdout] (default task-4) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:35,065 INFO  [stdout] (default task-5) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:09:35,069 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:09:35,071 INFO  [stdout] (default task-4) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:09:35,072 INFO  [stdout] (default task-5) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:11:43,157 INFO  [stdout] (default task-5) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:11:43,190 INFO  [stdout] (default task-5) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:11:43,190 INFO  [stdout] (default task-6) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:11:43,191 INFO  [stdout] (default task-7) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:11:43,194 INFO  [stdout] (default task-8) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:11:43,205 INFO  [stdout] (default task-5) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:11:43,208 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:11:43,208 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:11:43,208 INFO  [stdout] (default task-8) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:11:43,212 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:11:43,212 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:11:43,212 INFO  [stdout] (default task-8) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:11:43,217 INFO  [stdout] (default task-5) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:11:43,220 INFO  [stdout] (default task-7) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:11:43,224 INFO  [stdout] (default task-8) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:11:43,224 INFO  [stdout] (default task-6) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:11:44,906 INFO  [stdout] (default task-8) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:11:44,911 INFO  [stdout] (default task-8) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:11:44,916 INFO  [stdout] (default task-8) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:11:44,941 INFO  [stdout] (default task-8) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:11:44,946 INFO  [stdout] (default task-8) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:11:44,948 INFO  [stdout] (default task-8) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:11:44,955 INFO  [stdout] (default task-6) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:11:44,955 INFO  [stdout] (default task-7) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:11:44,964 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:11:44,967 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:11:44,971 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:11:44,971 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:11:46,601 INFO  [stdout] (default task-6) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:11:46,610 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:11:46,614 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:11:46,623 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:11:46,635 INFO  [stdout] (default task-7) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:11:46,636 INFO  [stdout] (default task-6) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:11:46,640 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:11:46,641 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:11:46,643 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:11:46,643 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:11:46,649 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:11:46,649 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:11:46,661 INFO  [stdout] (default task-7) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:11:46,667 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:11:46,669 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:11:46,677 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:15:28,644 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 109) WFLYUT0022: Unregistered web context: '/Bank' from server 'default-server'
+2025-03-24 12:15:28,676 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 128) WFLYJPA0011: Stopping Persistence Unit (phase 2 of 2) Service 'Bank.war#Bank'
+2025-03-24 12:15:28,678 INFO  [org.hibernate.orm.beans] (ServerService Thread Pool -- 128) HHH10005004: Stopping BeanContainer : org.hibernate.resource.beans.container.internal.CdiBeanContainerExtendedAccessImpl@7c03f7fe
+2025-03-24 12:15:28,680 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 128) WFLYJPA0011: Stopping Persistence Unit (phase 1 of 2) Service 'Bank.war#Bank'
+2025-03-24 12:15:28,687 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-8) WFLYSRV0028: Stopped deployment Bank.war (runtime-name: Bank.war) in 50ms
+2025-03-24 12:15:28,689 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0027: Starting deployment of "Bank.war" (runtime-name: "Bank.war")
+2025-03-24 12:15:28,915 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-8) WFLYSRV0293: The 'javax.servlet.jsp.api' module alias has been added as a dependency to 'Bank.war' deployment via jboss-deployment-structure.xml. While this is allowed, it is recommended to use its target module instead. Consider replacing this alias with its target module 'jakarta.servlet.jsp.api'.
+2025-03-24 12:15:28,963 INFO  [org.jboss.as.jpa] (MSC service thread 1-7) WFLYJPA0002: Read persistence.xml for Bank
+2025-03-24 12:15:28,984 INFO  [org.jipijapa] (MSC service thread 1-4) JIPIORMV6020260: Second level cache enabled for Bank.war#Bank
+2025-03-24 12:15:29,006 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 128) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.marshalling.jboss.JBossMarshaller'
+2025-03-24 12:15:29,013 INFO  [org.jboss.weld.deployer] (MSC service thread 1-2) WFLYWELD0003: Processing weld deployment Bank.war
+2025-03-24 12:15:29,021 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 128) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'Bank.war#Bank'
+2025-03-24 12:15:29,021 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 128) HHH000204: Processing PersistenceUnitInfo [name: Bank]
+2025-03-24 12:15:29,031 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-2) WFLYEJB0473: JNDI bindings for session bean named 'BankDAO' in deployment unit 'deployment "Bank.war"' are as follows:
+
+	java:global/Bank/BankDAO!com.bank.dao.BankDAO
+	java:app/Bank/BankDAO!com.bank.dao.BankDAO
+	java:module/BankDAO!com.bank.dao.BankDAO
+	java:global/Bank/BankDAO
+	java:app/Bank/BankDAO
+	java:module/BankDAO
+
+2025-03-24 12:15:29,041 INFO  [org.hibernate.cache.internal.RegionFactoryInitiator] (ServerService Thread Pool -- 128) HHH000025: Second-level cache region factory [org.infinispan.hibernate.cache.v62.InfinispanRegionFactory]
+2025-03-24 12:15:29,044 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 128) Envers integration enabled? : true
+2025-03-24 12:15:29,075 INFO  [org.jipijapa] (MSC service thread 1-8) JIPIORMV6020260: Second level cache enabled for Bank.war#Bank
+2025-03-24 12:15:29,107 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 128) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'Bank.war#Bank'
+2025-03-24 12:15:29,303 WARN  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0101: Duplicate servlet mapping /Controller found
+2025-03-24 12:15:29,323 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 109) RESTEASY002225: Deploying jakarta.ws.rs.core.Application: class com.bank.rest.RestApplication
+2025-03-24 12:15:29,329 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 109) WFLYUT0021: Registered web context: '/Bank' for server 'default-server'
+2025-03-24 12:15:29,349 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) WFLYSRV0016: Replaced deployment "Bank.war" with deployment "Bank.war"
+2025-03-24 12:15:33,667 INFO  [stdout] (default task-7) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:15:33,668 INFO  [stdout] (default task-6) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:15:33,679 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:15:33,679 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:15:33,684 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:15:33,685 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:15:35,185 INFO  [stdout] (default task-6) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:15:35,195 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:15:35,200 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:15:35,212 INFO  [stdout] (default task-6) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:15:35,248 INFO  [stdout] (default task-7) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:15:35,248 INFO  [stdout] (default task-9) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:15:35,249 INFO  [stdout] (default task-10) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:15:35,255 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:15:35,255 INFO  [stdout] (default task-9) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:15:35,259 INFO  [stdout] (default task-10) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:15:35,260 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:15:35,260 INFO  [stdout] (default task-9) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:15:35,262 INFO  [stdout] (default task-10) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:15:35,266 INFO  [stdout] (default task-9) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:15:35,266 INFO  [stdout] (default task-7) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:15:35,270 INFO  [stdout] (default task-10) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:15:35,756 INFO  [stdout] (default task-10) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:15:35,763 INFO  [stdout] (default task-10) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:15:35,768 INFO  [stdout] (default task-10) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:15:35,781 INFO  [stdout] (default task-10) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:15:35,817 INFO  [stdout] (default task-9) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:15:35,817 INFO  [stdout] (default task-7) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:15:35,818 INFO  [stdout] (default task-6) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:15:35,823 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:15:35,824 INFO  [stdout] (default task-9) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:15:35,824 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:15:35,826 INFO  [stdout] (default task-9) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:15:35,826 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:15:35,826 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:15:35,833 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:15:35,833 INFO  [stdout] (default task-9) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:15:35,833 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:15:38,933 INFO  [stdout] (default task-9) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:15:38,962 INFO  [stdout] (default task-9) Hibernate: delete from Students where studentID=?
+2025-03-24 12:15:38,967 INFO  [stdout] (default task-9) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:15:38,971 INFO  [stdout] (default task-9) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:15:39,104 INFO  [stdout] (default task-9) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:15:39,110 INFO  [stdout] (default task-9) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:15:39,113 INFO  [stdout] (default task-9) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:15:39,168 INFO  [stdout] (default task-9) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:15:39,174 INFO  [stdout] (default task-9) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:15:39,177 INFO  [stdout] (default task-9) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:15:40,751 INFO  [stdout] (default task-9) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:15:40,760 INFO  [stdout] (default task-9) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:15:40,764 INFO  [stdout] (default task-9) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:15:40,777 INFO  [stdout] (default task-9) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:15:40,794 INFO  [stdout] (default task-6) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:15:40,794 INFO  [stdout] (default task-9) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:15:40,799 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:15:40,799 INFO  [stdout] (default task-9) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:15:40,801 INFO  [stdout] (default task-9) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:15:40,801 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:15:40,810 INFO  [stdout] (default task-6) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:15:40,810 INFO  [stdout] (default task-9) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:15:40,813 INFO  [stdout] (default task-7) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:15:40,818 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:15:40,820 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:15:40,828 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:17:53,860 INFO  [stdout] (default task-7) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:17:53,862 INFO  [stdout] (default task-9) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:17:53,885 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:17:53,885 INFO  [stdout] (default task-9) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:17:53,889 INFO  [stdout] (default task-9) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:17:53,890 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:17:55,735 INFO  [stdout] (default task-9) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:17:55,745 INFO  [stdout] (default task-9) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:17:55,749 INFO  [stdout] (default task-9) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:17:55,760 INFO  [stdout] (default task-9) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:17:55,778 INFO  [stdout] (default task-9) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:17:55,783 INFO  [stdout] (default task-9) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:17:55,785 INFO  [stdout] (default task-9) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:17:55,791 INFO  [stdout] (default task-9) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:17:55,798 INFO  [stdout] (default task-7) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:17:55,799 INFO  [stdout] (default task-11) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:17:55,806 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:17:55,809 INFO  [stdout] (default task-11) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:17:55,810 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:17:55,811 INFO  [stdout] (default task-11) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:17:55,814 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:17:55,815 INFO  [stdout] (default task-11) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:18:04,611 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 109) WFLYUT0022: Unregistered web context: '/Bank' from server 'default-server'
+2025-03-24 12:18:04,630 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 141) WFLYJPA0011: Stopping Persistence Unit (phase 2 of 2) Service 'Bank.war#Bank'
+2025-03-24 12:18:04,632 INFO  [org.hibernate.orm.beans] (ServerService Thread Pool -- 141) HHH10005004: Stopping BeanContainer : org.hibernate.resource.beans.container.internal.CdiBeanContainerExtendedAccessImpl@4f89e1b0
+2025-03-24 12:18:04,633 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 141) WFLYJPA0011: Stopping Persistence Unit (phase 1 of 2) Service 'Bank.war#Bank'
+2025-03-24 12:18:04,640 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0028: Stopped deployment Bank.war (runtime-name: Bank.war) in 36ms
+2025-03-24 12:18:04,642 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) WFLYSRV0027: Starting deployment of "Bank.war" (runtime-name: "Bank.war")
+2025-03-24 12:18:04,828 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0293: The 'javax.servlet.jsp.api' module alias has been added as a dependency to 'Bank.war' deployment via jboss-deployment-structure.xml. While this is allowed, it is recommended to use its target module instead. Consider replacing this alias with its target module 'jakarta.servlet.jsp.api'.
+2025-03-24 12:18:04,872 INFO  [org.jboss.as.jpa] (MSC service thread 1-5) WFLYJPA0002: Read persistence.xml for Bank
+2025-03-24 12:18:04,892 INFO  [org.jipijapa] (MSC service thread 1-7) JIPIORMV6020260: Second level cache enabled for Bank.war#Bank
+2025-03-24 12:18:04,904 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 141) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.marshalling.jboss.JBossMarshaller'
+2025-03-24 12:18:04,905 INFO  [org.jboss.weld.deployer] (MSC service thread 1-2) WFLYWELD0003: Processing weld deployment Bank.war
+2025-03-24 12:18:04,916 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 141) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'Bank.war#Bank'
+2025-03-24 12:18:04,916 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 141) HHH000204: Processing PersistenceUnitInfo [name: Bank]
+2025-03-24 12:18:04,933 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-2) WFLYEJB0473: JNDI bindings for session bean named 'BankDAO' in deployment unit 'deployment "Bank.war"' are as follows:
+
+	java:global/Bank/BankDAO!com.bank.dao.BankDAO
+	java:app/Bank/BankDAO!com.bank.dao.BankDAO
+	java:module/BankDAO!com.bank.dao.BankDAO
+	java:global/Bank/BankDAO
+	java:app/Bank/BankDAO
+	java:module/BankDAO
+
+2025-03-24 12:18:04,943 INFO  [org.hibernate.cache.internal.RegionFactoryInitiator] (ServerService Thread Pool -- 141) HHH000025: Second-level cache region factory [org.infinispan.hibernate.cache.v62.InfinispanRegionFactory]
+2025-03-24 12:18:04,946 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 141) Envers integration enabled? : true
+2025-03-24 12:18:04,969 INFO  [org.jipijapa] (MSC service thread 1-1) JIPIORMV6020260: Second level cache enabled for Bank.war#Bank
+2025-03-24 12:18:04,999 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 141) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'Bank.war#Bank'
+2025-03-24 12:18:05,189 WARN  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0101: Duplicate servlet mapping /Controller found
+2025-03-24 12:18:05,206 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 148) RESTEASY002225: Deploying jakarta.ws.rs.core.Application: class com.bank.rest.RestApplication
+2025-03-24 12:18:05,212 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 148) WFLYUT0021: Registered web context: '/Bank' for server 'default-server'
+2025-03-24 12:18:05,232 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) WFLYSRV0016: Replaced deployment "Bank.war" with deployment "Bank.war"
+2025-03-24 12:18:10,636 INFO  [stdout] (default task-11) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:18:10,649 INFO  [stdout] (default task-11) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:18:10,652 INFO  [stdout] (default task-11) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:18:10,703 INFO  [stdout] (default task-11) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:18:10,707 INFO  [stdout] (default task-11) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:18:10,710 INFO  [stdout] (default task-11) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:18:11,539 INFO  [stdout] (default task-11) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:18:11,567 INFO  [stdout] (default task-11) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:18:11,569 INFO  [stdout] (default task-11) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:18:11,578 INFO  [stdout] (default task-11) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:18:11,617 INFO  [stdout] (default task-9) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:18:11,617 INFO  [stdout] (default task-7) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:18:11,618 INFO  [stdout] (default task-12) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:18:11,625 INFO  [stdout] (default task-9) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:18:11,627 INFO  [stdout] (default task-12) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:18:11,627 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:18:11,627 INFO  [stdout] (default task-9) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:18:11,629 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:18:11,630 INFO  [stdout] (default task-12) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:18:11,632 INFO  [stdout] (default task-9) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:18:11,634 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:18:11,635 INFO  [stdout] (default task-12) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:18:13,698 INFO  [stdout] (default task-12) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:18:13,704 INFO  [stdout] (default task-12) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:18:13,708 INFO  [stdout] (default task-12) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:18:13,806 INFO  [stdout] (default task-12) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:18:13,811 INFO  [stdout] (default task-12) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:18:13,813 INFO  [stdout] (default task-12) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:18:16,706 INFO  [stdout] (default task-12) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:18:16,717 INFO  [stdout] (default task-12) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:18:16,721 INFO  [stdout] (default task-12) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:18:16,731 INFO  [stdout] (default task-12) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:18:16,747 INFO  [stdout] (default task-12) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:18:16,752 INFO  [stdout] (default task-12) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:18:16,754 INFO  [stdout] (default task-12) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:18:16,761 INFO  [stdout] (default task-12) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:18:16,774 INFO  [stdout] (default task-12) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:18:16,778 INFO  [stdout] (default task-12) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:18:16,780 INFO  [stdout] (default task-12) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:18:16,783 INFO  [stdout] (default task-12) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:18:16,790 INFO  [stdout] (default task-7) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:18:16,796 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:18:16,798 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:18:16,802 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:18:19,589 INFO  [stdout] (default task-7) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:18:19,595 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:18:19,597 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:18:19,693 INFO  [stdout] (default task-7) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:18:19,699 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:18:19,702 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:19:40,416 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 148) WFLYUT0022: Unregistered web context: '/Bank' from server 'default-server'
+2025-03-24 12:19:40,438 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 164) WFLYJPA0011: Stopping Persistence Unit (phase 2 of 2) Service 'Bank.war#Bank'
+2025-03-24 12:19:40,445 INFO  [org.hibernate.orm.beans] (ServerService Thread Pool -- 164) HHH10005004: Stopping BeanContainer : org.hibernate.resource.beans.container.internal.CdiBeanContainerExtendedAccessImpl@7d2a9691
+2025-03-24 12:19:40,447 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 164) WFLYJPA0011: Stopping Persistence Unit (phase 1 of 2) Service 'Bank.war#Bank'
+2025-03-24 12:19:40,455 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0028: Stopped deployment Bank.war (runtime-name: Bank.war) in 45ms
+2025-03-24 12:19:40,456 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0027: Starting deployment of "Bank.war" (runtime-name: "Bank.war")
+2025-03-24 12:19:40,658 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0293: The 'javax.servlet.jsp.api' module alias has been added as a dependency to 'Bank.war' deployment via jboss-deployment-structure.xml. While this is allowed, it is recommended to use its target module instead. Consider replacing this alias with its target module 'jakarta.servlet.jsp.api'.
+2025-03-24 12:19:40,696 INFO  [org.jboss.as.jpa] (MSC service thread 1-5) WFLYJPA0002: Read persistence.xml for Bank
+2025-03-24 12:19:40,714 INFO  [org.jipijapa] (MSC service thread 1-5) JIPIORMV6020260: Second level cache enabled for Bank.war#Bank
+2025-03-24 12:19:40,728 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 164) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.marshalling.jboss.JBossMarshaller'
+2025-03-24 12:19:40,730 INFO  [org.jboss.weld.deployer] (MSC service thread 1-5) WFLYWELD0003: Processing weld deployment Bank.war
+2025-03-24 12:19:40,741 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 164) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'Bank.war#Bank'
+2025-03-24 12:19:40,741 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 164) HHH000204: Processing PersistenceUnitInfo [name: Bank]
+2025-03-24 12:19:40,745 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-5) WFLYEJB0473: JNDI bindings for session bean named 'BankDAO' in deployment unit 'deployment "Bank.war"' are as follows:
+
+	java:global/Bank/BankDAO!com.bank.dao.BankDAO
+	java:app/Bank/BankDAO!com.bank.dao.BankDAO
+	java:module/BankDAO!com.bank.dao.BankDAO
+	java:global/Bank/BankDAO
+	java:app/Bank/BankDAO
+	java:module/BankDAO
+
+2025-03-24 12:19:40,764 INFO  [org.hibernate.cache.internal.RegionFactoryInitiator] (ServerService Thread Pool -- 164) HHH000025: Second-level cache region factory [org.infinispan.hibernate.cache.v62.InfinispanRegionFactory]
+2025-03-24 12:19:40,770 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 164) Envers integration enabled? : true
+2025-03-24 12:19:40,785 INFO  [org.jipijapa] (MSC service thread 1-2) JIPIORMV6020260: Second level cache enabled for Bank.war#Bank
+2025-03-24 12:19:40,813 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 164) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'Bank.war#Bank'
+2025-03-24 12:19:40,990 WARN  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0101: Duplicate servlet mapping /Controller found
+2025-03-24 12:19:41,006 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 158) RESTEASY002225: Deploying jakarta.ws.rs.core.Application: class com.bank.rest.RestApplication
+2025-03-24 12:19:41,012 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 158) WFLYUT0021: Registered web context: '/Bank' for server 'default-server'
+2025-03-24 12:19:41,075 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) WFLYSRV0016: Replaced deployment "Bank.war" with deployment "Bank.war"
+2025-03-24 12:19:46,305 INFO  [stdout] (default task-7) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:19:46,305 INFO  [stdout] (default task-12) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:19:46,315 INFO  [stdout] (default task-12) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:19:46,316 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:19:46,320 INFO  [stdout] (default task-12) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:19:46,320 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:19:47,017 INFO  [stdout] (default task-12) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:19:47,045 INFO  [stdout] (default task-12) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:19:47,049 INFO  [stdout] (default task-12) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:19:47,064 INFO  [stdout] (default task-12) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:19:47,110 INFO  [stdout] (default task-12) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:19:47,110 INFO  [stdout] (default task-7) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:19:47,111 INFO  [stdout] (default task-13) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:19:47,115 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:19:47,115 INFO  [stdout] (default task-12) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:19:47,116 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:19:47,117 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:19:47,117 INFO  [stdout] (default task-12) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:19:47,118 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:19:47,125 INFO  [stdout] (default task-12) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:19:47,125 INFO  [stdout] (default task-7) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:19:47,125 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:23:51,511 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 158) WFLYUT0022: Unregistered web context: '/Bank' from server 'default-server'
+2025-03-24 12:23:51,537 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 170) WFLYJPA0011: Stopping Persistence Unit (phase 2 of 2) Service 'Bank.war#Bank'
+2025-03-24 12:23:51,540 INFO  [org.hibernate.orm.beans] (ServerService Thread Pool -- 170) HHH10005004: Stopping BeanContainer : org.hibernate.resource.beans.container.internal.CdiBeanContainerExtendedAccessImpl@241e2b98
+2025-03-24 12:23:51,542 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 170) WFLYJPA0011: Stopping Persistence Unit (phase 1 of 2) Service 'Bank.war#Bank'
+2025-03-24 12:23:51,548 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) WFLYSRV0028: Stopped deployment Bank.war (runtime-name: Bank.war) in 40ms
+2025-03-24 12:23:51,550 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-8) WFLYSRV0027: Starting deployment of "Bank.war" (runtime-name: "Bank.war")
+2025-03-24 12:23:51,797 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-8) WFLYSRV0293: The 'javax.servlet.jsp.api' module alias has been added as a dependency to 'Bank.war' deployment via jboss-deployment-structure.xml. While this is allowed, it is recommended to use its target module instead. Consider replacing this alias with its target module 'jakarta.servlet.jsp.api'.
+2025-03-24 12:23:51,907 INFO  [org.jboss.as.jpa] (MSC service thread 1-5) WFLYJPA0002: Read persistence.xml for Bank
+2025-03-24 12:23:51,942 INFO  [org.jipijapa] (MSC service thread 1-8) JIPIORMV6020260: Second level cache enabled for Bank.war#Bank
+2025-03-24 12:23:51,968 INFO  [org.jboss.weld.deployer] (MSC service thread 1-8) WFLYWELD0003: Processing weld deployment Bank.war
+2025-03-24 12:23:51,969 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 170) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.marshalling.jboss.JBossMarshaller'
+2025-03-24 12:23:51,995 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 170) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'Bank.war#Bank'
+2025-03-24 12:23:51,996 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 170) HHH000204: Processing PersistenceUnitInfo [name: Bank]
+2025-03-24 12:23:52,010 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-8) WFLYEJB0473: JNDI bindings for session bean named 'BankDAO' in deployment unit 'deployment "Bank.war"' are as follows:
+
+	java:global/Bank/BankDAO!com.bank.dao.BankDAO
+	java:app/Bank/BankDAO!com.bank.dao.BankDAO
+	java:module/BankDAO!com.bank.dao.BankDAO
+	java:global/Bank/BankDAO
+	java:app/Bank/BankDAO
+	java:module/BankDAO
+
+2025-03-24 12:23:52,029 INFO  [org.hibernate.cache.internal.RegionFactoryInitiator] (ServerService Thread Pool -- 170) HHH000025: Second-level cache region factory [org.infinispan.hibernate.cache.v62.InfinispanRegionFactory]
+2025-03-24 12:23:52,034 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 170) Envers integration enabled? : true
+2025-03-24 12:23:52,095 INFO  [org.jipijapa] (MSC service thread 1-7) JIPIORMV6020260: Second level cache enabled for Bank.war#Bank
+2025-03-24 12:23:52,136 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 170) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'Bank.war#Bank'
+2025-03-24 12:23:52,347 WARN  [org.wildfly.extension.undertow] (MSC service thread 1-6) WFLYUT0101: Duplicate servlet mapping /Controller found
+2025-03-24 12:23:52,365 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 185) RESTEASY002225: Deploying jakarta.ws.rs.core.Application: class com.bank.rest.RestApplication
+2025-03-24 12:23:52,372 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 185) WFLYUT0021: Registered web context: '/Bank' for server 'default-server'
+2025-03-24 12:23:52,401 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) WFLYSRV0016: Replaced deployment "Bank.war" with deployment "Bank.war"
+2025-03-24 12:24:05,333 INFO  [stdout] (default task-13) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:24:05,357 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:24:05,371 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:24:05,430 INFO  [stdout] (default task-12) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:24:05,438 INFO  [stdout] (default task-12) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:24:05,443 INFO  [stdout] (default task-12) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:24:06,916 INFO  [stdout] (default task-13) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:24:06,917 INFO  [stdout] (default task-12) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:24:06,923 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:24:06,926 INFO  [stdout] (default task-12) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:24:06,926 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:24:06,940 INFO  [stdout] (default task-12) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:24:11,678 INFO  [stdout] (default task-12) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:24:11,685 INFO  [stdout] (default task-12) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:24:11,688 INFO  [stdout] (default task-12) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:24:11,703 INFO  [stdout] (default task-12) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:24:11,818 INFO  [stdout] (default task-13) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:24:11,819 INFO  [stdout] (default task-14) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:24:11,820 INFO  [stdout] (default task-15) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:24:11,830 INFO  [stdout] (default task-15) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:24:11,831 INFO  [stdout] (default task-14) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:24:11,831 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:24:11,835 INFO  [stdout] (default task-15) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:24:11,836 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:24:11,836 INFO  [stdout] (default task-14) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:24:11,845 INFO  [stdout] (default task-14) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:24:11,846 INFO  [stdout] (default task-15) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:24:11,846 INFO  [stdout] (default task-13) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:24:14,021 INFO  [stdout] (default task-14) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:24:14,033 INFO  [stdout] (default task-14) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:24:14,037 INFO  [stdout] (default task-14) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:24:14,047 INFO  [stdout] (default task-14) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:24:14,123 INFO  [stdout] (default task-14) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:24:14,123 INFO  [stdout] (default task-15) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:24:14,123 INFO  [stdout] (default task-13) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:24:14,129 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:24:14,129 INFO  [stdout] (default task-15) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:24:14,129 INFO  [stdout] (default task-14) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:24:14,132 INFO  [stdout] (default task-14) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:24:14,132 INFO  [stdout] (default task-15) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:24:14,132 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:24:14,138 INFO  [stdout] (default task-15) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:24:14,138 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:24:14,138 INFO  [stdout] (default task-14) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:24:57,513 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 185) WFLYUT0022: Unregistered web context: '/Bank' from server 'default-server'
+2025-03-24 12:24:57,535 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 187) WFLYJPA0011: Stopping Persistence Unit (phase 2 of 2) Service 'Bank.war#Bank'
+2025-03-24 12:24:57,537 INFO  [org.hibernate.orm.beans] (ServerService Thread Pool -- 187) HHH10005004: Stopping BeanContainer : org.hibernate.resource.beans.container.internal.CdiBeanContainerExtendedAccessImpl@47b884c5
+2025-03-24 12:24:57,538 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 187) WFLYJPA0011: Stopping Persistence Unit (phase 1 of 2) Service 'Bank.war#Bank'
+2025-03-24 12:24:57,544 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) WFLYSRV0028: Stopped deployment Bank.war (runtime-name: Bank.war) in 36ms
+2025-03-24 12:24:57,546 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) WFLYSRV0027: Starting deployment of "Bank.war" (runtime-name: "Bank.war")
+2025-03-24 12:24:57,729 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-7) WFLYSRV0293: The 'javax.servlet.jsp.api' module alias has been added as a dependency to 'Bank.war' deployment via jboss-deployment-structure.xml. While this is allowed, it is recommended to use its target module instead. Consider replacing this alias with its target module 'jakarta.servlet.jsp.api'.
+2025-03-24 12:24:57,763 INFO  [org.jboss.as.jpa] (MSC service thread 1-3) WFLYJPA0002: Read persistence.xml for Bank
+2025-03-24 12:24:57,779 INFO  [org.jipijapa] (MSC service thread 1-2) JIPIORMV6020260: Second level cache enabled for Bank.war#Bank
+2025-03-24 12:24:57,792 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 187) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.marshalling.jboss.JBossMarshaller'
+2025-03-24 12:24:57,793 INFO  [org.jboss.weld.deployer] (MSC service thread 1-2) WFLYWELD0003: Processing weld deployment Bank.war
+2025-03-24 12:24:57,804 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 187) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'Bank.war#Bank'
+2025-03-24 12:24:57,804 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 187) HHH000204: Processing PersistenceUnitInfo [name: Bank]
+2025-03-24 12:24:57,808 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-2) WFLYEJB0473: JNDI bindings for session bean named 'BankDAO' in deployment unit 'deployment "Bank.war"' are as follows:
+
+	java:global/Bank/BankDAO!com.bank.dao.BankDAO
+	java:app/Bank/BankDAO!com.bank.dao.BankDAO
+	java:module/BankDAO!com.bank.dao.BankDAO
+	java:global/Bank/BankDAO
+	java:app/Bank/BankDAO
+	java:module/BankDAO
+
+2025-03-24 12:24:57,826 INFO  [org.hibernate.cache.internal.RegionFactoryInitiator] (ServerService Thread Pool -- 187) HHH000025: Second-level cache region factory [org.infinispan.hibernate.cache.v62.InfinispanRegionFactory]
+2025-03-24 12:24:57,831 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 187) Envers integration enabled? : true
+2025-03-24 12:24:57,846 INFO  [org.jipijapa] (MSC service thread 1-6) JIPIORMV6020260: Second level cache enabled for Bank.war#Bank
+2025-03-24 12:24:57,873 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 187) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'Bank.war#Bank'
+2025-03-24 12:24:58,021 WARN  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0101: Duplicate servlet mapping /Controller found
+2025-03-24 12:24:58,036 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 201) RESTEASY002225: Deploying jakarta.ws.rs.core.Application: class com.bank.rest.RestApplication
+2025-03-24 12:24:58,041 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 201) WFLYUT0021: Registered web context: '/Bank' for server 'default-server'
+2025-03-24 12:24:58,058 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) WFLYSRV0016: Replaced deployment "Bank.war" with deployment "Bank.war"
+2025-03-24 12:25:04,206 INFO  [stdout] (default task-13) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:25:04,206 INFO  [stdout] (default task-14) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:25:04,220 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:04,220 INFO  [stdout] (default task-14) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:04,226 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:04,226 INFO  [stdout] (default task-14) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:05,398 INFO  [stdout] (default task-14) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:25:05,410 INFO  [stdout] (default task-14) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:05,417 INFO  [stdout] (default task-14) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:05,439 INFO  [stdout] (default task-14) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:25:05,535 INFO  [stdout] (default task-14) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:25:05,535 INFO  [stdout] (default task-13) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:25:05,536 INFO  [stdout] (default task-15) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:25:05,540 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:05,541 INFO  [stdout] (default task-14) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:05,541 INFO  [stdout] (default task-15) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:05,543 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:05,543 INFO  [stdout] (default task-14) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:05,544 INFO  [stdout] (default task-15) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:05,552 INFO  [stdout] (default task-14) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:25:05,552 INFO  [stdout] (default task-15) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:25:05,553 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:25:08,400 INFO  [stdout] (default task-15) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:25:08,412 INFO  [stdout] (default task-15) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:08,416 INFO  [stdout] (default task-15) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:08,490 INFO  [stdout] (default task-15) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:25:08,497 INFO  [stdout] (default task-15) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:08,500 INFO  [stdout] (default task-15) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:11,589 INFO  [stdout] (default task-15) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:25:11,590 INFO  [stdout] (default task-13) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:25:11,600 INFO  [stdout] (default task-15) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:11,600 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:11,605 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:11,605 INFO  [stdout] (default task-15) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:11,625 INFO  [stdout] (default task-13) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:25:11,625 INFO  [stdout] (default task-15) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:25:11,676 INFO  [stdout] (default task-15) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:25:11,677 INFO  [stdout] (default task-13) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:25:11,681 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:11,681 INFO  [stdout] (default task-15) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:11,683 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:11,683 INFO  [stdout] (default task-15) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:11,687 INFO  [stdout] (default task-13) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:25:11,687 INFO  [stdout] (default task-15) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:25:12,408 INFO  [stdout] (default task-15) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:25:12,415 INFO  [stdout] (default task-15) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:12,418 INFO  [stdout] (default task-15) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:12,426 INFO  [stdout] (default task-15) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:25:12,438 INFO  [stdout] (default task-15) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:25:12,439 INFO  [stdout] (default task-13) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:25:12,445 INFO  [stdout] (default task-15) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:12,445 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:12,447 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:12,447 INFO  [stdout] (default task-15) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:12,452 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:25:12,452 INFO  [stdout] (default task-15) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:25:12,484 INFO  [stdout] (default task-13) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:25:12,494 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:12,498 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:12,511 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:25:17,846 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:17,923 INFO  [stdout] (default task-13) Hibernate: delete from Students where studentID=?
+2025-03-24 12:25:17,932 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:17,950 INFO  [stdout] (default task-13) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0 where a1_0.studentID=?
+2025-03-24 12:25:18,406 INFO  [stdout] (default task-13) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:25:18,413 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:18,416 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:18,533 INFO  [stdout] (default task-13) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:25:18,541 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:18,546 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:28,425 INFO  [stdout] (default task-13) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:25:28,431 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:28,434 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:28,447 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:25:28,463 INFO  [stdout] (default task-13) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:25:28,470 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:28,472 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:28,480 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:25:28,498 INFO  [stdout] (default task-13) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:25:28,502 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:28,503 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:28,508 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:25:28,518 INFO  [stdout] (default task-13) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:25:28,521 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:28,522 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:28,527 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0
+2025-03-24 12:25:30,803 INFO  [stdout] (default task-13) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:25:30,820 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:30,828 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:30,837 INFO  [stdout] (default task-15) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:25:30,837 INFO  [stdout] (default task-13) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:25:30,843 INFO  [stdout] (default task-15) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:30,844 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:30,847 INFO  [stdout] (default task-15) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:30,847 INFO  [stdout] (default task-13) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:30,854 INFO  [stdout] (default task-15) Hibernate: select a1_0.accountID,a1_0.accountAlias,a1_0.accountBalance,a1_0.studentID from Accounts a1_0
+2025-03-24 12:25:30,859 INFO  [stdout] (default task-15) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
+2025-03-24 12:25:30,861 INFO  [stdout] (default task-15) Hibernate: select s1_0.studentID,s1_0.studentAddress,s1_0.studentEmail,s1_0.studentName,s1_0.studentPhone from Students s1_0 where s1_0.studentID=?
