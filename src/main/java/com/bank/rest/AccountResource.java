@@ -43,9 +43,10 @@ public class AccountResource {
     }
 	//POST /api/accounts
 	@POST
+    @Path("/studentID/{studentID}")
 	@Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response createAccount(Account account, @QueryParam("studentID") int studentID) {
+    public Response createAccount(Account account, @PathParam("studentID") int studentID) {
         Student student = bankDAO.getStudentByID(studentID);
         if (student == null) {
             return Response.status(Response.Status.BAD_REQUEST).entity("Student not found").build();
