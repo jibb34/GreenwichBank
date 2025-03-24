@@ -141,8 +141,9 @@ public class BankDAO {
 	public boolean deposit(int accountId, float amount) {
 		// Literally the same as withdraw except + amount
 		Account account = em.find(Account.class, accountId);
-		if (account != null && account.getAccountBalance() >= amount){
-			// Set balance to be amount less than before
+		//also don't need to check balance
+		if (account != null){
+			// Set balance to be amount more than before
 			account.setAccountBalance(account.getAccountBalance() + amount);
 			em.merge(account);
 			return true;

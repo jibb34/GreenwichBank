@@ -106,5 +106,34 @@ public class AccountResource {
                            .build();
         }
     }
+    
+    @PUT
+    @Path("/transfer")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response transferFunds(Map<String, Object> payload) {
+        try {
+
+        	//get the data first
+            int fromAccountID = Integer.parseInt(payload.get("fromAccountID").toString());
+            int toAccountID = Integer.parseInt(payload.get("toAccountID").toString());
+            float amount = Float.parseFloat(payload.get("amount").toString());
+
+            //do the transfer
+            if (bankDAO.transfer(fromAccountID, toAccountID, amount)) {
+                return Response.ok(Map.of("message", "Transfer successful")).build();
+            } else {
+               
+                return Response.status(Response.Status.BAD_REQUEST)
+                               .entity(Map.of("error", "Transfer failed..."))
+                               .build();
+            }
+        } catch (Exception e) {
+            System.out.println("REST transfer error: " + e.getMessage()); // Debug
+            return Response.status(Response.Status.BAD_REQUEST)
+                           .entity(Map.of("error", "Invalid input or internal error"))
+                           .build();
+        }
+    }
 
 }

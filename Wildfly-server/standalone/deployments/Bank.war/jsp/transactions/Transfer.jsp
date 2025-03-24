@@ -7,13 +7,25 @@
         <input type="hidden" name="action" value="transfer">
 
         <div class="form-group">
-            <label for="fromAccount">From Account ID:</label>
-            <input type="number" name="fromAccount" id="fromAccount" required>
+            <label for="fromAccountID">From Account:</label>
+            <select name="fromAccountID" id="fromAccountID" required>
+                <c:forEach var="account" items="${Accounts}">
+                    <option value="${account.accountID}">
+                        ${account.accountAlias} (ID: ${account.accountID}, £${account.accountBalance})
+                    </option>
+                </c:forEach>
+            </select>
         </div>
 
         <div class="form-group">
-            <label for="toAccount">To Account ID:</label>
-            <input type="number" name="toAccount" id="toAccount" required>
+            <label for="toAccountID">To Account:</label>
+            <select name="toAccountID" id="toAccountID" required>
+                <c:forEach var="account" items="${Accounts}">
+                    <option value="${account.accountID}">
+                        ${account.accountAlias} (ID: ${account.accountID}, £${account.accountBalance})
+                    </option>
+                </c:forEach>
+            </select>
         </div>
 
         <div class="form-group">
