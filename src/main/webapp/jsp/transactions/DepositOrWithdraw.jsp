@@ -1,5 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 
 <div class="form-container">
@@ -21,7 +22,7 @@
             <select name="accountID" id="accountID" required>
                 <c:forEach var="account" items="${Accounts}">
                     <option value="${account.accountID}">
-                        ${account.accountAlias} (ID: ${account.accountID}, £${account.accountBalance})
+                        ${account.accountAlias} (ID: ${account.accountID}, £<fmt:formatNumber value="${account.accountBalance}" type="number" minFractionDigits="2" maxFractionDigits="2" />)
                     </option>
                 </c:forEach>
             </select>

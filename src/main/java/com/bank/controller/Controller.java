@@ -26,7 +26,6 @@ public class Controller extends HttpServlet {
      */
     public Controller() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
@@ -59,7 +58,7 @@ public class Controller extends HttpServlet {
 		    student.setStudentPhone(request.getParameter("phone"));
 		    student.setStudentAddress(request.getParameter("address"));
 		    if(bankDAO.createStudent(student)) {
-		    	response.sendRedirect("");
+		    	response.sendRedirect("/Bank/");
 		    }
 		    else {
 		    	request.setAttribute("error", "Could not add student.");
@@ -75,7 +74,7 @@ public class Controller extends HttpServlet {
 				account.setStudent(bankDAO.getStudentByID(studentID));
 				System.out.println("Account being created...");
 				bankDAO.createAccount(account);
-				response.sendRedirect("");
+				response.sendRedirect("/Bank/");
 			} else {response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Student not logged in or recognized");}
 			
 			break;
@@ -86,7 +85,9 @@ public class Controller extends HttpServlet {
 				Account accToDelete = bankDAO.getAccountByID(accountID);
 				if (accToDelete != null && bankDAO.deleteAccount(accountID)) {
 					response.setStatus(HttpServletResponse.SC_OK);
-				} else { 
+					request.getRequestDispatcher("/Bank/");
+					response.sendRedirect("/Bank/");
+					} else { 
 		            response.sendError(HttpServletResponse.SC_NOT_FOUND, "Account not found or deleted.");
 				}
 			} else {
@@ -97,7 +98,7 @@ public class Controller extends HttpServlet {
 	        int fromAccountID = Integer.parseInt(request.getParameter("fromAccountID"));
 	        int toAccountID = Integer.parseInt(request.getParameter("toAccountID"));
 	        amount = Float.parseFloat(request.getParameter("amount"));
-	        if((amount >= bankDAO.getAccountByID(fromAccountID).getAccountBalance()) 
+	        if((amount <= bankDAO.getAccountByID(fromAccountID).getAccountBalance()) 
 	        		&& bankDAO.transfer(fromAccountID, toAccountID, amount)) {
 					request.setAttribute("fromAccount", bankDAO.getAccountByID(fromAccountID));
 					request.setAttribute("toAccount", bankDAO.getAccountByID(toAccountID));

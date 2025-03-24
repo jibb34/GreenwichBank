@@ -74,7 +74,6 @@ public class AccountResource {
         }
         return Response.noContent().build();
     }
-    //TODO: implement Transfer, withdraw and Deposit
     
     @PUT
     @Path("/accounts/{id}")

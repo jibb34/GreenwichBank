@@ -1,4 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ page import="java.net.URLDecoder" %>
 <div class="container">
@@ -27,7 +29,8 @@
                     <tr>
                         <td>${account.accountID}</td>
                         <td>${account.accountAlias}</td>
-                        <td>£${account.accountBalance}</td>
+                        <td>£<fmt:formatNumber value="${account.accountBalance}" type="number" minFractionDigits="2" maxFractionDigits="2" />
+                        </td>
                         <td>
                             <button class="view-account-btn" data-id="${account.accountID}">View</button>
                         </td>
@@ -50,7 +53,8 @@
                     <tr>
                         <td>${account.accountID}</td>
                         <td>${account.accountAlias}</td>
-                        <td>£${account.accountBalance}</td>
+                        <td>£<fmt:formatNumber value="${account.accountBalance}" type="number" minFractionDigits="2" maxFractionDigits="2" />
+</td>
                         <td>${account.student.studentName}, ${account.student.studentID}</td>
                         <td>
                             <button class="view-account-btn" data-id="${account.accountID}">View</button>

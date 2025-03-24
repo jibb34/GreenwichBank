@@ -127,7 +127,6 @@ public class BankDAO {
 		return true;
  	}
 
-//TODO: Create Business Logic for operations Withdraw, Deposit & Transfer
 	public boolean withdraw(int accountId, float amount) {
 		Account account = em.find(Account.class, accountId);
 		if (account != null && account.getAccountBalance() >= amount){
@@ -150,7 +149,22 @@ public class BankDAO {
 		}
 		return false; // Insufficient Funds
 	}
+
 	public boolean transfer(int fromAccountID, int toAccountID, float amount) {
-		return false;
+		Account fromAccount = em.find(Account.class, fromAccountID);
+		 Account toAccount = em.find(Account.class, toAccountID);
+		 
+		 if (fromAccount != null && toAccount != null && fromAccount.getAccountBalance() >= amount) {
+		        // we will deduct from the FromAccount and add in the toAccount
+		        fromAccount.setAccountBalance(fromAccount.getAccountBalance() - amount);
+		        toAccount.setAccountBalance(toAccount.getAccountBalance() + amount);
+
+		        em.merge(fromAccount);
+		        em.merge(toAccount);
+
+		        return true;
+		    } else {
+		        return false; // Insufficient funds
+		    }
 	}
 }
