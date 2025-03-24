@@ -50,12 +50,12 @@ public class StudentResource {
     @PUT
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response updateStudent(int id, Student updatedStudent) {
+    public Response updateStudent(Student updatedStudent) {
     	if(bankDAO.updateStudent(updatedStudent)) {
     		return Response.status(Response.Status.CREATED).entity(updatedStudent).build();
     	}
     	
-    	return Response.status(Response.Status.BAD_REQUEST).entity("Student ID" + id + " not found.").build();
+    	return Response.status(Response.Status.BAD_REQUEST).entity("Student ID" + updatedStudent.getStudentID() + " not found.").build();
     }
     
  // DELETE /api/students/{id}
@@ -66,7 +66,7 @@ public class StudentResource {
         if (!removed) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
-        return Response.noContent().build();
+        return Response.status(Response.Status.OK).build();
     }
 
 /* TODO: implement CRUD Operations for Accounts

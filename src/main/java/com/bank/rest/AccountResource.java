@@ -75,11 +75,11 @@ public class AccountResource {
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response deleteAccount(@PathParam("id") int id) {
-        boolean removed = bankDAO.deleteStudent(id);
+        boolean removed = bankDAO.deleteAccount(id);
         if (!removed) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
-        return Response.noContent().build();
+        return Response.status(Response.Status.OK).build();
     }
    // PUT /api/accounts/{account_ID}
     @PUT

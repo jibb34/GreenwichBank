@@ -19,7 +19,7 @@
 
 \titleformat{\section}{\Large\bfseries}{\thesection}{1em}{}
 
-\title{COMP1610 Coursework Report \\ \large Programming Enterprise Components \\ \large Bank App Project}
+\title{COMP1610 Coursework Report \\ \large Programming Enterprise Components \\ \large \textbf{Bank App Project}}
 \author{Jack Jibb\\ 001408490 \\ Other Group Members: \\ Syed Ali Irtaza – 001414068 \\ Anastasiia Pyslar – 001412071 \\ Devanshi Pandya – 001426270 \\ Poorva Motaval – 001449334  }
 \date{Submission Date: 24 March 2025}
 
@@ -73,7 +73,7 @@ This section outlines the implemented features of the Banking Web Application, c
 \begin{center}
 	\fbox{
 		\begin{minipage}{0.9\linewidth}
-			\textbf{Implementation Rating (1--5):} \underline{\hspace{1cm}}
+			\textbf{Implementation Rating (1--5):} \underline{4}
 		\end{minipage}
 	}
 \end{center}
@@ -90,7 +90,7 @@ This section outlines the implemented features of the Banking Web Application, c
 \begin{center}
 	\fbox{
 		\begin{minipage}{0.9\linewidth}
-			\textbf{Implementation Rating (1--5):} \underline{\hspace{1cm}}
+			\textbf{Implementation Rating (1--5):} \underline{5}
 		\end{minipage}
 	}
 \end{center}
@@ -107,7 +107,7 @@ This section outlines the implemented features of the Banking Web Application, c
 \begin{center}
 	\fbox{
 		\begin{minipage}{0.9\linewidth}
-			\textbf{Implementation Rating (1--5):} \underline{\hspace{1cm}}
+			\textbf{Implementation Rating (1--5):} \underline{5}
 		\end{minipage}
 	}
 \end{center}
@@ -117,14 +117,14 @@ This section outlines the implemented features of the Banking Web Application, c
 \begin{itemize}
 	\item Deposit and withdraw via dynamic form.
 	\item Overdraft protection prevents excessive withdrawal.
-	\item Transfer funds between accounts with validation.
+	\item Transfer funds between accounts with Student validation.
 	\item TransactionResult page displays updated balances and outcome messages.
 \end{itemize}
 
 \begin{center}
 	\fbox{
 		\begin{minipage}{0.9\linewidth}
-			\textbf{Implementation Rating (1--5):} \underline{\hspace{1cm}}
+			\textbf{Implementation Rating (1--5):} \underline{4}
 		\end{minipage}
 	}
 \end{center}
@@ -135,18 +135,17 @@ This section outlines the implemented features of the Banking Web Application, c
 	\item Dynamic page loading using JavaScript and AJAX.
 	\item Button and form action binding via \texttt{main.js}.
 	\item Confirmation prompts for sensitive actions (e.g., delete).
-	\item Responsive feedback and clean UI structure.
 \end{itemize}
 
 \begin{center}
 	\fbox{
 		\begin{minipage}{0.9\linewidth}
-			\textbf{Implementation Rating (1--5):} \underline{\hspace{1cm}}
+			\textbf{Implementation Rating (1--5):} \underline{5}
 		\end{minipage}
 	}
 \end{center}
 
-\subsubsection{RESTful API (JSON)}
+\subsubsection{RESTful API (JSON*)}
 
 \begin{itemize}
 	\item JSON-based API for students and accounts.
@@ -157,35 +156,46 @@ This section outlines the implemented features of the Banking Web Application, c
 \begin{center}
 	\fbox{
 		\begin{minipage}{0.9\linewidth}
-			\textbf{Implementation Rating (1--5):} \underline{\hspace{1cm}}
+			\textbf{Implementation Rating (1--5):} \underline{3}
 		\end{minipage}
 	}
 \end{center}
 
 \vspace{1em}
-\noindent \textit{Note:} All JSON endpoints consume and produce data via \texttt{MediaType.APPLICATION\_JSON}.
+\noindent \textit{*Note:} All JSON endpoints consume and produce data via \texttt{MediaType.APPLICATION\_JSON}.
 
-
+\subsection{REST API Endpoints}
+List of all endpoints and the function they serve:
+\paragraph{Student API}
+\begin{itemize}
+	\item \textbf{GET /api/students}:\textit{getAllStudents()}
+	\item \textbf{GET /api/students/{student\_id}}:\texttt{getStudentByID(student\_id)}
+	\item \textbf{POST /api/students}:\texttt{createStudent(Student Entity)}
+	\item \textbf{PUT /api/students}:\texttt{updateStudent(Student entity)}
+	\item \textbf{DELETE /api/students/{student\_id}}:\texttt{deleteStudent(student\_id)}
+\end{itemize}
+\paragraph{Account API}
+\newpage
 \section{Evaluation (Group Work)}
 
 
 \section{Research (Individual)}
-\textit{Write approx. 200 words.}
-Compare Jakarta EE with frameworks such as:
-\begin{itemize}
-	\item Spring Boot
-	\item ASP.NET Core
-	\item Django
-	\item Node.js (Express)
-\end{itemize}
 
-Discuss component-based design, scalability, learning curve, IDE/tooling support, REST and ORM integration.
 
 \section{Individual Reflection (Individual)}
-\textit{Write approx. 200 words.}
-Discuss your role in the group project, lessons learned, collaboration, and areas for improvement. Mention tools used (e.g., Git, Eclipse, phpMyAdmin) and key takeaways.
 
+\newpage
 \section{Appendix}
+
+\subsection{Application Screenshots}
+\subsubsection{Web App Screenshots}
+
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{./assets/Web1}
+	\caption{}
+\end{figure}
+
+\subsubsection{CLI Application Screenshots}
 
 \subsection{WildFly 33 Server Configuration}
 
@@ -200,7 +210,6 @@ The configuration includes a comprehensive set of extensions and subsystems to s
 	\item \textbf{Logging:} Console and periodic file handlers with custom formatters.
 	\item \textbf{Data Sources:}
 	      \begin{itemize}
-		      \item \texttt{ExampleDS}: In-memory H2 database.
 		      \item \texttt{BankDS}: MySQL datasource connecting to \texttt{bank\_db} using driver \texttt{com.mysql.cj.jdbc.Driver}.
 	      \end{itemize}
 \end{itemize}
@@ -212,12 +221,6 @@ The configuration includes a comprehensive set of extensions and subsystems to s
 	\item Audit logging is available but currently disabled.
 \end{itemize}
 
-\subsubsection{Security and Authentication}
-\begin{itemize}
-	\item Elytron subsystems define HTTP and SASL authentication factories.
-	\item Identity realms and properties realms are used to manage users and roles.
-	\item A keystore \texttt{applicationKS} is defined for SSL contexts.
-\end{itemize}
 
 \subsubsection{Server Interfaces and Socket Bindings}
 \begin{itemize}

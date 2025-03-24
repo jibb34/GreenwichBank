@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024/Homebrew)  (format=lualatex 2024.3.10)  24 MAR 2025 17:21
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024/Homebrew)  (format=lualatex 2024.3.10)  24 MAR 2025 18:25
  restricted system commands enabled.
 **cw.tex
 (./cw.tex
@@ -587,7 +587,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [2]
-<./assets/ERD.png, id=102, 617.30624pt x 258.9675pt>
+<./assets/ERD.png, id=132, 617.30624pt x 258.9675pt>
 File: ./assets/ERD.png Graphic file (type png)
 <use ./assets/ERD.png>
 Package luatex.def Info: ./assets/ERD.png  used on input line 40.
@@ -642,293 +642,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [4]
-! Undefined control sequence.
-l.83 		\(\square
-              \) Fully completed \newline
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-! Undefined control sequence.
-l.84 		\(\square
-              \) Partially completed \newline
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.85 		\(\square
-              \) Having bugs/Not working \newline
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.86 		\(\square
-              \) Not implemented
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.91 		\(\square
-              \) Fully completed \newline
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.92 		\(\square
-              \) Partially completed \newline
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.93 		\(\square
-              \) Having bugs/Not working \newline
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.94 		\(\square
-              \) Not implemented
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.99 		\(\square
-              \) Fully completed \newline
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.100 		\(\square
-               \) Partially completed \newline
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.101 		\(\square
-               \) Having bugs/Not working \newline
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.102 		\(\square
-               \) Not implemented
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.107 		\(\square
-               \) Fully completed \newline
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.108 		\(\square
-               \) Partially completed \newline
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.109 		\(\square
-               \) Having bugs/Not working \newline
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.110 		\(\square
-               \) Not implemented
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.115 		\(\square
-               \) Fully completed \newline
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.116 		\(\square
-               \) Partially completed \newline
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.117 		\(\square
-               \) Having bugs/Not working \newline
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.118 		\(\square
-               \) Not implemented
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.123 		\(\square
-               \) Fully completed \newline
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.124 		\(\square
-               \) Partially completed \newline
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.125 		\(\square
-               \) Having bugs/Not working \newline
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.126 		\(\square
-               \) Not implemented
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.131 		\(\square
-               \) Fully completed \newline
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.132 		\(\square
-               \) Partially completed \newline
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.133 		\(\square
-               \) Having bugs/Not working \newline
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.134 		\(\square
-               \) Not implemented
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.139 		\(\square
-               \) Fully completed \newline
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.140 		\(\square
-               \) Partially completed \newline
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.141 		\(\square
-               \) Having bugs/Not working \newline
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.142 		\(\square
-               \) Not implemented
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 65.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -939,6 +655,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [5]
+Overfull \hbox (1.48273pt too wide) in paragraph at lines 166--167
+\TU/lmr/m/it/12 Note: \TU/lmr/m/n/12 All JSON end-points con-sume and pro-duce 
+data via \TU/lmtt/m/n/12 MediaType.APPLICATION_JSON\TU/lmr/m/n/12 . 
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -948,14 +669,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [6]
-Overfull \hbox (2.60068pt too wide) in paragraph at lines 174--175
+Overfull \hbox (2.60068pt too wide) in paragraph at lines 197--198
 []\TU/lmr/bx/n/12 EJB, JPA, JSF, JAX-RS: \TU/lmr/m/n/12 En-abled via \TU/lmtt/m
 /n/12 org.jboss.as.ejb3\TU/lmr/m/n/12 , \TU/lmtt/m/n/12 org.jboss.as.jpa\TU/lmr
 /m/n/12 ,
  []
 
 
-Overfull \hbox (76.53862pt too wide) in paragraph at lines 181--182
+Overfull \hbox (76.53862pt too wide) in paragraph at lines 204--205
 []\TU/lmtt/m/n/12 BankDS\TU/lmr/m/n/12 : MySQL data-source con-nect-ing to \TU/
 lmtt/m/n/12 bank_db \TU/lmr/m/n/12 us-ing driver \TU/lmtt/m/n/12 com.mysql.cj.jd
 bc.Driver\TU/lmr/m/n/12 . 
@@ -978,66 +699,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[8
-Missing character: There is no │ (U+2502) in font [lmmono12-regular]:!
-Missing character: There is no ├ (U+251C) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-Missing character: There is no │ (U+2502) in font [lmmono12-regular]:!
-Missing character: There is no ├ (U+251C) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-Missing character: There is no │ (U+2502) in font [lmmono12-regular]:!
-Missing character: There is no ├ (U+251C) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-Missing character: There is no │ (U+2502) in font [lmmono12-regular]:!
-Missing character: There is no ├ (U+251C) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-Missing character: There is no │ (U+2502) in font [lmmono12-regular]:!
-Missing character: There is no ├ (U+251C) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-Missing character: There is no │ (U+2502) in font [lmmono12-regular]:!
-Missing character: There is no └ (U+2514) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-Missing character: There is no ├ (U+251C) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-Missing character: There is no │ (U+2502) in font [lmmono12-regular]:!
-Missing character: There is no ├ (U+251C) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-Missing character: There is no │ (U+2502) in font [lmmono12-regular]:!
-Missing character: There is no ├ (U+251C) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-Missing character: There is no │ (U+2502) in font [lmmono12-regular]:!
-Missing character: There is no ├ (U+251C) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-Missing character: There is no │ (U+2502) in font [lmmono12-regular]:!
-Missing character: There is no ├ (U+251C) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-Missing character: There is no │ (U+2502) in font [lmmono12-regular]:!
-Missing character: There is no └ (U+2514) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-Missing character: There is no │ (U+2502) in font [lmmono12-regular]:!
-Missing character: There is no ├ (U+251C) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-Missing character: There is no │ (U+2502) in font [lmmono12-regular]:!
-Missing character: There is no └ (U+2514) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-Missing character: There is no └ (U+2514) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
-]
+[8]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1046,39 +708,95 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[9] (./cw.aux)
+[9
+Missing character: There is no │ (U+2502) in font [lmmono12-regular]:!
+Missing character: There is no ├ (U+251C) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+Missing character: There is no │ (U+2502) in font [lmmono12-regular]:!
+Missing character: There is no ├ (U+251C) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+Missing character: There is no │ (U+2502) in font [lmmono12-regular]:!
+Missing character: There is no ├ (U+251C) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+Missing character: There is no │ (U+2502) in font [lmmono12-regular]:!
+Missing character: There is no ├ (U+251C) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+Missing character: There is no │ (U+2502) in font [lmmono12-regular]:!
+Missing character: There is no ├ (U+251C) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+Missing character: There is no │ (U+2502) in font [lmmono12-regular]:!
+Missing character: There is no └ (U+2514) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+Missing character: There is no ├ (U+251C) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+Missing character: There is no │ (U+2502) in font [lmmono12-regular]:!
+Missing character: There is no ├ (U+251C) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+Missing character: There is no │ (U+2502) in font [lmmono12-regular]:!
+Missing character: There is no ├ (U+251C) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+Missing character: There is no │ (U+2502) in font [lmmono12-regular]:!
+Missing character: There is no ├ (U+251C) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+Missing character: There is no │ (U+2502) in font [lmmono12-regular]:!
+Missing character: There is no ├ (U+251C) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+Missing character: There is no │ (U+2502) in font [lmmono12-regular]:!
+Missing character: There is no └ (U+2514) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+Missing character: There is no │ (U+2502) in font [lmmono12-regular]:!
+Missing character: There is no ├ (U+251C) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+Missing character: There is no │ (U+2502) in font [lmmono12-regular]:!
+Missing character: There is no └ (U+2514) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+Missing character: There is no └ (U+2514) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+Missing character: There is no ─ (U+2500) in font [lmmono12-regular]:!
+] (./cw.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `cw.out' has not changed.
-(rerunfilecheck)             Checksum: 8608ADE22A627C304549AE1E68BB1EA0;3207.
+(rerunfilecheck)             Checksum: F9A47A0A6A9C5C96BB3B584CEE771364;4516.
 )
 
 Here is how much of LuaTeX's memory you used:
- 13626 strings out of 476447
+ 13629 strings out of 476447
  125027,1977958 words of node,token memory allocated
  509 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 6 attribute, 57 glue_spec,
  6 attribute_list, 1 write nodes
-   avail lists: 2:656,3:402,4:88,5:249,6:83,7:4163,8:26,9:558,10:6,11:291
- 35466 multiletter control sequences out of 65536+600000
- 53 fonts using 3774495 bytes
- 72i,11n,75p,289b,466s stack positions out of 10000i,1000n,20000p,200000b,200000s
+   avail lists: 2:731,3:323,4:116,5:313,6:83,7:3776,8:26,9:484,10:6,11:257
+ 35464 multiletter control sequences out of 65536+600000
+ 47 fonts using 3262551 bytes
+ 72i,11n,75p,321b,464s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dist/fonts/opentype/public/
 lm/lmroman12-italic.otf></opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dis
-t/fonts/opentype/public/lm/lmroman10-regular.otf></opt/homebrew/Cellar/texlive/2
-0240312_3/share/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></opt/hom
-ebrew/Cellar/texlive/20240312_3/share/texmf-dist/fonts/opentype/public/lm/lmmono
+t/fonts/opentype/public/lm/lmmono12-regular.otf></opt/homebrew/Cellar/texlive/20
+240312_3/share/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf></opt/home
+brew/Cellar/texlive/20240312_3/share/texmf-dist/fonts/opentype/public/lm/lmroman
 12-regular.otf></opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dist/fonts/o
-pentype/public/lm/lmroman12-bold.otf></opt/homebrew/Cellar/texlive/20240312_3/sh
-are/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></opt/homebrew/Cel
-lar/texlive/20240312_3/share/texmf-dist/fonts/opentype/public/lm/lmroman17-regul
-ar.otf>
-Output written on cw.pdf (9 pages, 98869 bytes).
+pentype/public/lm/lmroman17-regular.otf>
+Output written on cw.pdf (9 pages, 96015 bytes).
 
-PDF statistics: 192 PDF objects out of 1000 (max. 8388607)
- 156 compressed objects within 2 object streams
- 31 named destinations out of 1000 (max. 131072)
- 137 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 209 PDF objects out of 1000 (max. 8388607)
+ 179 compressed objects within 2 object streams
+ 36 named destinations out of 1000 (max. 131072)
+ 185 words of extra memory for PDF output out of 10000 (max. 100000000)
 
