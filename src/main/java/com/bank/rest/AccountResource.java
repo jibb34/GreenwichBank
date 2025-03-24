@@ -29,9 +29,12 @@ public class AccountResource {
     @Path("/{accountID}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAccount(@PathParam("accountID") int accountID) {
-
         Account account = bankDAO.getAccountByID(accountID);
+        if (account != null) {
         return Response.ok(account).build();
+        } else {
+            return Response.status(Response.Status.BAD_REQUEST).entity("Account not found").build();
+        }
     }
 	//GET /api/accounts/studentID/{student_id}
 	@GET
@@ -55,17 +58,16 @@ public class AccountResource {
         bankDAO.createAccount(account);
         return Response.status(Response.Status.CREATED).entity(account).build();
     }
-	//PUT /api/accounts/{account_id}
+	//PUT /api/accounts
     @PUT
-    @Path("/{id}")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response updateAccount(@PathParam("id") int id, Account updatedAccount) {
+    public Response updateAccount(Account updatedAccount) {
     	if(bankDAO.updateAccount(updatedAccount)) {
     		return Response.status(Response.Status.CREATED).entity(updatedAccount).build();
     	}
     	
-    	return Response.status(Response.Status.BAD_REQUEST).entity("Account ID" + id + " not found.").build();
+    	return Response.status(Response.Status.BAD_REQUEST).entity("Account ID" + updatedAccount.getAccountID() + " not found.").build();
 
     }
     // DELETE /api/accounts/{account_id}

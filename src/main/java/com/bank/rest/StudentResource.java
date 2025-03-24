@@ -46,12 +46,11 @@ public class StudentResource {
     	}
     }
 
- // PUT /api/students/{id}
+ // PUT /api/students
     @PUT
-    @Path("/{id}")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response updateStudent(@PathParam("id") int id, Student updatedStudent) {
+    public Response updateStudent(int id, Student updatedStudent) {
     	if(bankDAO.updateStudent(updatedStudent)) {
     		return Response.status(Response.Status.CREATED).entity(updatedStudent).build();
     	}
